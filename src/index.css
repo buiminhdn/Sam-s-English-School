@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-dark: #0a2351;
+  --color-blue-light: #d8e6ff;
+  --color-purple-dark: #6e4fe6;
+  --color-purple-light: #dfc8fe;
+  --color-yellow-darker: #feb605;
+  --color-yellow-dark: #ffd83b;
+  --color-yellow-light: #fff9e1;
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-10;
+  }
+}

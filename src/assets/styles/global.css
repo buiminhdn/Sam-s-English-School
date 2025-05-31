@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e9e9e9;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cdcdcd;
+}
+
+:root {
+  --font-family: "Quicksand", sans-serif;
+}
+
+* {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000000;
+  font-size: 0.875rem; /* 14px */
+}
