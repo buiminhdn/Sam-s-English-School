@@ -21,8 +21,10 @@ import QuestionsIllus from "./QuestionsIllus.png";
 import ContactIllus from "./ContactIllus.png";
 import ContactIllus2 from "./ContactIllus2.png";
 import footerillus from "./footerillus.png";
+import bgProgram from "./bgPrograms.png";
 
 export {
+  bgProgram,
   logo,
   BoyHoldCamera,
   BoyThumbUp,

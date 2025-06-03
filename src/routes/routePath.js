@@ -1,5 +1,14 @@
 export const ROUTE_PATH = {
   LOGIN: "/login",
+  PROGRAMS: "/programs",
+  PROGRAM_DETAIL: "/programs/:id",
+  COURSES: "/courses",
+  COURSE_DETAIL: "/courses/:id",
+  TEACHERS: "/teachers",
+  TEACHER_DETAIL: "/teachers/:id",
+  CONTACT: "/contact",
+  NEWS: "/news",
+  NEWS_DETAIL: "/news/:id",
   FORBIDDEN: "/forbidden",
   NOT_FOUND: "*",
 };

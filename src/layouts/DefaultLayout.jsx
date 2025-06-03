@@ -9,7 +9,9 @@ function DefaultLayout() {
     <div>
       <TopNavbar />
       <Navbar />
-      <Outlet />
+      <div className="min-h-screen">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

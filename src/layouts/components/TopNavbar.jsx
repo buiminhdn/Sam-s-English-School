@@ -1,12 +1,33 @@
 import { Link } from "react-router-dom";
 import { logo } from "../../assets/images";
+import { motion as _motion } from "framer-motion";
+import { ROUTE_PATH } from "../../routes/routePath";
 
 function TopNavbar() {
   return (
-    <div className="bg-blue-dark">
+    <_motion.div
+      className="bg-blue-dark"
+      initial={{ y: -30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container py-4 flex justify-between items-center text-white">
-        <img src={logo} alt="logo" className="h-14" />
-        <div className="flex gap-20">
+        <Link to="/">
+          <_motion.img
+            src={logo}
+            alt="logo"
+            className="h-14 cursor-pointer"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+          />
+        </Link>
+        <_motion.div
+          className="flex gap-20"
+          initial={{ x: 20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+        >
           <div className="flex items-center gap-4">
             <i className="fa-2xl fa-thin fa-phone"></i>
             <div>
@@ -21,8 +42,13 @@ function TopNavbar() {
               <p className="text-base mt-0.5">sam@samenglishschool.com</p>
             </div>
           </div>
-        </div>
-        <div className="flex items-center gap-6">
+        </_motion.div>
+        <_motion.div
+          className="flex items-center gap-6"
+          initial={{ x: -20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+        >
           <p className="font-medium">EN | VN</p>
           <Link
             to="/dd"
@@ -31,9 +57,9 @@ function TopNavbar() {
           >
             Đăng nhập
           </Link>
-        </div>
+        </_motion.div>
       </div>
-    </div>
+    </_motion.div>
   );
 }
 

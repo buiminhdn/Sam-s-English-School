@@ -1,10 +1,10 @@
-import React from "react";
+import { motion as _motion } from "framer-motion";
 import { ContactIllus, ContactIllus2 } from "../../assets/images";
 
 function Contact() {
   return (
-    <div className="container mt-30 ">
-      <div
+    <div className="container mt-30">
+      <_motion.div
         style={{
           backgroundImage: `url(${ContactIllus2})`,
           backgroundRepeat: "no-repeat",
@@ -12,35 +12,73 @@ function Contact() {
           backgroundSize: "90rem",
         }}
         className="bg-blue-dark rounded-2xl p-20 relative"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <img
+        <_motion.img
           src={ContactIllus}
           alt=""
           className="absolute w-[35rem] bottom-0 left-0"
+          animate={{ x: [0, 15, 0] }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         />
-        <div className="w-3/5 ml-auto">
-          <p className="text-white text-4xl leading-tight">
+
+        <_motion.div
+          className="w-3/5 ml-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.2, delayChildren: 0.5 },
+            },
+          }}
+        >
+          <_motion.p
+            className="text-white text-4xl leading-tight"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
             Tham gia cộng đồng
             <br />
             của Sam's English School
-          </p>
+          </_motion.p>
+
           <form action="" className="flex flex-col gap-4 mt-10">
-            <input
-              type="text"
-              placeholder="Họ và tên"
-              className="bg-white text-black rounded-full px-5 py-3 outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="bg-white text-black rounded-full px-5 py-3 outline-none"
-            />
-            <button className="bg-yellow-dark rounded-full p-3 text-black">
+            {["Họ và tên", "Email"].map((placeholder, idx) => (
+              <_motion.input
+                key={idx}
+                type={placeholder === "Email" ? "email" : "text"}
+                placeholder={placeholder}
+                className="bg-white text-black rounded-full px-5 py-3 outline-none"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              />
+            ))}
+
+            <_motion.button
+              className="border-2 border-yellow-dark bg-yellow-dark text-black hover:bg-transparent hover:text-white transision-colors duration-300 rounded-full p-3"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
               Gửi
-            </button>
+            </_motion.button>
           </form>
-        </div>
-      </div>
+        </_motion.div>
+      </_motion.div>
     </div>
   );
 }
