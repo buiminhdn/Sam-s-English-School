@@ -17,6 +17,10 @@ import Teacher4 from "./Teacher4.png";
 import YellowCircle from "./YellowCircle.png";
 import Course1 from "./Course1.png";
 import Schools from "./Schools.png";
+import QuestionsIllus from "./QuestionsIllus.png";
+import ContactIllus from "./ContactIllus.png";
+import ContactIllus2 from "./ContactIllus2.png";
+import footerillus from "./footerillus.png";
 
 export {
   logo,
@@ -38,4 +42,8 @@ export {
   YellowCircle,
   Course1,
   Schools,
+  QuestionsIllus,
+  ContactIllus,
+  ContactIllus2,
+  footerillus,
 };

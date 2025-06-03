@@ -1,5 +1,5 @@
 import React from "react";
-import { DocumentHomeIllustration, TextCircle } from "../assets/images";
+import { DocumentHomeIllustration, TextCircle } from "../../assets/images";
 
 function DocumentHome() {
   return (
@@ -22,9 +22,9 @@ function DocumentHome() {
           dễ hiểu của chúng tôi.
         </p>
 
-        <button className="mt-10 bg-white border-2 border-blue-dark p-2 flex items-center gap-3 rounded-full">
+        <button className="mt-10 bg-white border-2 border-blue-dark p-2 flex items-center gap-3 rounded-full hover:bg-blue-dark hover:text-white group transition-colors duration-300">
           <p className="ml-1.5 font-medium">ĐĂNG KÝ NGAY</p>
-          <div className="bg-blue-dark text-white px-2.5 py-1 rounded-full">
+          <div className="bg-blue-dark text-white px-2.5 py-1 rounded-full group-hover:bg-white group-hover:text-black transition-colors duration-300">
             <i className="fa-regular fa-arrow-up-right"></i>
           </div>
         </button>

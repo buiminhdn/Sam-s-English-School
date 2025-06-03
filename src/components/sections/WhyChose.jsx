@@ -7,7 +7,7 @@ import {
   WhyChooseGame,
   WhyChooseProgram,
   WhyChooseTeacher,
-} from "../assets/images";
+} from "../../assets/images";
 
 function WhyChose() {
   return (

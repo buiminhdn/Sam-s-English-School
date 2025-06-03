@@ -1,23 +1,23 @@
-import CourseHome from "../components/CourseHome";
-import CustomerHome from "../components/CustomerHome";
-import DocumentHome from "../components/DocumentHome";
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
-import TeacherHome from "../components/TeacherHome";
-import TopNavbar from "../components/TopNavbar";
-import WhyChose from "../components/WhyChose";
+import Contact from "../components/sections/Contact";
+import CourseHome from "../components/sections/CourseHome";
+import CustomerHome from "../components/sections/CustomerHome";
+import DocumentHome from "../components/sections/DocumentHome";
+import Hero from "../components/sections/Hero";
+import Questions from "../components/sections/Questions";
+import TeacherHome from "../components/sections/TeacherHome";
+import WhyChose from "../components/sections/WhyChose";
 
 function Home() {
   return (
     <>
-      <TopNavbar />
-      <Navbar />
       <Hero />
       <WhyChose />
       <DocumentHome />
       <TeacherHome />
       <CourseHome />
       <CustomerHome />
+      <Questions />
+      <Contact />
     </>
   );
 }

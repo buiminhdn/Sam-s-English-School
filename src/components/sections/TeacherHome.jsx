@@ -6,7 +6,7 @@ import {
   Teacher4,
   Wave,
   YellowCircle,
-} from "../assets/images";
+} from "../../assets/images";
 
 function TeacherHome() {
   return (
@@ -48,9 +48,9 @@ function TeacherHome() {
           <p className="text-gray-300 mt-1 text-center">530 Học viên</p>
         </div>
       </div>
-      <button className="mt-20 mx-auto border-2 border-white p-2 flex items-center gap-3 rounded-full">
-        <p className="ml-3 mr-1 font-medium text-white">XEM THÊM</p>
-        <div className="bg-white px-2 py-1 rounded-full">
+      <button className="mt-20 mx-auto border-2 border-white p-2 flex items-center gap-3 rounded-full text-white transition-colors duration-300 hover:bg-white hover:text-black group">
+        <p className="ml-3 mr-1 font-medium ">XEM THÊM</p>
+        <div className="bg-white px-2 py-1 rounded-full text-blue-dark group-hover:bg-blue-dark group-hover:text-white transition-colors duration-300">
           <i className="fa-regular fa-arrow-right"></i>
         </div>
       </button>

@@ -16,9 +16,12 @@ function Navbar() {
             <i className="fa-regular fa-angle-down mt-1"></i>
           </Link>
         </div>
-        <button className="bg-yellow-dark font-medium text-black py-2.5 px-5 rounded-sm">
+        <Link
+          to="/hello"
+          className="bg-yellow-dark font-medium text-black py-2.5 px-5 rounded-sm hover:shadow-xl transition-shadow duration-300"
+        >
           Đăng ký học thử!
-        </button>
+        </Link>
       </div>
     </div>
   );

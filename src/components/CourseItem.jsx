@@ -1,4 +1,3 @@
-import React from "react";
 import { Course1 } from "../assets/images";
 
 function CourseItem() {
@@ -28,7 +27,7 @@ function CourseItem() {
           </div>
           <p className="text-gray-700">512 Classes Taken</p>
         </div>
-        <button className="border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker">
+        <button className="border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker hover:bg-yellow-darker hover:text-white transition-colors duration-300">
           Tham gia ngay
         </button>
       </div>

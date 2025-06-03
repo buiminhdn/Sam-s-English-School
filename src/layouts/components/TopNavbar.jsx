@@ -1,5 +1,5 @@
-import React from "react";
-import { logo } from "../assets/images";
+import { Link } from "react-router-dom";
+import { logo } from "../../assets/images";
 
 function TopNavbar() {
   return (
@@ -24,9 +24,13 @@ function TopNavbar() {
         </div>
         <div className="flex items-center gap-6">
           <p className="font-medium">EN | VN</p>
-          <button className="bg-white font-medium text-black py-2.5 px-5 rounded-sm">
+          <Link
+            to="/dd"
+            className="bg-white font-medium text-black py-2.5 px-5 rounded-sm border border-blue-dark
+           hover:bg-blue-dark hover:border-white hover:text-white transition-colors duration-300"
+          >
             Đăng nhập
-          </button>
+          </Link>
         </div>
       </div>
     </div>

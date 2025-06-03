@@ -1,4 +1,4 @@
-import { BoyHoldCamera, BoyThumbUp } from "../assets/images";
+import { BoyHoldCamera, BoyThumbUp } from "../../assets/images";
 
 function Hero() {
   return (
@@ -26,10 +26,10 @@ function Hero() {
         <br />
         để hỗ trợ quá trình phát triển và học tập của con bạn.
       </p>
-      <button className="mx-auto mt-12 bg-blue-dark p-3 flex items-center gap-3 rounded-full">
+      <button className="mx-auto mt-12 bg-blue-dark p-3 flex items-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl">
         <p className="text-white ml-1.5">ĐĂNG KÝ NGAY</p>
         <div className="bg-white px-2.5 py-1 rounded-full">
-          <i className="fa-regular fa-arrow-up-right"></i>
+          <i className="fa-regular fa-arrow-up-right fa-beat"></i>
         </div>
       </button>
     </div>
