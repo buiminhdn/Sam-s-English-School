@@ -1,13 +1,12 @@
-import React from "react";
 import { motion as _motion } from "framer-motion";
-import { bgProgram } from "../assets/images";
+import { bgProgramBlue } from "../assets/images";
 
-function Banner() {
+function BannerBlue() {
   return (
     <div className="container">
       <_motion.div
         style={{
-          backgroundImage: `url(${bgProgram})`,
+          backgroundImage: `url(${bgProgramBlue})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -40,7 +39,7 @@ function Banner() {
         </_motion.p>
 
         <_motion.button
-          className="mt-7 text-base bg-yellow-dark py-3.5 px-5 font-medium rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+          className="mt-7 text-base bg-blue-dark text-white py-3.5 px-5 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -53,4 +52,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default BannerBlue;

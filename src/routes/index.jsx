@@ -3,6 +3,9 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import Home from "../pages/Home";
 import { ROUTE_PATH } from "./routePath";
 import Programs from "../pages/Programs";
+import Teachers from "../pages/Teachers";
+import Introduction from "../pages/Introduction";
+import Login from "../pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +20,19 @@ const router = createBrowserRouter([
         path: ROUTE_PATH.PROGRAMS,
         element: <Programs />,
       },
+      {
+        path: ROUTE_PATH.TEACHERS,
+        element: <Teachers />,
+      },
+      {
+        path: ROUTE_PATH.INTRO,
+        element: <Introduction />,
+      },
     ],
+  },
+  {
+    path: ROUTE_PATH.LOGIN,
+    element: <Login />,
   },
 ]);
 
