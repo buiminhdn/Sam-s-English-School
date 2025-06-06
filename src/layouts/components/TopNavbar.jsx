@@ -51,7 +51,7 @@ function TopNavbar() {
         >
           <p className="font-medium">EN | VN</p>
           <Link
-            to="/dd"
+            to={ROUTE_PATH.LOGIN}
             className="bg-white font-medium text-black py-2.5 px-5 rounded-sm border border-blue-dark
            hover:bg-blue-dark hover:border-white hover:text-white transition-colors duration-300"
           >

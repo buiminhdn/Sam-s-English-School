@@ -6,6 +6,7 @@ import Programs from "../pages/Programs";
 import Teachers from "../pages/Teachers";
 import Introduction from "../pages/Introduction";
 import Login from "../pages/Login";
+import News from "../pages/News";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: ROUTE_PATH.INTRO,
         element: <Introduction />,
+      },
+      {
+        path: ROUTE_PATH.NEWS,
+        element: <News />,
       },
     ],
   },
