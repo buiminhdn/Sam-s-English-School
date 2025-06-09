@@ -8,6 +8,7 @@ import Introduction from "../pages/Introduction";
 import Login from "../pages/Login";
 import News from "../pages/News";
 import ProgramDetail from "../pages/ProgramDetail";
+import TeacherDetail from "../pages/TeacherDetail";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: ROUTE_PATH.PROGRAM_DETAIL,
         element: <ProgramDetail />,
+      },
+      {
+        path: ROUTE_PATH.TEACHER_DETAIL,
+        element: <TeacherDetail />,
       },
     ],
   },

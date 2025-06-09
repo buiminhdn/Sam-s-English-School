@@ -66,6 +66,7 @@ function ProgramDetail() {
           </_motion.div>
         </div>
       </_motion.div>
+
       <_motion.div
         className="container mt-10"
         initial={{ opacity: 0, y: 30 }}
@@ -116,6 +117,7 @@ function ProgramDetail() {
           <li>Engage in role-plays to simulate business interactions</li>
         </ul>
       </_motion.div>
+
       <_motion.div
         className="container mt-14"
         initial={{ opacity: 0, y: 40 }}
@@ -161,6 +163,7 @@ function ProgramDetail() {
           ))}
         </div>
       </_motion.div>
+
       <_motion.div
         className="container mt-14"
         initial={{ opacity: 0, y: 40 }}
