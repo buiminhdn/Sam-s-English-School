@@ -7,6 +7,7 @@ import Teachers from "../pages/Teachers";
 import Introduction from "../pages/Introduction";
 import Login from "../pages/Login";
 import News from "../pages/News";
+import ProgramDetail from "../pages/ProgramDetail";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: ROUTE_PATH.NEWS,
         element: <News />,
+      },
+      {
+        path: ROUTE_PATH.PROGRAM_DETAIL,
+        element: <ProgramDetail />,
       },
     ],
   },
