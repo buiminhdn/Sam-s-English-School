@@ -13,17 +13,15 @@ function Filter() {
     <_motion.form
       className="mt-10 mx-auto w-fit"
       initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true }}
     >
       {/* Genre Buttons */}
       <_motion.div
         className="flex gap-4 text-base font-light"
         initial="hidden"
-        whileInView="visible"
+        animate="visible"
         transition={{ staggerChildren: 0.1 }}
-        viewport={{ once: true }}
       >
         {genreOptions.map((genre) => (
           <_motion.button
@@ -33,7 +31,7 @@ function Filter() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className={`w-36 p-2 rounded-xl border border-gray-200 ${
+            className={`w-36 p-2 rounded-xl border border-gray-200 hover:cursor-pointer ${
               activeGenre === genre
                 ? "bg-blue-dark text-white"
                 : "bg-gray-50 text-gray-600"
@@ -49,9 +47,8 @@ function Filter() {
       <_motion.div
         className="flex gap-3 mt-5"
         initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        viewport={{ once: true }}
       >
         {/* Search Bar */}
         <div className="flex gap-2 bg-gray-50 border border-gray-200 rounded-xl w-full p-2">
@@ -60,7 +57,10 @@ function Filter() {
             className="w-full outline-none ml-2"
             placeholder="Tìm kiếm Khóa học, Tên giáo viên"
           />
-          <button className="py-2 px-3 bg-yellow-dark text-white rounded-lg">
+          <button
+            className="py-2 px-3 bg-yellow-dark text-white rounded-lg"
+            type="button"
+          >
             <i className="fa-regular fa-magnifying-glass"></i>
           </button>
         </div>
@@ -70,7 +70,7 @@ function Filter() {
           <button
             type="button"
             onClick={() => setDropdownOpen((prev) => !prev)}
-            className="bg-gray-50 border border-gray-200 h-full py-2 px-4 flex items-center justify-between rounded-lg w-48"
+            className="bg-gray-50 border border-gray-200 h-full py-2 px-4 flex items-center justify-between rounded-lg w-48 hover:cursor-pointer"
           >
             <p className="text-nowrap">
               <span className="text-gray-500 font-light">Sort by:</span>{" "}

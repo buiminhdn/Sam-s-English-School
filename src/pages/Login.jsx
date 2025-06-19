@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { class1, teacherone, teacherthree } from "../assets/images";
+import { course1, course2, course3 } from "../assets/images";
 import { motion as _motion, AnimatePresence } from "framer-motion";
 
-const images = [class1, teacherone, teacherthree];
+const images = [course1, course2, course3];
 
 function Login() {
   const [current, setCurrent] = useState(0);

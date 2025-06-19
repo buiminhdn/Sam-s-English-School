@@ -13,3 +13,11 @@ export const ROUTE_PATH = {
   FORBIDDEN: "/forbidden",
   NOT_FOUND: "*",
 };
+
+export const SOCIAL_LINKS = {
+  ZALO: "https://zalo.me/0707060068",
+  FACEBOOK: "https://www.facebook.com/samsenglishschool1111",
+  INSTAGRAM: "https://www.instagram.com/samsenglishschool",
+  TIKTOK: "https://www.tiktok.com/@samsenglishschool",
+  LINKEDIN: "https://www.facebook.com/samsenglishschool1111",
+};

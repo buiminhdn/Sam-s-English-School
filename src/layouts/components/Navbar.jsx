@@ -1,5 +1,37 @@
 import { Link } from "react-router-dom";
 import { motion as _motion } from "framer-motion";
+import { ROUTE_PATH, SOCIAL_LINKS } from "../../routes/routePath";
+
+const menuItems = [
+  {
+    to: "/",
+    label: "Trang chủ",
+  },
+  {
+    to: ROUTE_PATH.PROGRAMS,
+    label: "Khóa học",
+    hasDropdown: true,
+    dropdownItems: [
+      { label: "Trực tuyến", to: ROUTE_PATH.PROGRAMS },
+      { label: "Trực tiếp", to: ROUTE_PATH.PROGRAMS },
+      { label: "1 kèm 1", to: ROUTE_PATH.PROGRAMS },
+      { label: "Học nhóm", to: ROUTE_PATH.PROGRAMS },
+    ],
+  },
+  {
+    to: "/teachers",
+    label: "Giáo viên",
+  },
+  {
+    to: ROUTE_PATH.INTRO,
+    label: "Về chúng tôi",
+    hasDropdown: true,
+    dropdownItems: [
+      { label: "Tin tức", to: ROUTE_PATH.NEWS },
+      { label: "Giới thiệu", to: ROUTE_PATH.INTRO },
+    ],
+  },
+];
 
 function Navbar() {
   return (
@@ -24,28 +56,32 @@ function Navbar() {
             },
           }}
         >
-          {[
-            { to: "/", label: "Trang chủ" },
-            { to: "/courses", label: "Khóa học", hasDropdown: true },
-            { to: "/courses", label: "Giáo viên" },
-            { to: "/about", label: "Về chúng tôi", hasDropdown: true },
-          ].map(({ to, label, hasDropdown }, i) => (
-            <_motion.div
-              key={i}
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.4 }}
-              className="flex items-center gap-2"
-            >
-              <Link to={to} className="flex items-center gap-2">
+          {menuItems.map(({ to, label, hasDropdown, dropdownItems }, i) => (
+            <div key={label} className="relative group">
+              {" "}
+              {/* ✅ Thêm key */}
+              <Link to={to} className="flex items-center gap-2 pr-3">
                 <p>{label}</p>
                 {hasDropdown && (
                   <i className="fa-regular fa-angle-down mt-1"></i>
                 )}
               </Link>
-            </_motion.div>
+              {hasDropdown && (
+                <div className="absolute top-full left-0 pt-2 z-50">
+                  <div className="hidden group-hover:block bg-white shadow-xl rounded-md p-2 min-w-[160px]">
+                    {dropdownItems.map((item) => (
+                      <Link
+                        key={item.label} // ✅ Key duy nhất cho từng dropdown item
+                        to={item.to}
+                        className="block p-2 hover:bg-blue-dark hover:text-white transition-colors duration-200 rounded"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </_motion.div>
 
@@ -54,12 +90,13 @@ function Navbar() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
-          <Link
-            to="/hello"
-            className="bg-yellow-dark font-medium text-black py-3 px-5 rounded-sm hover:shadow-xl transition-shadow duration-300"
+          <a
+            href={SOCIAL_LINKS.ZALO}
+            target="_blank"
+            className="hover:cursor-pointer bg-yellow-dark font-medium text-black py-3 px-5 rounded-sm hover:shadow-xl transition-shadow duration-300"
           >
             Đăng ký học thử!
-          </Link>
+          </a>
         </_motion.div>
       </div>
     </_motion.div>

@@ -3,32 +3,33 @@ import Filter from "../components/Filter";
 import CourseItem from "../components/CourseItem";
 import TeacherItem from "../components/TeacherItem";
 import { motion as _motion } from "framer-motion";
-import WhatYouGetSection from "../components/sections/WhatYouGetSection";
 import FreeConsultation from "../components/FreeConsultation";
+import { teacherData } from "../assets/data/teacherData";
+import { SOCIAL_LINKS } from "../routes/routePath";
+import { programillus } from "../assets/images";
+import { courseData } from "../assets/data/courseData";
 
 function Programs() {
   return (
     <>
-      <Banner />
+      <Banner buttonClass="bg-yellow-dark font-medium" />
+
       <Filter />
-      <_motion.div
-        className="container mt-10 grid grid-cols-4 gap-x-8 gap-y-12"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        {[...Array(8)].map((_, i) => (
+
+      <_motion.div className="container mt-10 grid grid-cols-4 gap-x-8 gap-y-12">
+        {courseData.map((course, i) => (
           <_motion.div
-            key={i}
+            key={course.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.1 }}
             viewport={{ once: true }}
           >
-            <CourseItem />
+            <CourseItem {...course} />
           </_motion.div>
         ))}
       </_motion.div>
+
       <_motion.div
         className="container mt-20"
         initial="hidden"
@@ -47,9 +48,13 @@ function Programs() {
             <span className="text-yellow-darker">Giáo viên</span> của chúng tôi
           </p>
           <div className="flex items-center gap-3 group cursor-pointer">
-            <p className="font-semibold text-yellow-darker group-hover:underline">
+            <a
+              href={SOCIAL_LINKS.ZALO}
+              target="_blank"
+              className="font-semibold text-yellow-darker group-hover:underline"
+            >
               Xem tất cả
-            </p>
+            </a>
             <div className="bg-yellow-dark px-3 py-1.5 text-white rounded-full group-hover:bg-yellow-light group-hover:text-yellow-dark transition-colors duration-300">
               <i className="fa-light fa-arrow-up-right"></i>
             </div>
@@ -58,20 +63,83 @@ function Programs() {
 
         {/* Teacher Cards */}
         <div className="grid grid-cols-4 gap-7 mt-10">
-          {[...Array(4)].map((_, i) => (
+          {teacherData.slice(0, 4).map((teacher, i) => (
             <_motion.div
-              key={i}
+              key={teacher.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <TeacherItem />
+              <TeacherItem
+                avatar={teacher.avatar}
+                name={teacher.name}
+                countryFlag={teacher.countryFlag}
+                subject={teacher.subject}
+                studentCount={teacher.studentCount}
+              />
             </_motion.div>
           ))}
         </div>
       </_motion.div>
-      <WhatYouGetSection />
+
+      <_motion.div
+        className="container mt-10 grid grid-cols-2 gap-20 items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {/* Image with slide in from left */}
+        <_motion.img
+          src={programillus}
+          alt=""
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        />
+
+        {/* Text Content with staggered children */}
+        <_motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ staggerChildren: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <_motion.p
+            className="font-semibold text-5xl leading-tight mb-2"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Con bạn sẽ nhận
+            <br />
+            được gì sau khi học tại
+            <br />
+            Trường Anh ngữ Sam?
+          </_motion.p>
+
+          {[
+            "Tự tin giao tiếp tiếng Anh mỗi ngày",
+            "Phát triển toàn diện 4 kỹ năng",
+            "Tư duy phản xạ tiếng Anh nhanh chóng",
+          ].map((text, i) => (
+            <_motion.div
+              key={i}
+              className={`flex items-center gap-5 ${i === 0 ? "mt-7" : "mt-4"}`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: (i + 1) * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <i className="fa-solid fa-circle-check text-yellow-dark fa-xl"></i>
+              <p className="text-xl font-light">{text}</p>
+            </_motion.div>
+          ))}
+        </_motion.div>
+      </_motion.div>
+
       <FreeConsultation />
     </>
   );

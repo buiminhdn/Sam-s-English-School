@@ -1,8 +1,9 @@
 import { motion as _motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { footerillus, logo } from "../../assets/images";
+import { ROUTE_PATH, SOCIAL_LINKS } from "../../routes/routePath";
 
 function Footer() {
-  // Variants for the container to stagger children
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -15,7 +16,6 @@ function Footer() {
     },
   };
 
-  // Variants for individual items
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -45,19 +45,27 @@ function Footer() {
             variants={itemVariants}
           />
           <_motion.p className="mt-7" variants={itemVariants}>
-            At Sam's English School, we are committed to making a difference. We
-            invite you to join our community and embark on a journey of positive
-            change and growth. Together, we can make a significant impact on
-            your life and career.
+            Tại Trường Anh ngữ Sam, chúng tôi cam kết tạo ra sự khác biệt. Chúng
+            tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành trình
+            thay đổi và phát triển tích cực. Cùng nhau, chúng ta có thể tạo ra
+            tác động đáng kể đến cuộc sống và sự nghiệp của bạn.
           </_motion.p>
           <_motion.div
             className="mt-7 flex gap-5 text-2xl"
             variants={itemVariants}
           >
-            <i className="fa-brands fa-facebook-f cursor-pointer hover:text-purple-dark transition-colors" />
-            <i className="fa-brands fa-instagram cursor-pointer hover:text-purple-dark transition-colors" />
-            <i className="fa-brands fa-linkedin cursor-pointer hover:text-purple-dark transition-colors" />
-            <i className="fa-brands fa-tiktok cursor-pointer hover:text-purple-dark transition-colors" />
+            <a href={SOCIAL_LINKS.FACEBOOK} className="block" target="_blank">
+              <i className="fa-brands fa-facebook-f cursor-pointer hover:text-yellow-dark transition-colors" />
+            </a>
+            <a href={SOCIAL_LINKS.INSTAGRAM} className="block" target="_blank">
+              <i className="fa-brands fa-instagram cursor-pointer hover:text-yellow-dark transition-colors" />
+            </a>
+            <a href={SOCIAL_LINKS.FACEBOOK} className="block" target="_blank">
+              <i className="fa-brands fa-linkedin cursor-pointer hover:text-yellow-dark transition-colors" />
+            </a>
+            <a href={SOCIAL_LINKS.TIKTOK} className="block" target="_blank">
+              <i className="fa-brands fa-tiktok cursor-pointer hover:text-yellow-dark transition-colors" />
+            </a>
           </_motion.div>
         </_motion.div>
 
@@ -65,20 +73,28 @@ function Footer() {
         <_motion.div className="flex justify-between" variants={itemVariants}>
           {[
             {
-              title: "Pages",
-              items: ["Home", "Our Programs", "Our Teachers", "About Us"],
-            },
-            {
-              title: "Service",
+              title: "Liên kết",
               items: [
-                "IELTS Preparation",
-                "English for CEO",
-                "Cambridge Curriculum",
-                "Communication Skill",
+                { label: "Trang chủ", to: "/" },
+                { label: "Chương trình học", to: ROUTE_PATH.PROGRAMS },
+                { label: "Giáo viên", to: ROUTE_PATH.TEACHERS },
+                { label: "Về chúng tôi", to: ROUTE_PATH.INTRO },
               ],
             },
             {
-              title: "Contact",
+              title: "Khoá học",
+              items: [
+                { label: "Chuẩn bị IELTS", to: ROUTE_PATH.PROGRAMS },
+                {
+                  label: "Tiếng anh cho CEO, giám đốc",
+                  to: ROUTE_PATH.PROGRAMS,
+                },
+                { label: "Chương trình Cambridge", to: ROUTE_PATH.PROGRAMS },
+                { label: "Kĩ năng giao tiếp", to: ROUTE_PATH.PROGRAMS },
+              ],
+            },
+            {
+              title: "Liên hệ",
               items: [
                 {
                   icon: "fa-light fa-phone-volume",
@@ -100,18 +116,30 @@ function Footer() {
                 },
               ],
             },
-          ].map(({ title, items }, i) => (
-            <_motion.div key={i} variants={itemVariants}>
+          ].map(({ title, items }) => (
+            <_motion.div key={title} variants={itemVariants}>
               <p className="text-base">{title}</p>
               <_motion.div className="mt-10 flex flex-col gap-5 text-gray-300">
                 {items.map((item, idx) =>
                   typeof item === "string" ? (
-                    <_motion.p key={idx} variants={itemVariants}>
+                    <_motion.p key={item} variants={itemVariants}>
                       {item}
                     </_motion.p>
+                  ) : item.to ? (
+                    <_motion.div
+                      key={`${item.to}-${idx}`}
+                      variants={itemVariants}
+                    >
+                      <Link
+                        to={item.to}
+                        className="hover:text-white transition-colors duration-200"
+                      >
+                        {item.label}
+                      </Link>
+                    </_motion.div>
                   ) : (
                     <_motion.div
-                      key={idx}
+                      key={item.text?.toString() || idx}
                       className="flex gap-3 items-center"
                       variants={itemVariants}
                     >

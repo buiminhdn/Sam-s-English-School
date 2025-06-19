@@ -1,4 +1,6 @@
-import BannerBlue from "../components/BannerBlue";
+import { teacherData } from "../assets/data/teacherData";
+import { bgProgramBlue } from "../assets/images";
+import Banner from "../components/Banner";
 import FreeConsultation from "../components/FreeConsultation";
 import HorizontalTeacherItem from "../components/HorizontalTeacherItem";
 import { motion as _motion } from "framer-motion";
@@ -6,32 +8,43 @@ import { motion as _motion } from "framer-motion";
 function Teachers() {
   return (
     <>
-      <BannerBlue />
+      <Banner
+        backgroundImage={bgProgramBlue}
+        buttonStyle="button"
+        buttonClass="bg-blue-dark text-white"
+      />
       {/* Heading */}
       <_motion.p
         className="text-3xl font-semibold text-blue-dark mt-14 text-center"
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
       >
         Đội ngũ giáo viên
       </_motion.p>
 
       {/* Grid of Teachers */}
       <div className="grid grid-cols-2 gap-10 container mt-10 mb-30">
-        {Array.from({ length: 8 }).map((_, i) => (
+        {teacherData.map((teacher, i) => (
           <_motion.div
-            key={i}
+            key={teacher.id}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
             viewport={{ once: true }}
           >
-            <HorizontalTeacherItem />
+            <HorizontalTeacherItem
+              avatar={teacher.avatar}
+              name={teacher.name}
+              countryFlag={teacher.countryFlag}
+              description="Giáo viên tận tâm với nhiều năm kinh nghiệm giảng dạy quốc tế. Kết hợp lý thuyết & thực hành giúp học sinh tiến bộ rõ rệt."
+              subject={teacher.subject}
+              students={teacher.studentCount}
+            />
           </_motion.div>
         ))}
       </div>
+
       <FreeConsultation theme="blue" />
     </>
   );

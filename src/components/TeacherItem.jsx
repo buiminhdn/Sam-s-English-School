@@ -1,33 +1,41 @@
 import React from "react";
-import { america, teacherone } from "../assets/images";
+import { SOCIAL_LINKS } from "../routes/routePath";
 
-function TeacherItem() {
+function TeacherItem({ avatar, name, countryFlag, subject, studentCount }) {
   return (
     <div className="rounded-xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-500">
       <img
-        src={teacherone}
-        alt=""
+        src={avatar}
+        alt={name}
         className="rounded-t-xl h-70 w-full object-cover"
       />
       <div className="p-4">
         <div className="flex justify-center items-center gap-3 mt-2">
-          <p className="text-2xl font-medium">Colin Hancock</p>
-          <img src={america} alt="" className="size-5" />
+          <p className="text-2xl font-medium">{name}</p>
+          <img
+            src={countryFlag}
+            alt={`${name}'s flag`}
+            className="size-5 object-cover rounded-full border border-gray-400"
+          />
         </div>
         <div className="flex justify-evenly gap-5 mt-4 text-gray-500">
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-book"></i>
-            <p className="text-base">IELTS</p>
+            <p className="">{subject}</p>
           </div>
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-user-group"></i>
-            <p className="text-base">530 Học viên</p>
+            <p className="">{studentCount} Học viên</p>
           </div>
         </div>
-        <button className="flex items-center gap-3 justify-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker font-medium hover:bg-yellow-darker hover:border-yellow-dark hover:text-white transition-colors duration-300">
+        <a
+          href={SOCIAL_LINKS.ZALO}
+          target="_blank"
+          className=" flex items-center gap-3 justify-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker font-medium hover:bg-yellow-darker hover:border-yellow-dark hover:text-white transition-colors duration-300"
+        >
           <p>Book giáo viên</p>
           <i className="fa-regular fa-chevrons-right"></i>
-        </button>
+        </a>
       </div>
     </div>
   );

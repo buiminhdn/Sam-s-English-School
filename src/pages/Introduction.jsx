@@ -1,5 +1,9 @@
 import {
   class1,
+  course2,
+  course3,
+  course4,
+  course6,
   founder,
   whychoose1,
   whychoose2,
@@ -7,6 +11,8 @@ import {
 } from "../assets/images";
 import FreeConsultation from "../components/FreeConsultation";
 import { motion as _motion } from "framer-motion";
+
+const courseImages = [course6, course2, course3, course4];
 
 function Introduction() {
   return (
@@ -17,25 +23,22 @@ function Introduction() {
           <_motion.p
             className="text-3xl sm:text-4xl font-semibold mx-auto"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
-            We are a community of changemakers
+            Chúng tôi muốn tạo ra sự thay đổi
             <br />
-            we educate, we inspire, we empower
+            chúng tôi giáo dục, và truyền cảm hứng
           </_motion.p>
           <_motion.p
             className="lg:w-2/3 mx-auto text-base mt-2"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
           >
-            Discover the passion and expertise behind Sam's English School,
-            where we're committed to delivering exceptional English language
-            education and cultivating a supportive learning environment for
-            students around the globe.
+            Khám phá niềm đam mê và chuyên môn đằng sau Trường tiếng Anh Sam,
+            nơi chúng tôi cam kết cung cấp nền giáo dục tiếng Anh đặc biệt và
+            xây dựng môi trường học tập hỗ trợ cho học sinh trên toàn cầu.
           </_motion.p>
         </div>
 
@@ -44,39 +47,37 @@ function Introduction() {
           <_motion.div
             className="mt-10 text-base"
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <p className="font-semibold text-xl">
-              Sam Mittal - Founder &amp; Educator at Sam's English School
+              Sam Mittal - Nhà sáng lập &amp; Giáo viên tại Trường Anh ngữ Sam
             </p>
             <br />
             <p className="text-base">
-              My name is Sam Mital, and I am passionate about education and
-              language learning. With over 10 years of experience in teaching, I
-              have had the privilege of working in 15 different countries and
-              teaching at various universities. As a former IELTS examiner, I
-              have seen firsthand the transformative power of language
-              education.
+              Tôi tên là Sam Mital, và tôi đam mê giáo dục và học ngôn ngữ. Với
+              hơn 10 năm kinh nghiệm giảng dạy, tôi đã có vinh dự được làm việc
+              tại 15 quốc gia khác nhau và giảng dạy tại nhiều trường đại học.
+              Là một cựu giám khảo IELTS, tôi đã tận mắt chứng kiến sức mạnh
+              chuyển đổi của giáo dục ngôn ngữ.
               <br />
               <br />
-              I founded Sam's English School to make a positive impact in
-              people's lives through language learning. Our mission is to unlock
-              new possibilities for personal and professional growth by
-              mastering the English language. We believe that learning a new
-              language can open doors to a world of opportunities and enrich
-              lives in meaningful ways.
+              Tôi thành lập Trường tiếng Anh Sam để tạo ra tác động tích cực đến
+              cuộc sống của mọi người thông qua việc học ngôn ngữ. Sứ mệnh của
+              chúng tôi là mở ra những khả năng mới cho sự phát triển cá nhân và
+              nghề nghiệp bằng cách thành thạo tiếng Anh. Chúng tôi tin rằng
+              việc học một ngôn ngữ mới có thể mở ra cánh cửa đến với thế giới
+              cơ hội và làm phong phú cuộc sống theo những cách có ý nghĩa.
               <br />
               <br />
-              At Sam's English School, we are committed to making a difference.
-              We invite you to join our community and embark on a journey of
-              positive change and growth. Together, we can make a significant
-              impact on your life and career.
+              Tại Trường tiếng Anh Sam, chúng tôi cam kết tạo ra sự khác biệt.
+              Chúng tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành
+              trình thay đổi và phát triển tích cực. Cùng nhau, chúng ta có thể
+              tạo ra tác động đáng kể đến cuộc sống và sự nghiệp của bạn.
               <br />
               <br />
-              Come join us and experience the positive transformation that
-              language learning can bring.
+              Hãy tham gia cùng chúng tôi và trải nghiệm sự chuyển đổi tích cực
+              mà việc học ngôn ngữ có thể mang lại.
             </p>
           </_motion.div>
 
@@ -84,9 +85,8 @@ function Introduction() {
           <_motion.div
             className="mx-auto"
             initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             <div className="object-contain w-80">
               <img
@@ -99,20 +99,20 @@ function Introduction() {
               Sam Mittal
             </p>
             <p className="text-center sm:text-left text-base">
-              Founder and CEO
+              Người sáng lập và CEO
             </p>
           </_motion.div>
         </div>
       </div>
+
       <div className="container mt-20">
         {/* Header & Description */}
         <div className="flex justify-between gap-32 flex-col lg:flex-row">
           <_motion.p
             className="text-4xl font-semibold text-nowrap leading-tight"
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           >
             Sứ mệnh của
             <br />
@@ -122,27 +122,26 @@ function Introduction() {
           <_motion.p
             className="text-base text-gray-600"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
           >
-            Lorem Ipsum chỉ đơn giản là văn bản giả của ngành in ấn và sắp chữ.
-            Lorem Ipsum đã là văn bản giả chuẩn của ngành kể từ những năm 1500,
-            khi một thợ in vô danh lấy một galley chữ và xáo trộn nó để tạo ra
-            một cuốn sách mẫu chữ. Nó đã tồn tại không chỉ năm thế kỷ, mà còn
-            vượt qua cả bước nhảy vọt vào sắp chữ điện tử, Nó đã tồn tại không
-            chỉ năm thế kỷ, mà còn vượt qua cả bước nhảy vọt vào sắp chữ điện
-            tử.
+            Tại Sam's English School, chúng tôi tin rằng mỗi học viên đều có thể
+            trở thành phiên bản tốt nhất của chính mình thông qua môi trường học
+            tiếng Anh chất lượng và truyền cảm hứng. Chúng tôi không chỉ dạy
+            ngôn ngữ, mà còn phát triển sự tự tin, tư duy phản biện và kỹ năng
+            giao tiếp cho học viên ở mọi lứa tuổi. Với đội ngũ giáo viên bản ngữ
+            tận tâm và phương pháp giảng dạy cá nhân hóa, Sam's cam kết đồng
+            hành cùng học viên trên hành trình chinh phục tiếng Anh vững chắc và
+            đầy cảm hứng.
           </_motion.p>
         </div>
 
         {/* Image Grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
-          {[class1, class1, class1, class1].map((src, index) => (
+          {courseImages.map((src, index) => (
             <_motion.img
               key={index}
               src={src}
-              alt={`class-${index}`}
               className="h-96 w-full object-cover rounded-xl"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -152,6 +151,7 @@ function Introduction() {
           ))}
         </div>
       </div>
+
       <div className="container mt-30 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Text Section */}
         <div>
@@ -172,21 +172,19 @@ function Introduction() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Lorem Ipsum chỉ đơn giản là văn bản giả của ngành in ấn và sắp chữ.
-            Lorem Ipsum đã là văn bản giả chuẩn của ngành kể từ những năm 1500
-            khi một thợ in vô danh lấy một galley chữ và xáo trộn nó để tạo ra
+            Tại Sam’s English School, chúng tôi hướng đến việc xây dựng một thế
+            hệ học viên tự tin, bản lĩnh và sẵn sàng hội nhập toàn cầu thông qua
+            khả năng sử dụng tiếng Anh thành thạo.
             <br />
             <br />
-            một cuốn sách mẫu chữ. Nó đã tồn tại không chỉ năm thế kỷ, mà còn
-            vượt qua cả bước nhảy vọt vào sắp chữ điện tử,Nó đã tồn tại không
-            chỉ năm thế kỷ, mà còn vượt qua cả bước nhảy vọt vào sắp chữ điện
-            tử,
+            Chúng tôi không ngừng đổi mới phương pháp giảng dạy, tạo ra một môi
+            trường học tập tích cực, hiện đại và truyền cảm hứng, giúp học viên
+            phát triển toàn diện về ngôn ngữ, tư duy và kỹ năng mềm.
             <br />
             <br />
-            một cuốn sách mẫu chữ. Nó đã tồn tại không chỉ năm thế kỷ, mà còn
-            vượt qua cả bước nhảy vọt vào sắp chữ điện tử,Nó đã tồn tại không
-            chỉ năm thế kỷ, mà còn vượt qua cả bước nhảy vọt vào sắp chữ điện
-            tử,
+            Tầm nhìn của chúng tôi là trở thành trung tâm tiếng Anh hàng đầu,
+            nơi mọi học viên đều được trao cơ hội để vươn xa và tỏa sáng trên
+            hành trình học tập và cuộc sống.
           </_motion.p>
         </div>
 
@@ -217,30 +215,42 @@ function Introduction() {
 
         {/* Cards */}
         <div className="container grid grid-cols-1 md:grid-cols-3 gap-10 mt-14">
-          {[{ img: whychoose1 }, { img: whychoose2 }, { img: whychoose3 }].map(
-            (item, i) => (
-              <_motion.div
-                key={i}
-                className="rounded-2xl shadow-xl flex flex-col justify-end bg-white"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <img src={item.img} alt="" />
-                <div className="p-10">
-                  <p className="text-2xl font-semibold text-center">
-                    Experienced teacher
-                  </p>
-                  <p className="text-gray-500 text-center text-base mt-5">
-                    Native teachers from around the world, providing quality
-                    learning experiences and helping students develop their full
-                    potential
-                  </p>
-                </div>
-              </_motion.div>
-            )
-          )}
+          {[
+            {
+              img: whychoose1,
+              title: "Giáo viên giàu kinh nghiệm",
+              desc: "Đội ngũ giáo viên đến từ các quốc gia nói tiếng Anh, giàu chuyên môn và tận tâm, giúp học viên phát triển toàn diện khả năng ngôn ngữ.",
+            },
+            {
+              img: whychoose2,
+              title: "Phương pháp học hiện đại",
+              desc: "Áp dụng các phương pháp giảng dạy tiên tiến, chú trọng thực hành và tương tác, giúp học viên tiếp thu nhanh, nhớ lâu, tự nhiên.",
+            },
+            {
+              img: whychoose3,
+              title: "Chi phí hợp lý, chất lượng",
+              desc: "Chúng tôi mang đến chương trình học chất lượng cao với mức học phí phù hợp, đảm bảo hiệu quả và giá trị cho từng khóa học.",
+            },
+          ].map((item, i) => (
+            <_motion.div
+              key={i}
+              className="rounded-2xl shadow-xl flex flex-col justify-end bg-white"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <img src={item.img} alt="" />
+              <div className="p-10">
+                <p className="text-2xl font-semibold text-center">
+                  {item.title}
+                </p>
+                <p className="text-gray-500 text-center text-base mt-5">
+                  {item.desc}
+                </p>
+              </div>
+            </_motion.div>
+          ))}
         </div>
       </div>
       <FreeConsultation theme="purple" />
