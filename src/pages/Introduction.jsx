@@ -21,17 +21,18 @@ function Introduction() {
         {/* Heading */}
         <div className="text-center flex flex-col gap-3">
           <_motion.p
-            className="text-3xl sm:text-4xl font-semibold mx-auto"
+            className="text-2xl sm:text-3xl font-semibold mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             Chúng tôi muốn tạo ra sự thay đổi
-            <br />
+            <br className="hidden sm:inline" />
             chúng tôi giáo dục, và truyền cảm hứng
           </_motion.p>
+
           <_motion.p
-            className="lg:w-2/3 mx-auto text-base mt-2"
+            className="text-base mt-2 text-gray-700 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -43,18 +44,19 @@ function Introduction() {
         </div>
 
         {/* Founder Section */}
-        <div className="mt-10 w-10/12 flex flex-col sm:flex-row mx-auto gap-10 lg:gap-20">
+        <div className="mt-10 w-full max-w-7xl mx-auto flex flex-col-reverse sm:flex-row gap-10 sm:gap-16">
+          {/* Left: Content */}
           <_motion.div
-            className="mt-10 text-base"
+            className="text-base sm:w-3/5"
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <p className="font-semibold text-xl">
+            <p className="font-semibold text-lg sm:text-xl mb-3">
               Sam Mittal - Nhà sáng lập &amp; Giáo viên tại Trường Anh ngữ Sam
             </p>
-            <br />
-            <p className="text-base">
+            <p className="text-sm sm:text-base text-justify leading-relaxed text-gray-700">
               Tôi tên là Sam Mital, và tôi đam mê giáo dục và học ngôn ngữ. Với
               hơn 10 năm kinh nghiệm giảng dạy, tôi đã có vinh dự được làm việc
               tại 15 quốc gia khác nhau và giảng dạy tại nhiều trường đại học.
@@ -81,24 +83,25 @@ function Introduction() {
             </p>
           </_motion.div>
 
-          {/* Image + Name */}
+          {/* Right: Image + Info */}
           <_motion.div
-            className="mx-auto"
+            className="w-full sm:w-2/5 flex flex-col items-center sm:items-start"
             initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <div className="object-contain w-80">
+            <div className="w-60 sm:w-72 mx-auto">
               <img
                 src={founder}
                 alt="Sam Mittal"
-                className="h-96 mx-auto object-cover"
+                className="h-80 sm:h-96 w-full object-cover"
               />
             </div>
-            <p className="text-center sm:text-left text-lg font-medium mt-2">
+            <p className="text-center sm:text-left text-lg font-medium mt-3">
               Sam Mittal
             </p>
-            <p className="text-center sm:text-left text-base">
+            <p className="text-center sm:text-left text-sm sm:text-base text-gray-600">
               Người sáng lập và CEO
             </p>
           </_motion.div>
@@ -107,15 +110,15 @@ function Introduction() {
 
       <div className="container mt-20">
         {/* Header & Description */}
-        <div className="flex justify-between gap-32 flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-32">
           <_motion.p
-            className="text-4xl font-semibold text-nowrap leading-tight"
+            className="text-3xl sm:text-4xl font-semibold leading-tight"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
             Sứ mệnh của
-            <br />
+            <br className="hidden lg:block" />
             Sam's English School
           </_motion.p>
 
@@ -142,7 +145,7 @@ function Introduction() {
             <_motion.img
               key={index}
               src={src}
-              className="h-96 w-full object-cover rounded-xl"
+              className="h-72 sm:h-80 lg:h-96 w-full object-cover rounded-xl"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
@@ -199,12 +202,14 @@ function Introduction() {
           viewport={{ once: true }}
         />
       </div>
-      <div className="mt-30 relative mb-40">
-        <div className="bg-purple-light h-70 w-full absolute -bottom-14 -z-10"></div>
+
+      <div className="mt-20 relative mb-32">
+        {/* Purple background strip */}
+        <div className="bg-purple-light h-60 w-full absolute -bottom-14 -z-10"></div>
 
         {/* Heading */}
         <_motion.p
-          className="text-4xl font-semibold leading-tight text-center"
+          className="text-3xl sm:text-4xl font-semibold leading-tight text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -213,8 +218,8 @@ function Introduction() {
           Tại Sao Nên Chọn Sam's English School
         </_motion.p>
 
-        {/* Cards */}
-        <div className="container grid grid-cols-1 md:grid-cols-3 gap-10 mt-14">
+        {/* Responsive Grid Cards */}
+        <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-8 mt-12">
           {[
             {
               img: whychoose1,
@@ -234,18 +239,18 @@ function Introduction() {
           ].map((item, i) => (
             <_motion.div
               key={i}
-              className="rounded-2xl shadow-xl flex flex-col justify-end bg-white"
+              className="rounded-2xl shadow-xl flex flex-col bg-white overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <img src={item.img} alt="" />
-              <div className="p-10">
-                <p className="text-2xl font-semibold text-center">
+              <img src={item.img} alt="" className="w-full h-60 object-cover" />
+              <div className="p-6 sm:p-5 md:p-10 flex flex-col gap-4 text-center">
+                <p className="text-xl sm:text-2xl font-semibold">
                   {item.title}
                 </p>
-                <p className="text-gray-500 text-center text-base mt-5">
+                <p className="text-gray-500 text-sm sm:text-base">
                   {item.desc}
                 </p>
               </div>
@@ -253,6 +258,7 @@ function Introduction() {
           ))}
         </div>
       </div>
+
       <FreeConsultation theme="purple" />
     </>
   );

@@ -29,48 +29,53 @@ function Footer() {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="mt-20 py-14 bg-blue-dark text-white"
+      className="mt-20 py-14 bg-blue-dark text-white px-4 sm:px-6"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <_motion.div className="container grid grid-cols-2 gap-20">
+      <_motion.div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
         {/* Left Column */}
         <_motion.div variants={itemVariants}>
           <_motion.img
             src={logo}
-            alt=""
-            className="h-20"
+            alt="Logo"
+            className="h-16 sm:h-20"
             variants={itemVariants}
           />
-          <_motion.p className="mt-7" variants={itemVariants}>
-            Tại Trường Anh ngữ Sam, chúng tôi cam kết tạo ra sự khác biệt. Chúng
-            tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành trình
-            thay đổi và phát triển tích cực. Cùng nhau, chúng ta có thể tạo ra
-            tác động đáng kể đến cuộc sống và sự nghiệp của bạn.
-          </_motion.p>
-          <_motion.div
-            className="mt-7 flex gap-5 text-2xl"
+          <_motion.p
+            className="mt-5 sm:mt-7 text-sm sm:text-base"
             variants={itemVariants}
           >
-            <a href={SOCIAL_LINKS.FACEBOOK} className="block" target="_blank">
-              <i className="fa-brands fa-facebook-f cursor-pointer hover:text-yellow-dark transition-colors" />
+            Tại Trường Anh ngữ Sam, chúng tôi cam kết tạo ra sự khác biệt. Chúng
+            tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành trình
+            thay đổi và phát triển tích cực.
+          </_motion.p>
+          <_motion.div
+            className="mt-6 flex gap-5 text-xl sm:text-2xl"
+            variants={itemVariants}
+          >
+            <a href={SOCIAL_LINKS.FACEBOOK} target="_blank">
+              <i className="fa-brands fa-facebook-f hover:text-yellow-dark transition-colors" />
             </a>
-            <a href={SOCIAL_LINKS.INSTAGRAM} className="block" target="_blank">
-              <i className="fa-brands fa-instagram cursor-pointer hover:text-yellow-dark transition-colors" />
+            <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank">
+              <i className="fa-brands fa-instagram hover:text-yellow-dark transition-colors" />
             </a>
-            <a href={SOCIAL_LINKS.FACEBOOK} className="block" target="_blank">
-              <i className="fa-brands fa-linkedin cursor-pointer hover:text-yellow-dark transition-colors" />
+            <a href={SOCIAL_LINKS.FACEBOOK} target="_blank">
+              <i className="fa-brands fa-linkedin hover:text-yellow-dark transition-colors" />
             </a>
-            <a href={SOCIAL_LINKS.TIKTOK} className="block" target="_blank">
-              <i className="fa-brands fa-tiktok cursor-pointer hover:text-yellow-dark transition-colors" />
+            <a href={SOCIAL_LINKS.TIKTOK} target="_blank">
+              <i className="fa-brands fa-tiktok hover:text-yellow-dark transition-colors" />
             </a>
           </_motion.div>
         </_motion.div>
 
         {/* Right Column */}
-        <_motion.div className="flex justify-between" variants={itemVariants}>
+        <_motion.div
+          className="flex flex-wrap sm:justify-between gap-10"
+          variants={itemVariants}
+        >
           {[
             {
               title: "Liên kết",
@@ -118,34 +123,25 @@ function Footer() {
             },
           ].map(({ title, items }) => (
             <_motion.div key={title} variants={itemVariants}>
-              <p className="text-base">{title}</p>
-              <_motion.div className="mt-10 flex flex-col gap-5 text-gray-300">
+              <p className="text-base font-semibold">{title}</p>
+              <_motion.div className="mt-6 flex flex-col gap-4 text-sm text-gray-300">
                 {items.map((item, idx) =>
-                  typeof item === "string" ? (
-                    <_motion.p key={item} variants={itemVariants}>
-                      {item}
-                    </_motion.p>
-                  ) : item.to ? (
-                    <_motion.div
+                  item.to ? (
+                    <Link
                       key={`${item.to}-${idx}`}
-                      variants={itemVariants}
+                      to={item.to}
+                      className="hover:text-white transition-colors duration-200"
                     >
-                      <Link
-                        to={item.to}
-                        className="hover:text-white transition-colors duration-200"
-                      >
-                        {item.label}
-                      </Link>
-                    </_motion.div>
+                      {item.label}
+                    </Link>
                   ) : (
-                    <_motion.div
+                    <div
                       key={item.text?.toString() || idx}
-                      className="flex gap-3 items-center"
-                      variants={itemVariants}
+                      className="flex items-start gap-3"
                     >
-                      <i className={item.icon} />
+                      <i className={`${item.icon} mt-1`} />
                       <p>{item.text}</p>
-                    </_motion.div>
+                    </div>
                   )
                 )}
               </_motion.div>

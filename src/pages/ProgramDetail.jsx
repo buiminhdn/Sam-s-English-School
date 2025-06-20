@@ -8,43 +8,43 @@ function ProgramDetail() {
       <_motion.div
         className="container"
         initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-gray-100 p-10 rounded-xl flex gap-8">
+        <div className="bg-gray-100 p-6 md:p-10 rounded-xl flex flex-col lg:flex-row gap-6 md:gap-8">
           <_motion.img
             src={class1}
             alt=""
-            className="h-96 w-auto object-cover rounded-lg"
+            className="w-full md:w-auto md:h-96 object-cover rounded-lg"
             initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
           />
 
           <_motion.div
             className="space-y-4"
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-4xl font-semibold">English For CEOs, Manager</p>
-            <p className="text-base">
-              <span className="text-gray-700">Number of lessons: </span>
-              <span className="font-medium"> 49 Lesson</span>
-            </p>
-            <p className="text-base">
-              <span className="text-gray-700">Completion time: </span>
-              <span className="font-medium"> 1 Month</span>
-            </p>
-            <p className="text-base">
-              <span className="text-gray-700">Students have learned: </span>
-              <span className="font-medium"> 12,000+</span>
+            <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
+              English For CEOs, Manager
             </p>
 
-            <div className="flex items-center gap-2 text-base">
+            <p className="text-sm sm:text-base">
+              <span className="text-gray-700">Number of lessons: </span>
+              <span className="font-medium">49 Lesson</span>
+            </p>
+            <p className="text-sm sm:text-base">
+              <span className="text-gray-700">Completion time: </span>
+              <span className="font-medium">1 Month</span>
+            </p>
+            <p className="text-sm sm:text-base">
+              <span className="text-gray-700">Students have learned: </span>
+              <span className="font-medium">12,000+</span>
+            </p>
+
+            <div className="flex items-center gap-2 text-sm sm:text-base">
               <p className="text-gray-700">Review: </p>
               <div className="flex text-yellow-dark gap-0.5">
                 <i className="fa-solid fa-star"></i>
@@ -55,11 +55,11 @@ function ProgramDetail() {
               </div>
             </div>
 
-            <div className="mt-7 flex gap-4">
-              <button className="bg-blue-dark py-2.5 px-7 rounded-lg text-white">
+            <div className="mt-5 sm:mt-7 flex flex-col sm:flex-row gap-4">
+              <button className="bg-blue-dark py-2.5 px-5 sm:px-7 rounded-lg text-white w-full sm:w-auto">
                 Đăng ký học
               </button>
-              <button className="bg-blue-light py-2.5 px-5 rounded-lg text-blue-dark font-medium">
+              <button className="bg-blue-light py-2.5 px-5 rounded-lg text-blue-dark font-medium w-full sm:w-auto">
                 Học thử miễn phí
               </button>
             </div>
@@ -70,8 +70,7 @@ function ProgramDetail() {
       <_motion.div
         className="container mt-10"
         initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <p className="font-semibold text-lg mb-2">Course Details</p>
@@ -119,23 +118,23 @@ function ProgramDetail() {
       </_motion.div>
 
       <_motion.div
-        className="container mt-14"
+        className="container mt-14 px-4 sm:px-6 lg:px-0"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         {/* Section Header */}
-        <div className="flex justify-between items-center">
-          <p className="font-semibold text-2xl">Similar Courses</p>
-          <div className="flex gap-2 items-center text-gray-800 hover:underline">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+          <p className="font-semibold text-xl sm:text-2xl">Similar Courses</p>
+          <div className="flex gap-2 items-center text-gray-800 hover:underline text-base">
             <p>Xem tất cả</p>
             <i className="fa-regular fa-angle-right"></i>
           </div>
         </div>
 
         {/* Grid of Courses */}
-        <div className="grid grid-cols-3 gap-6 mt-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
           {[1, 2, 3].map((item, index) => (
             <_motion.div
               key={index}
@@ -148,13 +147,13 @@ function ProgramDetail() {
               <img
                 src={class1}
                 alt=""
-                className="rounded-lg h-full w-32 object-cover"
+                className="rounded-lg w-28 h-28 object-cover shrink-0"
               />
               <div>
-                <p className="font-medium text-base">
+                <p className="font-medium text-base sm:text-lg line-clamp-2">
                   English for CEOs, Manager
                 </p>
-                <p className="mt-1 text-gray-800 font-light">
+                <p className="mt-1 text-gray-800 font-light text-sm sm:text-base line-clamp-4">
                   Product Management Masterclass, you will learn with Sarah
                   Johnson - Head of Product Customer Platform Gojek Indonesia.
                 </p>
@@ -165,20 +164,22 @@ function ProgramDetail() {
       </_motion.div>
 
       <_motion.div
-        className="container mt-14"
+        className="container mt-14 px-4 sm:px-6 lg:px-0"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-semibold text-2xl text-center">What student's say</p>
-        <p className="w-1/2 mx-auto mt-2 text-center text-gray-600">
+        <p className="font-semibold text-xl sm:text-2xl text-center">
+          What students say
+        </p>
+        <p className="w-full sm:w-4/5 lg:w-1/2 mx-auto mt-2 text-center text-gray-600 text-sm sm:text-base">
           Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand,
           South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có
           khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt.
         </p>
 
-        <div className="grid grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {[1, 2, 3].map((_, index) => (
             <_motion.div
               key={index}
@@ -188,12 +189,12 @@ function ProgramDetail() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <p className="text-gray-700 mb-2">
+              <p className="text-gray-700 text-sm sm:text-base">
                 “Teachings of the great explore of truth, the master-builder of
-                human happiness. no one rejects, dislikes, or avoids pleasure
-                itself, pleasure itself”
+                human happiness. No one rejects, dislikes, or avoids pleasure
+                itself.”
               </p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <img
                   src={class1}
                   alt=""
@@ -201,13 +202,14 @@ function ProgramDetail() {
                 />
                 <div>
                   <p className="font-medium text-base">Finlay Kirk</p>
-                  <p className="text-gray-500">Student</p>
+                  <p className="text-gray-500 text-sm">Student</p>
                 </div>
               </div>
             </_motion.div>
           ))}
         </div>
       </_motion.div>
+
       <_motion.div
         className="container mt-14 mb-20"
         initial={{ opacity: 0, y: 40 }}
@@ -218,32 +220,33 @@ function ProgramDetail() {
         <p className="font-semibold text-2xl text-center">
           Lớp Học English for CEOs, Managers
         </p>
-        <p className="w-1/2 mx-auto mt-2 text-center text-gray-600">
+        <p className="w-full sm:w-2/3 lg:w-1/2 mx-auto mt-2 text-center text-gray-600 text-sm sm:text-base">
           Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand,
           South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có
           khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt.
         </p>
 
-        <div className="grid grid-cols-4 grid-rows-3 gap-4 p-4 mt-5">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-4 p-4 mt-5">
           {[
-            { col: "col-span-2", row: "row-span-1" },
-            { col: "col-span-1", row: "row-span-1" },
-            { col: "col-span-1", row: "row-span-1" },
-            { isGrid: true }, // Placeholder for 2 stacked images
-            { col: "col-span-3", row: "row-span-2" },
+            { col: "lg:col-span-2", row: "lg:row-span-1" },
+            { col: "lg:col-span-1", row: "lg:row-span-1" },
+            { col: "lg:col-span-1", row: "lg:row-span-1" },
+            { isGrid: true },
+            { col: "lg:col-span-3", row: "lg:row-span-2" },
           ].map((layout, index) => {
             if (layout.isGrid) {
               return (
                 <div
                   key={index}
-                  className="row-span-2 col-span-1 grid grid-rows-2 gap-6"
+                  className="lg:row-span-2 lg:col-span-1 grid grid-rows-2 gap-4"
                 >
                   {[0, 1].map((i) => (
                     <_motion.img
                       key={i}
                       src={class1}
                       alt=""
-                      className="object-cover h-full rounded-xl"
+                      className="object-cover w-full h-48 sm:h-60 lg:h-full rounded-xl"
                       initial={{ opacity: 0, scale: 0.95 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
@@ -262,7 +265,9 @@ function ProgramDetail() {
                 key={index}
                 src={class1}
                 alt=""
-                className={`${layout.col} ${layout.row} object-cover h-full rounded-xl`}
+                className={`${layout.col ?? ""} ${
+                  layout.row ?? ""
+                } object-cover w-full h-48 sm:h-60 lg:h-full rounded-xl`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

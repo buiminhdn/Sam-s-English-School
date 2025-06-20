@@ -47,7 +47,7 @@ function Contact() {
   };
 
   return (
-    <div className="container mt-30">
+    <div className="container mt-30 px-4 sm:px-6">
       <Toaster position="top-center" />
       <_motion.div
         style={{
@@ -56,26 +56,24 @@ function Contact() {
           backgroundPosition: "top -40px left 30px",
           backgroundSize: "90rem",
         }}
-        className="bg-blue-dark rounded-2xl p-20 relative"
+        className="bg-blue-dark rounded-2xl px-4 py-16 sm:p-10 lg:p-20 relative"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
+        {/* Animated Illustration */}
         <_motion.img
           src={ContactIllus}
           alt=""
-          className="absolute w-[35rem] bottom-0 left-0"
+          className="hidden lg:block lg:absolute w-[30rem] xl:w-[35rem] bottom-0 left-0"
           animate={{ x: [0, 15, 0] }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         />
 
+        {/* Form Section */}
         <_motion.div
-          className="w-3/5 ml-auto"
+          className="w-full lg:w-3/5 lg:ml-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -87,17 +85,18 @@ function Contact() {
           }}
         >
           <_motion.p
-            className="text-white text-4xl leading-tight"
+            className="text-white text-2xl sm:text-3xl md:text-4xl leading-snug sm:leading-tight"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
           >
             Tham gia cộng đồng
-            <br />
+            <br className="hidden sm:block" />
             của Sam's English School
           </_motion.p>
 
+          {/* Form */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-10">
             <_motion.input
               type="text"
@@ -105,7 +104,7 @@ function Contact() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="bg-white text-black rounded-full px-5 py-3 outline-none"
+              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -117,7 +116,7 @@ function Contact() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-white text-black rounded-full px-5 py-3 outline-none"
+              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -129,7 +128,7 @@ function Contact() {
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="bg-white text-black rounded-full px-5 py-3 outline-none"
+              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -138,7 +137,7 @@ function Contact() {
 
             <_motion.button
               type="submit"
-              className="border-2 hover:cursor-pointer border-yellow-dark bg-yellow-dark text-black hover:bg-transparent hover:text-white transition-colors duration-300 rounded-full p-3"
+              className="border-2 border-yellow-dark bg-yellow-dark text-black hover:bg-transparent hover:text-white transition-colors duration-300 rounded-full p-3"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },

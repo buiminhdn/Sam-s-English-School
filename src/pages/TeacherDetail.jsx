@@ -8,10 +8,9 @@ function TeacherDetail() {
   return (
     <div className="mt-10">
       <_motion.div
-        className="grid grid-cols-3 gap-10 container"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-10 container"
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        animate="visible"
         variants={{
           hidden: {},
           visible: {
@@ -23,7 +22,7 @@ function TeacherDetail() {
       >
         {/* Left Column - Teacher Profile Card */}
         <_motion.div
-          className="col-span-1 bg-gray-100 p-7 rounded-xl"
+          className="lg:col-span-1 col-span-3 bg-gray-100 p-7 rounded-xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -33,9 +32,8 @@ function TeacherDetail() {
             alt=""
             className="rounded-full size-44 object-cover mx-auto mt-2"
             initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
           />
           <p className="text-center font-semibold text-2xl mt-4">
             Kritsin Watson
@@ -52,9 +50,8 @@ function TeacherDetail() {
                 key={i}
                 className="flex justify-between"
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                viewport={{ once: true }}
               >
                 <p>{label}</p>
                 <p
@@ -81,9 +78,8 @@ function TeacherDetail() {
             <_motion.div
               className="flex justify-between items-center"
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
             >
               <p>Social</p>
               <div className="flex gap-3">
@@ -100,9 +96,8 @@ function TeacherDetail() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
           >
             Book A Lesson
           </_motion.button>
@@ -110,45 +105,32 @@ function TeacherDetail() {
 
         {/* Right Column - About Section */}
         <_motion.div
-          className="col-span-2 bg-gray-100 p-7 rounded-xl h-fit"
+          className="lg:col-span-2 col-span-3 bg-gray-100 p-7 rounded-xl h-fit"
           initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
         >
           <p className="text-lg font-semibold">About Kritsin</p>
           <p className="mt-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis consectetur adipiscing elit. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-            suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
           </p>
           <p className="text-lg font-semibold mt-5">Certification</p>
           <p className="mt-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis consectetur adipiscing elit.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
           </p>
           <p className="text-lg font-semibold mt-5">Courses (2)</p>
           <div className="flex flex-col gap-3 mt-3">
             <_motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
             >
               <CourseCard />
             </_motion.div>
             <_motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
             >
               <CourseCard />
             </_motion.div>
@@ -166,32 +148,33 @@ function TeacherDetail() {
         <p className="font-semibold text-2xl text-center">
           Lớp Học English for CEOs, Managers
         </p>
-        <p className="w-1/2 mx-auto mt-2 text-center text-gray-600">
+        <p className="w-full sm:w-2/3 lg:w-1/2 mx-auto mt-2 text-center text-gray-600 text-sm sm:text-base">
           Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand,
           South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có
           khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt.
         </p>
 
-        <div className="grid grid-cols-4 grid-rows-3 gap-4 p-4 mt-5">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-4 p-4 mt-5">
           {[
-            { col: "col-span-2", row: "row-span-1" },
-            { col: "col-span-1", row: "row-span-1" },
-            { col: "col-span-1", row: "row-span-1" },
-            { isGrid: true }, // Placeholder for 2 stacked images
-            { col: "col-span-3", row: "row-span-2" },
+            { col: "lg:col-span-2", row: "lg:row-span-1" },
+            { col: "lg:col-span-1", row: "lg:row-span-1" },
+            { col: "lg:col-span-1", row: "lg:row-span-1" },
+            { isGrid: true },
+            { col: "lg:col-span-3", row: "lg:row-span-2" },
           ].map((layout, index) => {
             if (layout.isGrid) {
               return (
                 <div
                   key={index}
-                  className="row-span-2 col-span-1 grid grid-rows-2 gap-6"
+                  className="lg:row-span-2 lg:col-span-1 grid grid-rows-2 gap-4"
                 >
                   {[0, 1].map((i) => (
                     <_motion.img
                       key={i}
                       src={class1}
                       alt=""
-                      className="object-cover h-full rounded-xl"
+                      className="object-cover w-full h-48 sm:h-60 lg:h-full rounded-xl"
                       initial={{ opacity: 0, scale: 0.95 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
@@ -210,7 +193,9 @@ function TeacherDetail() {
                 key={index}
                 src={class1}
                 alt=""
-                className={`${layout.col} ${layout.row} object-cover h-full rounded-xl`}
+                className={`${layout.col ?? ""} ${
+                  layout.row ?? ""
+                } object-cover w-full h-48 sm:h-60 lg:h-full rounded-xl`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

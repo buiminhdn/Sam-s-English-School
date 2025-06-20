@@ -16,7 +16,7 @@ function Programs() {
 
       <Filter />
 
-      <_motion.div className="container mt-10 grid grid-cols-4 gap-x-8 gap-y-12">
+      <_motion.div className="container mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10 px-4">
         {courseData.map((course, i) => (
           <_motion.div
             key={course.id}
@@ -38,13 +38,13 @@ function Programs() {
       >
         {/* Header */}
         <_motion.div
-          className="flex justify-between items-end"
+          className="flex flex-col gap-6 md:flex-row justify-between items-start md:items-end"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <p className="text-5xl font-medium text-gray-800">
+          <p className="text-3xl md:text-5xl font-medium text-gray-800">
             <span className="text-yellow-darker">Giáo viên</span> của chúng tôi
           </p>
           <div className="flex items-center gap-3 group cursor-pointer">
@@ -62,7 +62,7 @@ function Programs() {
         </_motion.div>
 
         {/* Teacher Cards */}
-        <div className="grid grid-cols-4 gap-7 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10">
           {teacherData.slice(0, 4).map((teacher, i) => (
             <_motion.div
               key={teacher.id}
@@ -84,7 +84,7 @@ function Programs() {
       </_motion.div>
 
       <_motion.div
-        className="container mt-10 grid grid-cols-2 gap-20 items-center"
+        className="container my-20 lg:my-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center px-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -93,13 +93,14 @@ function Programs() {
         <_motion.img
           src={programillus}
           alt=""
+          className="w-full max-w-md mx-auto"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         />
 
-        {/* Text Content with staggered children */}
+        {/* Text Content */}
         <_motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,7 +108,7 @@ function Programs() {
           viewport={{ once: true }}
         >
           <_motion.p
-            className="font-semibold text-5xl leading-tight mb-2"
+            className="font-semibold text-3xl md:text-5xl leading-tight mb-4"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -127,14 +128,14 @@ function Programs() {
           ].map((text, i) => (
             <_motion.div
               key={i}
-              className={`flex items-center gap-5 ${i === 0 ? "mt-7" : "mt-4"}`}
+              className={`flex items-start gap-4 ${i === 0 ? "mt-6" : "mt-4"}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: (i + 1) * 0.2 }}
               viewport={{ once: true }}
             >
-              <i className="fa-solid fa-circle-check text-yellow-dark fa-xl"></i>
-              <p className="text-xl font-light">{text}</p>
+              <i className="fa-solid fa-circle-check text-yellow-dark fa-lg mt-1"></i>
+              <p className="text-lg md:text-xl font-light">{text}</p>
             </_motion.div>
           ))}
         </_motion.div>

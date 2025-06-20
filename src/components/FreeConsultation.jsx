@@ -72,50 +72,50 @@ function FreeConsultation({ theme = "yellow" }) {
 
   return (
     <div className="container">
-      <div className="rounded-2xl bg-gray-50 grid grid-cols-1 md:grid-cols-2 gap-10 items-end">
+      <div className="rounded-2xl bg-gray-50 grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
         {/* Left Content */}
         <_motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          className="px-6 pt-10 lg:pt-18 lg:pl-20"
         >
-          <div className="pb-14 pt-18 ml-10 md:ml-20">
-            <p className="text-5xl font-semibold">Tư Vấn Miễn Phí</p>
+          <p className="text-3xl lg:text-5xl font-semibold">Tư Vấn Miễn Phí</p>
 
-            <div className="mt-8">
-              {[
-                { label: "Zalo", value: "+84 707-060-068" },
-                { label: "WhatsApp", value: "+84 822-335-446" },
-                { label: "Email", value: "sam@samenglishschool.com" },
-              ].map((item, index) => (
-                <_motion.div
-                  key={index}
-                  className="flex items-center gap-4 mt-3 text-blue-dark"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  <i
-                    className={`fa-xl ${
-                      item.label === "Email"
-                        ? "fa-solid fa-envelope"
-                        : "fa-solid fa-phone-arrow-up-right"
-                    }`}
-                  ></i>
-                  <p className="text-2xl">
-                    {item.label}: {item.value}
-                  </p>
-                </_motion.div>
-              ))}
-            </div>
+          <div className="mt-8">
+            {[
+              { label: "Zalo", value: "+84 707-060-068" },
+              { label: "WhatsApp", value: "+84 822-335-446" },
+              { label: "Email", value: "sam@samenglishschool.com" },
+            ].map((item, index) => (
+              <_motion.div
+                key={index}
+                className="flex items-center gap-4 mt-3 text-blue-dark"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <i
+                  className={`fa-xl ${
+                    item.label === "Email"
+                      ? "fa-solid fa-envelope"
+                      : "fa-solid fa-phone-arrow-up-right"
+                  }`}
+                ></i>
+                <p className="text-lg md:text-2xl">
+                  {item.label}: {item.value}
+                </p>
+              </_motion.div>
+            ))}
           </div>
 
+          {/* Ẩn hình ở màn hình nhỏ */}
           <_motion.img
             src={getImageByTheme()}
             alt=""
-            className="w-10/12"
+            className="hidden lg:block w-10/12 mt-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -126,7 +126,7 @@ function FreeConsultation({ theme = "yellow" }) {
         {/* Right Form */}
         <_motion.form
           onSubmit={handleSubmit}
-          className={`${formBg} px-10 py-14 m-10 rounded-2xl text-lg flex flex-col gap-7 h-fit`}
+          className={`${formBg} px-6 py-10 lg:px-10 lg:py-14 m-5 lg:m-10 rounded-2xl text-base lg:text-lg flex flex-col gap-7 h-fit`}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -138,7 +138,7 @@ function FreeConsultation({ theme = "yellow" }) {
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="outline-none py-3 border-b text-black placeholder:text-gray-600"
+            className="outline-none py-3 border-b text-black placeholder:text-gray-600 w-full"
           />
           <input
             type="tel"
@@ -146,7 +146,7 @@ function FreeConsultation({ theme = "yellow" }) {
             required
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="outline-none py-3 border-b text-black placeholder:text-gray-600"
+            className="outline-none py-3 border-b text-black placeholder:text-gray-600 w-full"
           />
           <input
             type="email"
@@ -154,7 +154,7 @@ function FreeConsultation({ theme = "yellow" }) {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="outline-none py-3 border-b text-black placeholder:text-gray-600"
+            className="outline-none py-3 border-b text-black placeholder:text-gray-600 w-full"
           />
           <textarea
             placeholder="Nội dung cần hỗ trợ"
@@ -162,7 +162,7 @@ function FreeConsultation({ theme = "yellow" }) {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={5}
-            className="outline-none py-3 border-b text-black placeholder:text-gray-600"
+            className="outline-none py-3 border-b text-black placeholder:text-gray-600 w-full"
           ></textarea>
           <button
             type="submit"

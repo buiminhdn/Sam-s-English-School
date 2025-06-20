@@ -9,15 +9,19 @@ function CourseItem({
   buttonText = "Tham gia ngay",
 }) {
   return (
-    <div className="rounded-xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-500">
+    <div className="rounded-xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-500 h-full flex flex-col">
       <img
         src={image}
         alt={title}
         className="rounded-t-xl h-50 w-full object-cover"
       />
-      <div className="p-4">
-        <p className="text-lg font-medium">{title}</p>
-        <p className="mt-1 text-gray-600">{description}</p>
+
+      <div className="p-4 flex flex-col justify-between flex-1">
+        <div>
+          <p className="text-lg font-medium">{title}</p>
+          <p className="mt-1 text-gray-600">{description}</p>
+        </div>
+
         <div className="w-full border border-gray-300 border-dashed my-4"></div>
 
         <div className="flex items-center gap-2">

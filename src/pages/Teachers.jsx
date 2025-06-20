@@ -15,7 +15,7 @@ function Teachers() {
       />
       {/* Heading */}
       <_motion.p
-        className="text-3xl font-semibold text-blue-dark mt-14 text-center"
+        className="text-2xl md:text-3xl font-semibold text-blue-dark mt-14 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -24,7 +24,7 @@ function Teachers() {
       </_motion.p>
 
       {/* Grid of Teachers */}
-      <div className="grid grid-cols-2 gap-10 container mt-10 mb-30">
+      <div className="container mt-10 mb-30 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
         {teacherData.map((teacher, i) => (
           <_motion.div
             key={teacher.id}

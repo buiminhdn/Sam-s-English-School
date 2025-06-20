@@ -12,6 +12,6 @@
 
 @layer components {
   .container {
-    @apply mx-auto px-10;
+    @apply mx-auto px-4 md:px-10;
   }
 }

@@ -112,7 +112,7 @@ function Home() {
         <_motion.img
           src={BoyHoldCamera}
           alt="Boy Holding Camera"
-          className="absolute w-44 left-50"
+          className="hidden lg:block lg:absolute w-44 left-50"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -123,39 +123,42 @@ function Home() {
         <_motion.img
           src={BoyThumbUp}
           alt="Boy Thumb Up"
-          className="absolute w-64 right-40 top-20"
+          className="hidden lg:block lg:absolute w-64 right-40 top-20"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
         />
 
-        {/* Main Title */}
         <_motion.p
-          className="text-8xl text-center font-medium text-gray-800"
+          className="text-6xl lg:text-8xl text-center font-medium text-gray-800"
           initial={{ y: 40, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           Nơi tốt nhất để
-          <br />
-          <span className="text-purple-dark">học</span> và{" "}
-          <span className="text-yellow-darker">chơi</span>
-          <br />
+          <span className="hidden sm:inline">
+            <br />
+          </span>
+          <span className="text-purple-dark"> học</span> và{" "}
+          <span className="text-yellow-darker"> chơi </span>
+          <span className="hidden sm:inline">
+            <br />
+          </span>
           cho mọi lứa tuổi
         </_motion.p>
 
         {/* Subtext */}
         <_motion.p
-          className="text-center mt-12"
+          className="text-center mt-5 lg:mt-12"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.0 }}
         >
           Khám phá hàng ngàn hoạt động học tập tương tác và thú vị
-          <br />
+          <span className="hidden sm:inline">
+            <br />
+          </span>
           để hỗ trợ quá trình phát triển và học tập của con bạn.
         </_motion.p>
 
@@ -163,10 +166,9 @@ function Home() {
         <_motion.a
           href={SOCIAL_LINKS.ZALO}
           target="_blank"
-          className=" mx-auto mt-12 w-fit bg-blue-dark p-3 flex items-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          className=" mx-auto mt-5 lg:mt-12 w-fit bg-blue-dark p-3 flex items-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.4 }}
         >
           <p className="text-white ml-1.5">ĐĂNG KÝ NGAY</p>
@@ -175,18 +177,21 @@ function Home() {
           </div>
         </_motion.a>
       </div>
+
       <div className="container">
-        <div className="flex justify-between items-end">
+        {/* Header Section */}
+        <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-end gap-6">
           {/* Heading */}
           <_motion.p
-            className="text-7xl font-medium text-gray-800"
+            className="text-4xl sm:text-5xl lg:text-7xl font-medium text-gray-800 text-center lg:text-left"
             initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
             Tại Sao Nên Chọn
-            <br />
+            <span className="hidden sm:inline">
+              <br />
+            </span>
             Sam's English School
           </_motion.p>
 
@@ -194,16 +199,15 @@ function Home() {
           <_motion.img
             src={adj}
             alt="illustration adjectives"
-            className="w-64"
+            className="w-40 sm:w-52 lg:w-64"
             initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           />
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  mt-10">
           {[
             {
               bg: "bg-purple-light",
@@ -238,7 +242,7 @@ function Home() {
           ].map((item, index) => (
             <_motion.div
               key={index}
-              className={`${item.bg} p-10 rounded-4xl ${item.textColor}`}
+              className={`${item.bg} ${item.textColor} p-6 sm:p-8 md:p-10 rounded-3xl`}
               style={{
                 backgroundImage: `url(${item.bgImage})`,
                 backgroundRepeat: "no-repeat",
@@ -250,26 +254,29 @@ function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 + index * 0.2 }}
             >
-              <img src={item.image} alt="" className="h-32" />
-              <p className="font-medium text-5xl mt-10 whitespace-pre-line">
+              <img src={item.image} alt="" className="h-20 sm:h-24 md:h-32" />
+              <p className="font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-6 sm:mt-8 whitespace-pre-line">
                 {item.title}
               </p>
-              <p className="text-lg font-light leading-6 mt-10">{item.desc}</p>
+              <p className="text-base sm:text-lg font-light leading-6 mt-6 sm:mt-8">
+                {item.desc}
+              </p>
             </_motion.div>
           ))}
         </div>
       </div>
-      <div className="container mt-20 flex flex-col lg:flex-row items-center gap-20">
+
+      <div className="container mt-16 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20">
         {/* Left Side Content */}
         <_motion.div
-          className="flex-1"
+          className="flex-1 text-center lg:text-left"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           {/* Heading */}
-          <p className="text-7xl font-medium text-gray-800 leading-[5.5rem] relative">
+          <p className="text-4xl sm:text-5xl lg:text-7xl font-medium text-gray-800 leading-tight sm:leading-[4rem] lg:leading-[5.5rem] relative">
             Tài liệu học tập được cung cấp thú vị sinh động đối với{" "}
             <span className="relative inline-block text-purple-dark">
               trẻ em
@@ -277,14 +284,14 @@ function Home() {
               <img
                 src={TextCircle}
                 alt=""
-                className="h-24 absolute right-0 top-0 -z-10"
+                className="h-16 sm:h-20 lg:h-24 absolute right-0 top-0 -z-10"
               />
             </span>
           </p>
 
           {/* Subtext */}
           <_motion.p
-            className="text-lg font-light mt-10"
+            className="text-base sm:text-lg font-light mt-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -300,7 +307,7 @@ function Home() {
           <_motion.a
             href={SOCIAL_LINKS.ZALO}
             target="_blank"
-            className="mt-10 w-fit bg-white border-2 border-blue-dark p-2 flex items-center gap-3 rounded-full hover:bg-blue-dark hover:text-white group transition-colors duration-300"
+            className="mx-auto lg:mx-0 mt-6 sm:mt-8 w-fit bg-white border-2 border-blue-dark p-2 flex items-center gap-3 rounded-full hover:bg-blue-dark hover:text-white group transition-colors duration-300"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -317,33 +324,34 @@ function Home() {
         <_motion.img
           src={DocumentHomeIllustration}
           alt=""
-          className="w-2/5"
+          className="w-full sm:w-3/5 lg:w-2/5 max-w-md"
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         />
       </div>
-      <div className="mt-20 bg-blue-dark pt-30 pb-20 relative overflow-hidden">
+
+      <div className="mt-20 bg-blue-dark pt-20 pb-16 relative overflow-hidden">
         {/* Decorative Icons */}
         <_motion.img
           src={YellowCircle}
           alt=""
-          className="absolute h-28 left-16 top-20"
+          className="hidden lg:block lg:absolute h-16 sm:h-24 lg:h-28 left-4 sm:left-10 lg:left-16 top-10 lg:top-20"
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <_motion.img
           src={Wave}
           alt=""
-          className="absolute h-32 right-12 top-40"
+          className="hidden lg:block lg:absolute h-20 sm:h-28 lg:h-32 right-4 sm:right-8 lg:right-12 top-20 lg:top-40"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
 
         {/* Heading */}
         <_motion.p
-          className="text-white text-5xl text-center mx-56 leading-tight"
+          className="text-white text-2xl sm:text-3xl lg:text-5xl text-center px-4 sm:px-12 lg:px-56 leading-snug sm:leading-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -356,7 +364,7 @@ function Home() {
 
         {/* Teacher Cards */}
         <_motion.div
-          className="grid grid-cols-4 gap-14 mt-20 container px-32"
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-14 container px-4 sm:px-8 lg:px-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -377,11 +385,13 @@ function Home() {
               }}
               transition={{ duration: 0.5 }}
             >
-              <img src={img} alt={`Teacher ${index + 1}`} />
-              <p className="text-white text-2xl font-medium mt-7 text-center">
+              <img src={img} alt={`Teacher ${index + 1}`} className="w-full" />
+              <p className="text-white text-xl sm:text-2xl font-medium mt-5 text-center">
                 {name}
               </p>
-              <p className="text-gray-300 mt-1 text-center">{students}</p>
+              <p className="text-gray-300 text-sm sm:text-base mt-1 text-center">
+                {students}
+              </p>
             </_motion.div>
           ))}
         </_motion.div>
@@ -389,7 +399,7 @@ function Home() {
         {/* CTA Button */}
         <_motion.a
           href={ROUTE_PATH.TEACHERS}
-          className="mt-20 w-fit mx-auto border-2 border-white p-2 flex items-center gap-3 rounded-full text-white transition-colors duration-300 hover:bg-white hover:text-black group"
+          className="mt-12 sm:mt-16 lg:mt-20 w-fit mx-auto border-2 border-white p-2 flex items-center gap-3 rounded-full text-white transition-colors duration-300 hover:bg-white hover:text-black group"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -401,16 +411,17 @@ function Home() {
           </div>
         </_motion.a>
       </div>
+
       <div className="container mt-20">
         {/* Header section with animation */}
         <_motion.div
-          className="flex justify-between items-end"
+          className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-5xl font-medium text-gray-800">
+          <p className="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-800">
             <span className="text-purple-dark">Khoá học</span> của chúng tôi
           </p>
           <a
@@ -428,7 +439,7 @@ function Home() {
 
         {/* Course items with staggered animation */}
         <_motion.div
-          className="grid grid-cols-4 gap-7 mt-10"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-7 mt-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -460,10 +471,11 @@ function Home() {
           ))}
         </_motion.div>
       </div>
+
       <div className="container mt-28">
         {/* Animated heading */}
         <_motion.p
-          className="text-5xl font-medium text-gray-800"
+          className="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-800 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -476,14 +488,16 @@ function Home() {
         <_motion.img
           src={Schools}
           alt="Schools"
-          className="mt-14"
+          className="mt-10 sm:mt-14 w-full mx-auto"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
       </div>
-      <div className="container mt-28 flex justify-between gap-10 relative">
+
+      <div className="container mt-28 px-4 sm:px-6 flex flex-col lg:flex-row gap-10 relative">
+        {/* Left Side (Heading + Illustration) */}
         <_motion.div
           className="w-full relative"
           initial={{ opacity: 0, y: 30 }}
@@ -492,21 +506,22 @@ function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <_motion.p
-            className="text-center text-6xl font-medium text-gray-800 leading-tight"
+            className="text-center text-3xl sm:text-5xl lg:text-6xl font-medium text-gray-800 leading-snug sm:leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Những <span className="text-purple-dark">câu hỏi</span>
-            <br />
+            Những <span className="text-purple-dark">câu hỏi </span>
+            <br className="hidden sm:block" />
             thường gặp
           </_motion.p>
 
+          {/* Illustration - only show on lg+ */}
           <_motion.img
             src={QuestionsIllus}
             alt=""
-            className="h-[32rem] absolute top-14 -left-5"
+            className="hidden lg:block h-[26rem] xl:h-[32rem] absolute top-16 -left-5"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -514,7 +529,8 @@ function Home() {
           />
         </_motion.div>
 
-        <div className="w-full flex flex-col gap-3">
+        {/* Right Side (Questions) */}
+        <div className="w-full flex flex-col gap-4 mt-0">
           {questionsData.map(({ question, answer }, i) => {
             const isOpen = i === openIndex;
             return (
@@ -528,9 +544,9 @@ function Home() {
                   onClick={() => toggleQuestion(i)}
                   className="flex items-center justify-between cursor-pointer gap-7"
                 >
-                  <p className="ml-2 text-lg">{question}</p>
+                  <p className="ml-2 text-base sm:text-lg">{question}</p>
                   <div
-                    className={`size-8 rounded-full flex justify-center items-center transition-transform duration-300 ${
+                    className={`size-8 rounded-full flex flex-none justify-center items-center transition-transform duration-300 ${
                       isOpen
                         ? "bg-purple-dark text-white rotate-45"
                         : "bg-purple-light text-purple-dark"
@@ -552,7 +568,7 @@ function Home() {
                         collapsed: { opacity: 0, height: 0, marginTop: 0 },
                       }}
                       transition={{ duration: 0.4, ease: "easeInOut" }}
-                      className="px-2 text-gray-700 text-base overflow-hidden"
+                      className="px-2 text-gray-700 text-sm sm:text-base overflow-hidden"
                     >
                       {answer}
                     </_motion.div>
@@ -563,6 +579,7 @@ function Home() {
           })}
         </div>
       </div>
+
       <Contact />
     </>
   );
