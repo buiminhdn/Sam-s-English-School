@@ -112,14 +112,13 @@ function Introduction() {
         {/* Header & Description */}
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-32">
           <_motion.p
-            className="text-3xl sm:text-4xl font-semibold leading-tight"
+            className="text-3xl sm:text-4xl font-semibold leading-tight lg:text-nowrap"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Sứ mệnh của
-            <br className="hidden lg:block" />
-            Sam's English School
+            Sứ mệnh của{""}
+            <br className="hidden lg:block" /> Sam's English School
           </_motion.p>
 
           <_motion.p
