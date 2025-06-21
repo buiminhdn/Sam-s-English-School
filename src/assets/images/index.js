@@ -10,10 +10,10 @@ import Dots from "./Dots.png";
 import WhyChooseGame from "./WhyChooseGame.png";
 import DocumentHomeIllustration from "./DocumentHome.png";
 import TextCircle from "./TextCircle.png";
-import Teacher1 from "./Teacher1.png";
-import Teacher2 from "./Teacher2.png";
-import Teacher3 from "./Teacher3.png";
-import Teacher4 from "./Teacher4.png";
+import teacher1 from "./Teacher1.png";
+import teacher2 from "./Teacher2.png";
+import teacher3 from "./Teacher3.png";
+import teacher4 from "./Teacher4.png";
 import teacher5 from "./teacher5.jpg";
 import teacher6 from "./teacher6.jpg";
 import teacher7 from "./teacher7.jpg";
@@ -85,10 +85,10 @@ export {
   WhyChooseGame,
   DocumentHomeIllustration,
   TextCircle,
-  Teacher1,
-  Teacher2,
-  Teacher3,
-  Teacher4,
+  teacher1,
+  teacher2,
+  teacher3,
+  teacher4,
   teacher5,
   teacher6,
   teacher7,
