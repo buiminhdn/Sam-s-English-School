@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { class1 } from "../assets/images";
 import CourseCard from "../components/CourseCard";
 import FreeConsultation from "../components/FreeConsultation";
 import { motion as _motion } from "framer-motion";
+import { useParams } from "react-router-dom";
+import { teacherData } from "../assets/data/teacherData";
+import { courseData } from "../assets/data/courseData"; // Assuming you have a courseData file
 
 function TeacherDetail() {
+  const { id } = useParams();
+  const teacher = teacherData.find((t) => t.id === parseInt(id));
+
+  const randomCourses = useMemo(() => {
+    const shuffled = [...courseData].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, Math.floor(Math.random() * 2) + 2); // 2 or 3 courses
+  }, [id]);
+
   return (
     <div className="mt-10">
       <_motion.div
@@ -28,15 +39,15 @@ function TeacherDetail() {
           transition={{ duration: 0.6 }}
         >
           <_motion.img
-            src={class1}
-            alt=""
+            src={teacher.avatar}
+            alt={teacher.name}
             className="rounded-full size-44 object-cover mx-auto mt-2"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6 }}
           />
           <p className="text-center font-semibold text-2xl mt-4">
-            Kritsin Watson
+            {teacher.name}
           </p>
           <div className="text-base font-medium space-y-4 mt-5">
             {[
@@ -61,16 +72,16 @@ function TeacherDetail() {
                       : ""
                   }
                 >
-                  {label === "Total Course" && "30"}
+                  {label === "Total Course" && teacher.totalCourse}
                   {label === "Ratings" && (
                     <>
                       <i className="fa-solid fa-star fa-xs text-yellow-darker"></i>{" "}
-                      4.5 (153)
+                      {teacher.rating} ({teacher.ratingCount})
                     </>
                   )}
-                  {label === "Experiences" && "10 Years"}
-                  {label === "Graduated" && "Yes"}
-                  {label === "Language" && "English, French"}
+                  {label === "Experiences" && teacher.experiences}
+                  {label === "Graduated" && teacher.graduated}
+                  {label === "Language" && teacher.languages}
                 </p>
               </_motion.div>
             ))}
@@ -110,30 +121,26 @@ function TeacherDetail() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <p className="text-lg font-semibold">About Kritsin</p>
-          <p className="mt-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-          </p>
+          <p className="text-lg font-semibold">About {teacher.name}</p>
+          <p className="mt-2 text-gray-700">{teacher.about}</p>
+
           <p className="text-lg font-semibold mt-5">Certification</p>
-          <p className="mt-2 text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+          <p className="mt-2 text-gray-700">{teacher.certification}</p>
+
+          <p className="text-lg font-semibold mt-5">
+            Courses ({randomCourses.length})
           </p>
-          <p className="text-lg font-semibold mt-5">Courses (2)</p>
           <div className="flex flex-col gap-3 mt-3">
-            <_motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <CourseCard />
-            </_motion.div>
-            <_motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              <CourseCard />
-            </_motion.div>
+            {randomCourses.map((course, index) => (
+              <_motion.div
+                key={course.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <CourseCard data={course} />
+              </_motion.div>
+            ))}
           </div>
         </_motion.div>
       </_motion.div>

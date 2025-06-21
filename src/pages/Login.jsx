@@ -1,12 +1,36 @@
 import { useState } from "react";
 import { course1, course2, course3 } from "../assets/images";
 import { motion as _motion, AnimatePresence } from "framer-motion";
+import toast from "react-hot-toast";
 
 const images = [course1, course2, course3];
+
+const accounts = [
+  {
+    email: "teacher1@samsenglish.com",
+    password: "pass123",
+    redirect:
+      "https://drive.google.com/drive/folders/1qZNMiLIthHPs9QhRcOSLbXUv17qgkVYE?usp=sharing",
+  },
+  {
+    email: "teacher2@samsenglish.com",
+    password: "pass456",
+    redirect:
+      "https://drive.google.com/drive/folders/1q0gzfHDt7dg4lPpI9YjtSwZkpeAG3p2x?usp=sharing",
+  },
+  {
+    email: "teacher3@samsenglish.com",
+    password: "pass789",
+    redirect:
+      "https://drive.google.com/drive/folders/1IBrqYhAmEqaJ0SvCOjRt-gVglqcIE41l?usp=sharing",
+  },
+];
 
 function Login() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handlePrev = () => {
     setDirection(-1);
@@ -16,6 +40,18 @@ function Login() {
   const handleNext = () => {
     setDirection(1);
     setCurrent((prev) => (prev + 1) % images.length);
+  };
+
+  const handleLogin = () => {
+    const matched = accounts.find(
+      (acc) => acc.email === email && acc.password === password
+    );
+
+    if (matched) {
+      window.location.href = matched.redirect; // redirect to Google Drive folder
+    } else {
+      toast.error("Sai email hoặc mật khẩu. Vui lòng thử lại.");
+    }
   };
 
   return (
@@ -36,19 +72,26 @@ function Login() {
         <p className="text-base mt-4 font-medium">Email</p>
         <input
           type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
           className="border border-blue-100 bg-blue-50 p-3 mt-2 rounded-lg outline-blue-dark "
         />
 
         <p className="text-base mt-5 font-medium">Mật khẩu</p>
         <input
-          type="text"
-          placeholder="Enter your email"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter your password"
           className="border border-blue-100 bg-blue-50 p-3 mt-2 rounded-lg outline-blue-dark "
         />
 
-        <button className="mt-7 p-3 bg-blue-dark rounded-lg border-2 border-blue-dark hover:bg-blue-light hover:text-blue-dark transition-colors duration-300 text-white font-medium text-base">
-          Sign in
+        <button
+          onClick={handleLogin}
+          className="mt-7 p-3 hover:cursor-pointer bg-blue-dark rounded-lg border-2 border-blue-dark hover:bg-blue-light hover:text-blue-dark transition-colors duration-300 text-white font-medium text-base"
+        >
+          Đăng nhập
         </button>
       </_motion.div>
 

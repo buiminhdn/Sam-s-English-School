@@ -65,6 +65,9 @@ import video2 from "./video2.png";
 import video3 from "./video3.png";
 import video4 from "./video4.png";
 import video5 from "./video5.png";
+import student1 from "./student1.jpg";
+import student2 from "./student2.jpg";
+import student3 from "./student3.jpg";
 
 export {
   class1,
@@ -134,4 +137,7 @@ export {
   video3,
   video4,
   video5,
+  student1,
+  student2,
+  student3,
 };

@@ -1,10 +1,32 @@
-import { class1 } from "../assets/images";
+import { useMemo } from "react";
 import FreeConsultation from "../components/FreeConsultation";
 import { motion as _motion } from "framer-motion";
+import { courseData } from "../assets/data/courseData";
+import { useParams } from "react-router-dom";
+import { ROUTE_PATH, SOCIAL_LINKS } from "../routes/routePath";
+import { feedbackData } from "../assets/data/feedbackData";
+import ClassImage from "../components/ClassImage";
 
 function ProgramDetail() {
+  const { id } = useParams();
+  const course = courseData.find((item) => item.id === Number(id));
+
+  const randomCourses = useMemo(() => {
+    const shuffled = [...courseData].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3);
+  }, []);
+
+  if (!course) {
+    return (
+      <div className="text-center mt-10 text-red-500">
+        Khoá học không tồn tại.
+      </div>
+    );
+  }
+
   return (
     <div className=" mt-10">
+      {/* Phần chi tiết khoá học */}
       <_motion.div
         className="container"
         initial={{ opacity: 0, y: 30 }}
@@ -13,8 +35,8 @@ function ProgramDetail() {
       >
         <div className="bg-gray-100 p-6 md:p-10 rounded-xl flex flex-col lg:flex-row gap-6 md:gap-8">
           <_motion.img
-            src={class1}
-            alt=""
+            src={course.image}
+            alt={course.title}
             className="w-full md:w-auto md:h-96 object-cover rounded-lg"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -28,97 +50,75 @@ function ProgramDetail() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-              English For CEOs, Manager
+              {course.title}
             </p>
 
             <p className="text-sm sm:text-base">
-              <span className="text-gray-700">Number of lessons: </span>
-              <span className="font-medium">49 Lesson</span>
+              <span className="text-gray-700">Số bài học: </span>
+              <span className="font-medium">{course.lessons} bài</span>
             </p>
             <p className="text-sm sm:text-base">
-              <span className="text-gray-700">Completion time: </span>
-              <span className="font-medium">1 Month</span>
+              <span className="text-gray-700">Thời gian hoàn thành: </span>
+              <span className="font-medium">{course.duration}</span>
             </p>
             <p className="text-sm sm:text-base">
-              <span className="text-gray-700">Students have learned: </span>
-              <span className="font-medium">12,000+</span>
+              <span className="text-gray-700">Học viên đã học: </span>
+              <span className="font-medium">{course.studentsLearned}</span>
             </p>
 
             <div className="flex items-center gap-2 text-sm sm:text-base">
-              <p className="text-gray-700">Review: </p>
+              <p className="text-gray-700">Đánh giá: </p>
               <div className="flex text-yellow-dark gap-0.5">
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
-                <i className="fa-solid fa-star"></i>
+                {Array.from({ length: course.rating }).map((_, i) => (
+                  <i key={i} className="fa-solid fa-star"></i>
+                ))}
               </div>
             </div>
 
             <div className="mt-5 sm:mt-7 flex flex-col sm:flex-row gap-4">
-              <button className="bg-blue-dark py-2.5 px-5 sm:px-7 rounded-lg text-white w-full sm:w-auto">
+              <a
+                href={SOCIAL_LINKS.ZALO}
+                className="bg-blue-dark hover:shadow-xl transition-shadow duration-300 py-2.5 px-5 sm:px-7 rounded-lg text-white w-full sm:w-auto"
+              >
                 Đăng ký học
-              </button>
-              <button className="bg-blue-light py-2.5 px-5 rounded-lg text-blue-dark font-medium w-full sm:w-auto">
+              </a>
+              <a
+                href={SOCIAL_LINKS.ZALO}
+                className="bg-blue-light hover:shadow-xl transition-shadow duration-300 py-2.5 px-5 rounded-lg text-blue-dark font-medium w-full sm:w-auto"
+              >
                 Học thử miễn phí
-              </button>
+              </a>
             </div>
           </_motion.div>
         </div>
       </_motion.div>
 
+      {/* Nội dung chi tiết */}
       <_motion.div
         className="container mt-10"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-semibold text-lg mb-2">Course Details</p>
-        <p className="leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis consectetur adipiscing elit. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-          gravida. Risus commodo viverra maecenas accumsan.
-        </p>
+        <p className="font-semibold text-lg mb-2">Chi tiết khoá học</p>
+        <p className="leading-relaxed">{course.details}</p>
 
-        <p className="font-semibold text-lg mb-2 mt-5">Certification</p>
-        <p className="leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis consectetur adipiscing elit.
-        </p>
+        <p className="font-semibold text-lg mb-2 mt-5">Chứng nhận</p>
+        <p className="leading-relaxed">{course.certification}</p>
 
-        <p className="font-semibold text-lg mb-2 mt-5">
-          Who this course is for
-        </p>
-        <p className="leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-          suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
-          lacus vel facilisis consectetur adipiscing elit.
-        </p>
+        <p className="font-semibold text-lg mb-2 mt-5">Phù hợp với</p>
+        <p className="leading-relaxed">{course.target}</p>
 
-        <p className="font-semibold text-lg mb-2 mt-5">
-          What you'll learn in this course:
-        </p>
+        <p className="font-semibold text-lg mb-2 mt-5">Bạn sẽ học được:</p>
         <ul className="list-disc pl-5 leading-relaxed">
-          <li>Understand the basics of English for business communication</li>
-          <li>Develop skills for effective meetings and presentations</li>
-          <li>Enhance vocabulary related to management and leadership</li>
-          <li>Practice writing professional emails and reports</li>
-          <li>
-            Improve listening skills through real-world business scenarios
-          </li>
-          <li>Engage in role-plays to simulate business interactions</li>
+          {course.learningOutcomes.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </_motion.div>
 
       <_motion.div
-        className="container mt-14 px-4 sm:px-6 lg:px-0"
+        className="container mt-20"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -126,18 +126,23 @@ function ProgramDetail() {
       >
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-          <p className="font-semibold text-xl sm:text-2xl">Similar Courses</p>
-          <div className="flex gap-2 items-center text-gray-800 hover:underline text-base">
-            <p>Xem tất cả</p>
+          <p className="font-semibold text-xl sm:text-2xl">
+            Các khoá học tương tự
+          </p>
+          <div className="flex gap-2 items-center text-gray-800 text-base">
+            <a href={ROUTE_PATH.PROGRAMS} className="hover:underline">
+              Xem tất cả
+            </a>
             <i className="fa-regular fa-angle-right"></i>
           </div>
         </div>
 
         {/* Grid of Courses */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
-          {[1, 2, 3].map((item, index) => (
-            <_motion.div
-              key={index}
+          {randomCourses.map((course, index) => (
+            <_motion.a
+              href={`/Programs/${course.id}`}
+              key={course.id}
               className="bg-gray-100 hover:shadow-xl transition-shadow duration-300 p-5 rounded-xl flex gap-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -145,44 +150,42 @@ function ProgramDetail() {
               transition={{ duration: 0.4, delay: index * 0.15 }}
             >
               <img
-                src={class1}
-                alt=""
+                src={course.image}
+                alt={course.title}
                 className="rounded-lg w-28 h-28 object-cover shrink-0"
               />
               <div>
                 <p className="font-medium text-base sm:text-lg line-clamp-2">
-                  English for CEOs, Manager
+                  {course.title}
                 </p>
                 <p className="mt-1 text-gray-800 font-light text-sm sm:text-base line-clamp-4">
-                  Product Management Masterclass, you will learn with Sarah
-                  Johnson - Head of Product Customer Platform Gojek Indonesia.
+                  {course.description}
                 </p>
               </div>
-            </_motion.div>
+            </_motion.a>
           ))}
         </div>
       </_motion.div>
 
       <_motion.div
-        className="container mt-14 px-4 sm:px-6 lg:px-0"
+        className="container mt-14"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         <p className="font-semibold text-xl sm:text-2xl text-center">
-          What students say
+          Cảm nhận từ học viên
         </p>
         <p className="w-full sm:w-4/5 lg:w-1/2 mx-auto mt-2 text-center text-gray-600 text-sm sm:text-base">
-          Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand,
-          South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có
-          khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt.
+          Đội ngũ giáo viên bản ngữ đến từ Anh, Mỹ, Úc, Canada, New Zealand, Nam
+          Phi… giàu kinh nghiệm giảng dạy, sáng tạo và phù hợp nhiều lứa tuổi.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          {[1, 2, 3].map((_, index) => (
+          {feedbackData.map((item, index) => (
             <_motion.div
-              key={index}
+              key={item.id}
               className="bg-gray-100 p-6 rounded-lg flex flex-col gap-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -190,19 +193,17 @@ function ProgramDetail() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <p className="text-gray-700 text-sm sm:text-base">
-                “Teachings of the great explore of truth, the master-builder of
-                human happiness. No one rejects, dislikes, or avoids pleasure
-                itself.”
+                {item.content}
               </p>
               <div className="flex gap-2 items-center">
                 <img
-                  src={class1}
-                  alt=""
+                  src={item.image}
+                  alt={item.name}
                   className="size-10 rounded-full object-cover"
                 />
                 <div>
-                  <p className="font-medium text-base">Finlay Kirk</p>
-                  <p className="text-gray-500 text-sm">Student</p>
+                  <p className="font-medium text-base">{item.name}</p>
+                  <p className="text-gray-500 text-sm">{item.role}</p>
                 </div>
               </div>
             </_motion.div>
@@ -210,73 +211,7 @@ function ProgramDetail() {
         </div>
       </_motion.div>
 
-      <_motion.div
-        className="container mt-14 mb-20"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <p className="font-semibold text-2xl text-center">
-          Lớp Học English for CEOs, Managers
-        </p>
-        <p className="w-full sm:w-2/3 lg:w-1/2 mx-auto mt-2 text-center text-gray-600 text-sm sm:text-base">
-          Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand,
-          South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có
-          khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt.
-        </p>
-
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-4 p-4 mt-5">
-          {[
-            { col: "lg:col-span-2", row: "lg:row-span-1" },
-            { col: "lg:col-span-1", row: "lg:row-span-1" },
-            { col: "lg:col-span-1", row: "lg:row-span-1" },
-            { isGrid: true },
-            { col: "lg:col-span-3", row: "lg:row-span-2" },
-          ].map((layout, index) => {
-            if (layout.isGrid) {
-              return (
-                <div
-                  key={index}
-                  className="lg:row-span-2 lg:col-span-1 grid grid-rows-2 gap-4"
-                >
-                  {[0, 1].map((i) => (
-                    <_motion.img
-                      key={i}
-                      src={class1}
-                      alt=""
-                      className="object-cover w-full h-48 sm:h-60 lg:h-full rounded-xl"
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{
-                        duration: 0.5,
-                        delay: index * 0.1 + i * 0.1,
-                      }}
-                    />
-                  ))}
-                </div>
-              );
-            }
-
-            return (
-              <_motion.img
-                key={index}
-                src={class1}
-                alt=""
-                className={`${layout.col ?? ""} ${
-                  layout.row ?? ""
-                } object-cover w-full h-48 sm:h-60 lg:h-full rounded-xl`}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-              />
-            );
-          })}
-        </div>
-      </_motion.div>
+      <ClassImage />
 
       <FreeConsultation />
     </div>

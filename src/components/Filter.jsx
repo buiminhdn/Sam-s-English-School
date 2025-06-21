@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { motion as _motion, AnimatePresence } from "framer-motion";
 
-const genreOptions = ["All Programs", "Online", "Offline", "1 kèm 1", "Nhóm"];
-const sortOptions = ["Latest", "Price", "Popularity"];
+const genreOptions = ["Tất cả", "Online", "Offline", "1 kèm 1", "Nhóm"];
+const sortOptions = ["Gần nhất", "Giá cả", "Phổ biến"];
 
 function Filter() {
-  const [activeGenre, setActiveGenre] = useState("All Programs");
+  const [activeGenre, setActiveGenre] = useState("Tất cả");
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedSort, setSelectedSort] = useState("Latest");
+  const [selectedSort, setSelectedSort] = useState("Gần nhất");
 
   return (
     <_motion.form

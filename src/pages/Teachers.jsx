@@ -34,6 +34,7 @@ function Teachers() {
             viewport={{ once: true }}
           >
             <HorizontalTeacherItem
+              id={teacher.id}
               avatar={teacher.avatar}
               name={teacher.name}
               countryFlag={teacher.countryFlag}

@@ -1,6 +1,5 @@
-import { SOCIAL_LINKS } from "../routes/routePath";
-
 function CourseItem({
+  id,
   image,
   title,
   description,
@@ -39,7 +38,7 @@ function CourseItem({
         </div>
 
         <a
-          href={SOCIAL_LINKS.ZALO}
+          href={`/Programs/${id}`}
           target="_blank"
           className="block text-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker hover:bg-yellow-darker hover:text-white transition-colors duration-300"
         >
