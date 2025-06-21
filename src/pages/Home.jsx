@@ -10,10 +10,10 @@ import {
   WhyChooseTeacher,
   DocumentHomeIllustration,
   TextCircle,
-  Teacher1,
-  Teacher2,
-  Teacher3,
-  Teacher4,
+  teacher1,
+  teacher2,
+  teacher3,
+  teacher4,
   YellowCircle,
   course1,
   course2,
@@ -29,10 +29,10 @@ import { motion as _motion, AnimatePresence } from "framer-motion";
 import Contact from "../components/Contact";
 
 const teacherData = [
-  { img: Teacher1, name: "Emma Johnson", students: "530 students" }, // girl
-  { img: Teacher2, name: "Chloe Anderson", students: "470 students" }, // girl
-  { img: Teacher3, name: "Michael Thompson", students: "612 students" }, // man
-  { img: Teacher4, name: "Sophia Nguyen", students: "488 students" }, // girl
+  { img: teacher1, name: "Emma Johnson", students: "530 students" }, // girl
+  { img: teacher2, name: "Chloe Anderson", students: "470 students" }, // girl
+  { img: teacher3, name: "Michael Thompson", students: "612 students" }, // man
+  { img: teacher4, name: "Sophia Nguyen", students: "488 students" }, // girl
 ];
 
 const courseData = [
