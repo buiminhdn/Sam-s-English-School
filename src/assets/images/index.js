@@ -35,7 +35,7 @@ import course5 from "./course5.jpg";
 import course6 from "./course6.png";
 import course7 from "./course7.jpg";
 import course8 from "./course8.png";
-import Schools from "./Schools.png";
+import Schools from "./schools.png";
 import QuestionsIllus from "./QuestionsIllus.png";
 import ContactIllus from "./ContactIllus.png";
 import ContactIllus2 from "./ContactIllus2.png";
