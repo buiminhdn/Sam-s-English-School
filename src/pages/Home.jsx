@@ -27,6 +27,8 @@ import { ROUTE_PATH, SOCIAL_LINKS } from "../routes/routePath";
 import { useState } from "react";
 import { motion as _motion, AnimatePresence } from "framer-motion";
 import Contact from "../components/Contact";
+import { questionsData } from "../assets/data/questionData";
+import { useTranslation } from "react-i18next";
 
 const teacherData = [
   { img: teacher1, name: "Emma Johnson", students: "530 students" }, // girl
@@ -70,37 +72,9 @@ const courseData = [
   },
 ];
 
-const questionsData = [
-  {
-    question:
-      "Trung tâm có chương trình phù hợp với độ tuổi của con tôi không?",
-    answer:
-      "Chắc chắn rồi! Sam's English School có các khóa học dành riêng cho trẻ em, thanh thiếu niên, sinh viên và người lớn, được thiết kế theo trình độ và nhu cầu học tập cụ thể.",
-  },
-  {
-    question: "Giáo viên tại trung tâm là người bản ngữ hay người Việt?",
-    answer:
-      "Chúng tôi có đội ngũ giáo viên bản ngữ đến từ Anh, Mỹ, Úc cùng các giáo viên Việt Nam giàu kinh nghiệm. Mỗi lớp đều có phương pháp giảng dạy phù hợp để đảm bảo học viên tiếp thu hiệu quả nhất.",
-  },
-  {
-    question: "Tôi có thể đăng ký học thử trước khi quyết định không?",
-    answer:
-      "Hoàn toàn được! Chúng tôi cung cấp buổi học thử miễn phí, giúp học viên trải nghiệm không khí lớp học và phong cách giảng dạy trước khi đăng ký chính thức.",
-  },
-  {
-    question: "Học phí tại Sam's English School có linh hoạt không?",
-    answer:
-      "Trung tâm áp dụng nhiều hình thức thanh toán linh hoạt theo từng khóa học, với ưu đãi hấp dẫn khi đăng ký sớm hoặc theo nhóm.",
-  },
-  {
-    question: "Làm sao để theo dõi kết quả học tập của con?",
-    answer:
-      "Phụ huynh sẽ nhận được báo cáo định kỳ và có thể tham gia các buổi họp mặt với giáo viên để cập nhật tiến độ học tập cũng như định hướng phù hợp cho con.",
-  },
-];
-
 function Home() {
   const [openIndex, setOpenIndex] = useState(0);
+  const { t } = useTranslation();
 
   const toggleQuestion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -136,16 +110,17 @@ function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          Nơi tốt nhất để
+          {t("home.Headline1")}
           <span className="hidden sm:inline">
             <br />
           </span>
-          <span className="text-purple-dark"> học</span> và{" "}
-          <span className="text-yellow-darker"> chơi </span>
+          <span className="text-purple-dark"> {t("home.Headline2")}</span>{" "}
+          {t("home.Headline3")}{" "}
+          <span className="text-yellow-darker"> {t("home.Headline4")} </span>
           <span className="hidden sm:inline">
             <br />
           </span>
-          cho mọi lứa tuổi
+          {t("home.Headline5")}
         </_motion.p>
 
         {/* Subtext */}
@@ -155,11 +130,11 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.0 }}
         >
-          Khám phá hàng ngàn hoạt động học tập tương tác và thú vị
+          {t("home.Subtext1")}
           <span className="hidden sm:inline">
             <br />
           </span>
-          để hỗ trợ quá trình phát triển và học tập của con bạn.
+          {t("home.Subtext2")}
         </_motion.p>
 
         {/* CTA Button */}
@@ -171,7 +146,7 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.4 }}
         >
-          <p className="text-white ml-1.5">ĐĂNG KÝ NGAY</p>
+          <p className="text-white ml-1.5">{t("registerNow")}</p>
           <div className="bg-white px-2.5 py-1 rounded-full">
             <i className="fa-regular fa-arrow-up-right fa-beat"></i>
           </div>
@@ -188,11 +163,11 @@ function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            Tại Sao Nên Chọn
+            {t("home.whyChoose1")}
             <span className="hidden sm:inline">
               <br />
             </span>
-            Sam's English School
+            {t("home.whyChoose2")}
           </_motion.p>
 
           {/* Image */}
@@ -212,8 +187,8 @@ function Home() {
             {
               bg: "bg-purple-light",
               image: WhyChooseTeacher,
-              title: "Giáo viên\nkinh nghiệm",
-              desc: "Đội ngũ giáo viên 100% bản ngữ đến từ Mỹ, Anh, Úc với nhiều năm kinh nghiệm.",
+              title: t("home.choose.teacher"),
+              desc: t("home.choose.teacher.desc"),
               bgImage: CirclePurple,
               bgPos: "top -20px right -100px",
               bgSize: "250px",
@@ -222,8 +197,8 @@ function Home() {
             {
               bg: "bg-blue-dark",
               image: WhyChooseProgram,
-              title: "Chương trình\nđa dạng",
-              desc: "Từ luyện thi IELTS, Giao tiếp, Tiếng Anh cho doanh nghiệp đến lớp học 1 kèm 1.",
+              title: t("home.choose.program"),
+              desc: t("home.choose.program.desc"),
               bgImage: Wave,
               bgPos: "top -50px right -60px",
               bgSize: "230px",
@@ -232,8 +207,8 @@ function Home() {
             {
               bg: "bg-yellow-dark",
               image: WhyChooseGame,
-              title: "Phương pháp học sáng tạo",
-              desc: "Học mà chơi - chơi mà học! Áp dụng mô hình học tương tác, thực hành liên tục.",
+              title: t("home.choose.method"),
+              desc: t("home.choose.method.desc"),
               bgImage: Dots,
               bgPos: "top -20px right -30px",
               bgSize: "180px",
@@ -277,9 +252,9 @@ function Home() {
         >
           {/* Heading */}
           <p className="text-4xl sm:text-5xl lg:text-7xl font-medium text-gray-800 leading-tight sm:leading-[4rem] lg:leading-[5.5rem] relative">
-            Tài liệu học tập được cung cấp thú vị sinh động đối với{" "}
+            {t("home.document.title1")}{" "}
             <span className="relative inline-block text-purple-dark">
-              trẻ em
+              {t("home.document.title2")}
               {/* Animated Circle */}
               <img
                 src={TextCircle}
@@ -297,10 +272,7 @@ function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Chúng tôi thiết kế giáo trình dành riêng cho trẻ em - đầy màu sắc,
-            sinh động và dễ hiểu. Mỗi bài học đều kết hợp trò chơi, hình ảnh, và
-            hoạt động tương tác giúp bé học một cách tự nhiên mà không thấy nhàm
-            chán.
+            {t("home.document.subtext")}
           </_motion.p>
 
           {/* CTA Button */}
@@ -313,7 +285,7 @@ function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="ml-1.5 font-medium">ĐĂNG KÝ NGAY</p>
+            <p className="ml-1.5 font-medium">{t("registerNow")}</p>
             <div className="bg-blue-dark text-white px-2.5 py-1 rounded-full group-hover:bg-white group-hover:text-black transition-colors duration-300">
               <i className="fa-regular fa-arrow-up-right"></i>
             </div>
@@ -357,9 +329,9 @@ function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Chúng tôi mong muốn giúp học trò khám phá{" "}
-          <span className="text-yellow-dark">niềm vui của việc học tập</span>{" "}
-          sáng tạo và phát triển thành những cá nhân toàn diện.
+          {t("home.vision1")}{" "}
+          <span className="text-yellow-dark">{t("home.vision2")}</span>{" "}
+          {t("home.vision3")}
         </_motion.p>
 
         {/* Teacher Cards */}
@@ -405,7 +377,7 @@ function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <p className="ml-3 mr-1 font-medium">XEM THÊM</p>
+          <p className="ml-3 mr-1 font-medium">{t("seeMore")}</p>
           <div className="bg-white px-2 py-1 rounded-full text-blue-dark group-hover:bg-blue-dark group-hover:text-white transition-colors duration-300">
             <i className="fa-regular fa-arrow-right"></i>
           </div>
@@ -422,14 +394,15 @@ function Home() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-800">
-            <span className="text-purple-dark">Khoá học</span> của chúng tôi
+            <span className="text-purple-dark">{t("home.ourCourses1")}</span>{" "}
+            {t("home.ourCourses2")}
           </p>
           <a
             href={ROUTE_PATH.PROGRAMS}
             className="flex items-center gap-3 group cursor-pointer"
           >
             <p className="font-semibold text-purple-dark group-hover:underline">
-              Xem tất cả
+              {t("viewAll")}
             </p>
             <div className="bg-purple-dark px-3 py-1.5 text-white rounded-full group-hover:bg-purple-light group-hover:text-purple-dark transition-colors duration-300">
               <i className="fa-light fa-arrow-up-right"></i>
@@ -481,7 +454,8 @@ function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-purple-dark">Khách hàng</span> của chúng tôi
+          <span className="text-purple-dark">{t("home.ourClients1")}</span>{" "}
+          {t("home.ourClients2")}
         </_motion.p>
 
         {/* Animated image */}
@@ -512,9 +486,10 @@ function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Những <span className="text-purple-dark">câu hỏi </span>
+            {t("home.faq.title1")}{" "}
+            <span className="text-purple-dark">{t("home.faq.title2")} </span>
             <br className="hidden sm:block" />
-            thường gặp
+            {t("home.faq.title3")}
           </_motion.p>
 
           {/* Illustration - only show on lg+ */}

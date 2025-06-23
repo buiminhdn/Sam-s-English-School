@@ -1,41 +1,50 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion as _motion } from "framer-motion";
+import { useTranslation } from "react-i18next"; // NEW
 import { ROUTE_PATH, SOCIAL_LINKS } from "../../routes/routePath";
 import { logo } from "../../assets/images";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
+import { useLocation } from "react-router-dom";
 
 const menuItems = [
   {
     to: "/",
-    label: "Trang chủ",
+    labelKey: "home",
   },
   {
     to: ROUTE_PATH.PROGRAMS,
-    label: "Khóa học",
+    labelKey: "courses",
     hasDropdown: true,
     dropdownItems: [
-      { label: "Trực tuyến", to: ROUTE_PATH.PROGRAMS },
-      { label: "Trực tiếp", to: ROUTE_PATH.PROGRAMS },
-      { label: "1 kèm 1", to: ROUTE_PATH.PROGRAMS },
-      { label: "Học nhóm", to: ROUTE_PATH.PROGRAMS },
+      { labelKey: "online", to: ROUTE_PATH.PROGRAMS },
+      { labelKey: "offline", to: ROUTE_PATH.PROGRAMS },
+      { labelKey: "oneOnOne", to: ROUTE_PATH.PROGRAMS },
+      { labelKey: "group", to: ROUTE_PATH.PROGRAMS },
     ],
   },
   {
     to: ROUTE_PATH.TEACHERS,
-    label: "Giáo viên",
+    labelKey: "teachers",
   },
   {
     to: ROUTE_PATH.INTRO,
-    label: "Về chúng tôi",
+    labelKey: "aboutUs",
   },
   {
     to: ROUTE_PATH.NEWS,
-    label: "Tin tức",
+    labelKey: "news",
   },
 ];
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useTranslation(); // NEW
+  const location = useLocation(); // 🔥 THÊM NÀY
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <>
@@ -68,14 +77,14 @@ function Navbar() {
             <div className="flex items-center gap-3">
               <i className="fa-xl fa-thin fa-phone"></i>
               <div>
-                <p className="text-sm font-light">Hỗ trợ 24/7</p>
+                <p className="text-sm font-light">{t("support")}</p>
                 <p className="text-base">+84 822-335-446</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <i className="fa-xl fa-thin fa-envelope-open"></i>
               <div>
-                <p className="text-sm font-light">Email liên hệ</p>
+                <p className="text-sm font-light">{t("contactEmail")}</p>
                 <p className="text-base">sam@samenglishschool.com</p>
               </div>
             </div>
@@ -83,13 +92,13 @@ function Navbar() {
 
           {/* Language + Login */}
           <div className="hidden lg:flex items-center gap-6">
-            <p className="font-medium">EN | VN</p>
+            <LanguageSwitcher />
             <Link
               to={ROUTE_PATH.LOGIN}
               target="_blank"
               className="bg-white text-black py-2 px-4 rounded-sm border border-blue-dark hover:bg-blue-dark transition duration-300 hover:border-white hover:text-white"
             >
-              Đăng nhập
+              {t("login")}
             </Link>
           </div>
 
@@ -107,10 +116,15 @@ function Navbar() {
       <div className="hidden lg:block border-b border-gray-300">
         <div className="container py-4 flex justify-between items-center">
           <div className="font-medium flex gap-12">
-            {menuItems.map(({ to, label, hasDropdown, dropdownItems }) => (
-              <div key={label} className="relative group">
-                <Link to={to} className="flex items-center gap-2 pr-3">
-                  {label}
+            {menuItems.map(({ to, labelKey, hasDropdown, dropdownItems }) => (
+              <div key={labelKey} className="relative group">
+                <Link
+                  to={to}
+                  className={`flex items-center gap-2 pr-2 transition duration-200 ${
+                    isActive(to) ? "text-purple-dark font-semibold" : ""
+                  }`}
+                >
+                  {t(labelKey)}
                   {hasDropdown && (
                     <i className="fa-regular fa-angle-down mt-1"></i>
                   )}
@@ -120,11 +134,11 @@ function Navbar() {
                     <div className="hidden group-hover:block bg-white shadow-xl rounded-md p-2 min-w-[160px]">
                       {dropdownItems.map((item) => (
                         <Link
-                          key={item.label}
+                          key={item.labelKey}
                           to={item.to}
                           className="block p-2 hover:bg-blue-dark hover:text-white transition duration-200 rounded"
                         >
-                          {item.label}
+                          {t(item.labelKey)}
                         </Link>
                       ))}
                     </div>
@@ -137,9 +151,9 @@ function Navbar() {
           <a
             href={SOCIAL_LINKS.ZALO}
             target="_blank"
-            className="bg-yellow-dark font-medium text-black py-3 px-5 rounded-sm hover:shadow-xl transition"
+            className="bg-yellow-dark font-medium text-black py-3 px-5 rounded-sm hover:shadow-xl transition duration-300"
           >
-            Đăng ký học thử!
+            {t("tryForFree")}
           </a>
         </div>
       </div>
@@ -151,7 +165,7 @@ function Navbar() {
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-white">
-          <p className="text-lg font-semibold">Menu</p>
+          <p className="text-lg font-semibold">{t("menu")}</p>
           <button
             onClick={() => setMobileMenuOpen(false)}
             className="hover:cursor-pointer hover:text-yellow-300"
@@ -162,25 +176,25 @@ function Navbar() {
 
         {/* Nav links */}
         <nav className="flex flex-col gap-4 p-4">
-          {menuItems.map(({ to, label }) => (
+          {menuItems.map(({ to, labelKey }) => (
             <Link
-              key={label}
+              key={labelKey}
               to={to}
               className="py-2 border-b border-white hover:text-yellow-300"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {label}
+              {t(labelKey)}
             </Link>
           ))}
 
           {/* Contact Info */}
           <div className="mt-2 space-y-4 text-sm ">
             <div>
-              <p className="font-light">Hỗ trợ 24/7</p>
+              <p className="font-light">{t("support")}</p>
               <p className="text-base">+84 822-335-446</p>
             </div>
             <div>
-              <p className="font-light">Email liên hệ</p>
+              <p className="font-light">{t("contactEmail")}</p>
               <p className="text-base">sam@samenglishschool.com</p>
             </div>
           </div>
@@ -191,12 +205,12 @@ function Navbar() {
             className="mt-6 py-2 text-center bg-white hover:bg-yellow-dark transition-colors duration-300 text-blue-dark rounded font-semibold"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Đăng nhập
+            {t("login")}
           </Link>
         </nav>
       </div>
 
-      {/* Mobile overlay background (optional) */}
+      {/* Mobile overlay background */}
       {isMobileMenuOpen && (
         <div
           className="fixed inset-0 z-40"

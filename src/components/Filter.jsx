@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import { motion as _motion, AnimatePresence } from "framer-motion";
-
-const genreOptions = ["Tất cả", "Online", "Offline", "1 kèm 1", "Nhóm"];
-const sortOptions = ["Gần nhất", "Giá cả", "Phổ biến"];
+import { useTranslation } from "react-i18next";
 
 function Filter() {
-  const [activeGenre, setActiveGenre] = useState("Tất cả");
+  const { t } = useTranslation();
+
+  const [activeGenre, setActiveGenre] = useState(t("filter.genre.all"));
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedSort, setSelectedSort] = useState("Gần nhất");
+  const [selectedSort, setSelectedSort] = useState(t("filter.sort.latest"));
+
+  const genreOptions = [
+    t("filter.genre.all"),
+    t("filter.genre.online"),
+    t("filter.genre.offline"),
+    t("filter.genre.oneOnOne"),
+    t("filter.genre.group"),
+  ];
+
+  const sortOptions = [
+    t("filter.sort.latest"),
+    t("filter.sort.price"),
+    t("filter.sort.popular"),
+  ];
 
   return (
     <_motion.form
@@ -55,7 +69,7 @@ function Filter() {
           <input
             type="text"
             className="w-full outline-none ml-2 bg-transparent text-sm sm:text-base"
-            placeholder="Tìm kiếm Khóa học, Tên giáo viên"
+            placeholder={t("filter.searchPlaceholder")}
           />
           <button
             className="py-2 px-3 bg-yellow-dark text-white rounded-lg"
@@ -73,7 +87,9 @@ function Filter() {
             className="w-full lg:w-48 bg-gray-50 border border-gray-200 h-full py-3 lg:py-2 px-4 flex items-center justify-between rounded-lg hover:cursor-pointer"
           >
             <p className="text-nowrap text-sm sm:text-base">
-              <span className="text-gray-500 font-light">Sort by:</span>{" "}
+              <span className="text-gray-500 font-light">
+                {t("filter.sortBy")}
+              </span>{" "}
               {selectedSort}
             </p>
             <i className="fa-regular fa-angle-down text-blue-dark"></i>

@@ -8,8 +8,11 @@ import { teacherData } from "../assets/data/teacherData";
 import { SOCIAL_LINKS } from "../routes/routePath";
 import { programillus } from "../assets/images";
 import { courseData } from "../assets/data/courseData";
+import { useTranslation } from "react-i18next";
 
 function Programs() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Banner buttonClass="bg-yellow-dark font-medium" />
@@ -45,7 +48,10 @@ function Programs() {
           viewport={{ once: true }}
         >
           <p className="text-3xl md:text-5xl font-medium text-gray-800">
-            <span className="text-yellow-darker">Giáo viên</span> của chúng tôi
+            <span className="text-yellow-darker">
+              {t("programs.teacherTitle.span")}
+            </span>{" "}
+            {t("programs.teacherTitle.rest")}
           </p>
           <div className="flex items-center gap-3 group cursor-pointer">
             <a
@@ -53,7 +59,7 @@ function Programs() {
               target="_blank"
               className="font-semibold text-yellow-darker group-hover:underline"
             >
-              Xem tất cả
+              {t("viewAll")}
             </a>
             <div className="bg-yellow-dark px-3 py-1.5 text-white rounded-full group-hover:bg-yellow-light group-hover:text-yellow-dark transition-colors duration-300">
               <i className="fa-light fa-arrow-up-right"></i>
@@ -114,21 +120,19 @@ function Programs() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Con bạn sẽ nhận
-            <br />
-            được gì sau khi học tại
-            <br />
-            Trường Anh ngữ Sam?
+            {t("programs.benefitTitle1")} <br />
+            {t("programs.benefitTitle2")} <br />
+            {t("programs.benefitTitle3")}
           </_motion.p>
 
           {[
-            "Tự tin giao tiếp tiếng Anh mỗi ngày",
-            "Phát triển toàn diện 4 kỹ năng",
-            "Tư duy phản xạ tiếng Anh nhanh chóng",
+            t("programs.benefit1"),
+            t("programs.benefit2"),
+            t("programs.benefit3"),
           ].map((text, i) => (
             <_motion.div
               key={i}
-              className={`flex items-start gap-4 ${i === 0 ? "mt-6" : "mt-4"}`}
+              className={`flex items-center gap-4 ${i === 0 ? "mt-6" : "mt-4"}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: (i + 1) * 0.2 }}

@@ -3,6 +3,7 @@ import { motion as _motion } from "framer-motion";
 import toast from "react-hot-toast";
 import confetti from "canvas-confetti";
 import { contact1, contact2, contact3 } from "../assets/images";
+import { useTranslation } from "react-i18next";
 
 const themeClasses = {
   yellow: {
@@ -20,6 +21,8 @@ const themeClasses = {
 };
 
 function FreeConsultation({ theme = "yellow" }) {
+  const { t } = useTranslation();
+
   const { formBg, buttonBg } = themeClasses[theme] || themeClasses["yellow"];
   const getImageByTheme = () => {
     if (theme === "blue") return contact2;
@@ -81,7 +84,9 @@ function FreeConsultation({ theme = "yellow" }) {
           viewport={{ once: true }}
           className="px-6 pt-10 lg:pt-18 lg:pl-20"
         >
-          <p className="text-3xl lg:text-5xl font-semibold">Tư Vấn Miễn Phí</p>
+          <p className="text-3xl lg:text-5xl font-semibold">
+            {t("consultation.title")}
+          </p>
 
           <div className="mt-8">
             {[
@@ -134,7 +139,7 @@ function FreeConsultation({ theme = "yellow" }) {
         >
           <input
             type="text"
-            placeholder="Họ và tên"
+            placeholder={t("consultation.placeholder.name")}
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -142,7 +147,7 @@ function FreeConsultation({ theme = "yellow" }) {
           />
           <input
             type="tel"
-            placeholder="Số điện thoại"
+            placeholder={t("consultation.placeholder.phone")}
             required
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -150,14 +155,14 @@ function FreeConsultation({ theme = "yellow" }) {
           />
           <input
             type="email"
-            placeholder="Tài khoản email"
+            placeholder={t("consultation.placeholder.email")}
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="outline-none py-3 border-b text-black placeholder:text-gray-600 w-full"
           />
           <textarea
-            placeholder="Nội dung cần hỗ trợ"
+            placeholder={t("consultation.placeholder.message")}
             required
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -168,7 +173,7 @@ function FreeConsultation({ theme = "yellow" }) {
             type="submit"
             className={`flex items-center justify-center gap-3 p-3 rounded-full hover:shadow-2xl transition-shadow duration-300 hover:cursor-pointer ${buttonBg}`}
           >
-            <p>Gửi yêu cầu</p>
+            <p>{t("consultation.submit")}</p>
             <i className="fa-light fa-paper-plane"></i>
           </button>
         </_motion.form>

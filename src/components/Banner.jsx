@@ -3,8 +3,11 @@ import { motion as _motion } from "framer-motion";
 import { bgProgram } from "../assets/images";
 import { SOCIAL_LINKS } from "../routes/routePath";
 import { getCurrentMonthRange } from "../utils/dateUtils";
+import { useTranslation } from "react-i18next";
 
 function Banner({ backgroundImage = bgProgram, buttonClass = "" }) {
+  const { t } = useTranslation();
+
   const { startDate, endDate } = getCurrentMonthRange();
   return (
     <div className="container">
@@ -27,9 +30,9 @@ function Banner({ backgroundImage = bgProgram, buttonClass = "" }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Sam cung cấp cho bạn mức
+          {t("banner.title.line1")}
           <br className="hidden sm:block" />
-          giảm giá 30% trong mùa này
+          {t("banner.title.line2")}
         </_motion.p>
 
         {/* Subtitle */}
@@ -39,7 +42,7 @@ function Banner({ backgroundImage = bgProgram, buttonClass = "" }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Khuyến mãi có hiệu lực từ {startDate} - {endDate}
+          {t("banner.dateRange", { startDate, endDate })}
         </_motion.p>
 
         {/* CTA Button */}
@@ -51,7 +54,7 @@ function Banner({ backgroundImage = bgProgram, buttonClass = "" }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          Khám phá ngay
+          {t("banner.cta")}
         </_motion.a>
       </_motion.div>
     </div>

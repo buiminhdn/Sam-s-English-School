@@ -2,8 +2,10 @@ import { motion as _motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { footerillus, logo } from "../../assets/images";
 import { ROUTE_PATH, SOCIAL_LINKS } from "../../routes/routePath";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -48,9 +50,7 @@ function Footer() {
             className="mt-5 sm:mt-7 text-sm sm:text-base"
             variants={itemVariants}
           >
-            Tại Trường Anh ngữ Sam, chúng tôi cam kết tạo ra sự khác biệt. Chúng
-            tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành trình
-            thay đổi và phát triển tích cực.
+            {t("footer.intro")}
           </_motion.p>
           <_motion.div
             className="mt-6 flex gap-5 text-xl sm:text-2xl"
@@ -78,44 +78,35 @@ function Footer() {
         >
           {[
             {
-              title: "Liên kết",
+              title: t("footer.linksTitle"),
               items: [
-                { label: "Trang chủ", to: "/" },
-                { label: "Chương trình học", to: ROUTE_PATH.PROGRAMS },
-                { label: "Giáo viên", to: ROUTE_PATH.TEACHERS },
-                { label: "Về chúng tôi", to: ROUTE_PATH.INTRO },
+                { label: t("home"), to: "/" },
+                { label: t("courses"), to: ROUTE_PATH.PROGRAMS },
+                { label: t("teachers"), to: ROUTE_PATH.TEACHERS },
+                { label: t("aboutUs"), to: ROUTE_PATH.INTRO },
               ],
             },
             {
-              title: "Khoá học",
+              title: t("footer.courseTitle"),
               items: [
-                { label: "Chuẩn bị IELTS", to: ROUTE_PATH.PROGRAMS },
-                {
-                  label: "Tiếng anh cho CEO, giám đốc",
-                  to: ROUTE_PATH.PROGRAMS,
-                },
-                { label: "Chương trình Cambridge", to: ROUTE_PATH.PROGRAMS },
-                { label: "Kĩ năng giao tiếp", to: ROUTE_PATH.PROGRAMS },
+                { label: t("footer.course1"), to: ROUTE_PATH.PROGRAMS },
+                { label: t("footer.course2"), to: ROUTE_PATH.PROGRAMS },
+                { label: t("footer.course3"), to: ROUTE_PATH.PROGRAMS },
+                { label: t("footer.course4"), to: ROUTE_PATH.PROGRAMS },
               ],
             },
             {
-              title: "Liên hệ",
+              title: t("footer.contactTitle"),
               items: [
-                {
-                  icon: "fa-light fa-phone-volume",
-                  text: "(406) 555-0120",
-                },
-                {
-                  icon: "fa-light fa-envelope",
-                  text: "mangcoding123@gmail.com",
-                },
+                { icon: "fa-light fa-phone-volume", text: t("footer.phone") },
+                { icon: "fa-light fa-envelope", text: t("footer.email") },
                 {
                   icon: "fa-light fa-location-dot",
                   text: (
                     <>
-                      2972 Westheimer Rd. Santa Ana,
+                      {t("footer.address1")}
                       <br />
-                      Illinois 85486
+                      {t("footer.address2")}
                     </>
                   ),
                 },
