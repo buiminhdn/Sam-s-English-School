@@ -4,8 +4,11 @@ import Banner from "../components/Banner";
 import FreeConsultation from "../components/FreeConsultation";
 import HorizontalTeacherItem from "../components/HorizontalTeacherItem";
 import { motion as _motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function Teachers() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Banner
@@ -20,7 +23,7 @@ function Teachers() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Đội ngũ giáo viên
+        {t("teachers.title")}
       </_motion.p>
 
       {/* Grid of Teachers */}
@@ -38,7 +41,7 @@ function Teachers() {
               avatar={teacher.avatar}
               name={teacher.name}
               countryFlag={teacher.countryFlag}
-              description="Giáo viên tận tâm với nhiều năm kinh nghiệm giảng dạy quốc tế. Kết hợp lý thuyết & thực hành giúp học sinh tiến bộ rõ rệt."
+              description={teacher.about}
               subject={teacher.subject}
               students={teacher.studentCount}
             />

@@ -9,8 +9,10 @@ import {
   course8,
 } from "../assets/images";
 import { motion as _motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 function ClassImage() {
+  const { t } = useTranslation();
   const imageSources = [
     course1,
     course2,
@@ -30,11 +32,11 @@ function ClassImage() {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <p className="font-semibold text-2xl text-center">Hình ảnh lớp học</p>
+      <p className="font-semibold text-2xl text-center">
+        {t("classImage.heading")}
+      </p>
       <p className="w-full sm:w-2/3 lg:w-1/2 mx-auto mt-2 text-center text-gray-600 text-sm sm:text-base">
-        Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand,
-        South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có
-        khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt.
+        {t("classImage.description")}
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-4 p-4 mt-5">

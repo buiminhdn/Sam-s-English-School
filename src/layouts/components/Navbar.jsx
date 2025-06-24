@@ -33,7 +33,7 @@ const menuItems = [
   },
   {
     to: ROUTE_PATH.NEWS,
-    labelKey: "news",
+    labelKey: "newsPage",
   },
 ];
 
@@ -98,7 +98,7 @@ function Navbar() {
               target="_blank"
               className="bg-white text-black py-2 px-4 rounded-sm border border-blue-dark hover:bg-blue-dark transition duration-300 hover:border-white hover:text-white"
             >
-              {t("login")}
+              {t("loginPage")}
             </Link>
           </div>
 
@@ -205,7 +205,7 @@ function Navbar() {
             className="mt-6 py-2 text-center bg-white hover:bg-yellow-dark transition-colors duration-300 text-blue-dark rounded font-semibold"
             onClick={() => setMobileMenuOpen(false)}
           >
-            {t("login")}
+            {t("loginPage")}
           </Link>
         </nav>
       </div>

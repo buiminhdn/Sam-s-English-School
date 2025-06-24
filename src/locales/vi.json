@@ -7,10 +7,10 @@
   "group": "Học nhóm",
   "teachers": "Giáo viên",
   "aboutUs": "Về chúng tôi",
-  "news": "Tin tức",
+  "newsPage": "Tin tức",
   "support": "Hỗ trợ 24/7",
   "contactEmail": "Email liên hệ",
-  "login": "Đăng nhập",
+  "loginPage": "Đăng nhập",
   "tryForFree": "Đăng ký học thử!",
   "menu": "Menu",
 
@@ -90,5 +90,146 @@
   "consultation.placeholder.name": "Họ và tên",
   "consultation.placeholder.phone": "Số điện thoại",
   "consultation.placeholder.email": "Tài khoản email",
-  "consultation.placeholder.message": "Nội dung cần hỗ trợ"
+  "consultation.placeholder.message": "Nội dung cần hỗ trợ",
+
+  "teachers.title": "Đội ngũ giáo viên",
+
+  "intro.heading1": "Chúng tôi muốn tạo ra sự thay đổi",
+  "intro.heading2": "chúng tôi giáo dục, và truyền cảm hứng",
+  "intro.subheading": "Khám phá niềm đam mê và chuyên môn đằng sau Trường tiếng Anh Sam, nơi chúng tôi cam kết cung cấp nền giáo dục tiếng Anh đặc biệt và xây dựng môi trường học tập hỗ trợ cho học sinh trên toàn cầu.",
+  "intro.founderTitle": "Sam Mittal - Nhà sáng lập & Giáo viên tại Trường Anh ngữ Sam",
+  "intro.founderRole": "Người sáng lập và CEO",
+  "intro.founderBio1": "Tôi tên là Sam Mital, và tôi đam mê giáo dục và học ngôn ngữ. Với hơn 10 năm kinh nghiệm giảng dạy, tôi đã có vinh dự được làm việc tại 15 quốc gia khác nhau và giảng dạy tại nhiều trường đại học. Là một cựu giám khảo IELTS, tôi đã tận mắt chứng kiến sức mạnh chuyển đổi của giáo dục ngôn ngữ.",
+  "intro.founderBio2": "Tôi thành lập Trường tiếng Anh Sam để tạo ra tác động tích cực đến cuộc sống của mọi người thông qua việc học ngôn ngữ. Sứ mệnh của chúng tôi là mở ra những khả năng mới cho sự phát triển cá nhân và nghề nghiệp bằng cách thành thạo tiếng Anh. Chúng tôi tin rằng việc học một ngôn ngữ mới có thể mở ra cánh cửa đến với thế giới cơ hội và làm phong phú cuộc sống theo những cách có ý nghĩa.",
+  "intro.founderBio3": "Tại Trường tiếng Anh Sam, chúng tôi cam kết tạo ra sự khác biệt. Chúng tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành trình thay đổi và phát triển tích cực. Cùng nhau, chúng ta có thể tạo ra tác động đáng kể đến cuộc sống và sự nghiệp của bạn.",
+  "intro.founderBio4": "Hãy tham gia cùng chúng tôi và trải nghiệm sự chuyển đổi tích cực mà việc học ngôn ngữ có thể mang lại.",
+  "intro.missionTitle1": "Sứ mệnh của",
+  "intro.missionTitle2": "Sam's English School",
+  "intro.missionDescription": "Tại Sam's English School, chúng tôi tin rằng mỗi học viên đều có thể trở thành phiên bản tốt nhất của chính mình thông qua môi trường học tiếng Anh chất lượng và truyền cảm hứng. Chúng tôi không chỉ dạy ngôn ngữ, mà còn phát triển sự tự tin, tư duy phản biện và kỹ năng giao tiếp cho học viên ở mọi lứa tuổi. Với đội ngũ giáo viên bản ngữ tận tâm và phương pháp giảng dạy cá nhân hóa, Sam's cam kết đồng hành cùng học viên trên hành trình chinh phục tiếng Anh vững chắc và đầy cảm hứng.",
+  "intro.visionTitle": "Tầm nhìn của chúng tôi",
+  "intro.visionDescription1": "Tại Sam's English School, chúng tôi hướng đến việc xây dựng một thế hệ học viên tự tin, bản lĩnh và sẵn sàng hội nhập toàn cầu thông qua khả năng sử dụng tiếng Anh thành thạo.",
+  "intro.visionDescription2": "Chúng tôi không ngừng đổi mới phương pháp giảng dạy, tạo ra một môi trường học tập tích cực, hiện đại và truyền cảm hứng, giúp học viên phát triển toàn diện về ngôn ngữ, tư duy và kỹ năng mềm.",
+  "intro.visionDescription3": "Tầm nhìn của chúng tôi là trở thành trung tâm tiếng Anh hàng đầu, nơi mọi học viên đều được trao cơ hội để vươn xa và tỏa sáng trên hành trình học tập và cuộc sống.",
+  "intro.whyTitle": "Tại Sao Nên Chọn Sam's English School",
+  "intro.why": {
+    "0": {
+      "title": "Giáo viên giàu kinh nghiệm",
+      "desc": "Đội ngũ giáo viên đến từ các quốc gia nói tiếng Anh, giàu chuyên môn và tận tâm, giúp học viên phát triển toàn diện khả năng ngôn ngữ."
+    },
+    "1": {
+      "title": "Phương pháp học hiện đại",
+      "desc": "Áp dụng các phương pháp giảng dạy tiên tiến, chú trọng thực hành và tương tác, giúp học viên tiếp thu nhanh, nhớ lâu, tự nhiên."
+    },
+    "2": {
+      "title": "Chi phí hợp lý, chất lượng",
+      "desc": "Chúng tôi mang đến chương trình học chất lượng cao với mức học phí phù hợp, đảm bảo hiệu quả và giá trị cho từng khóa học."
+    }
+  },
+  "news": {
+    "title": "Tin Tức",
+    "latest": "Bài viết mới nhất",
+    "seeAll": "Xem tất cả",
+    "articles": {
+      "0": {
+        "title": "Thầy giáo người Anh dạy học cho trẻ em vùng cao, yêu Việt Nam vì sự đôn hậu",
+        "content": "Suốt thời gian ở Việt Nam, Sam Mittal (37 tuổi, quốc tịch Anh) đã dành thời gian để đến những vùng cao, dạy tiếng Anh cho người đồng bào vì ước mong giúp họ thay đổi cuộc sống.",
+        "source": "Báo Dân Trí"
+      },
+      "1": {
+        "title": "Người nước ngoài làm tình nguyện ở Việt Nam",
+        "content": "Vài tháng sau khi tốt nghiệp trung học, Mara một mình xách vali bay từ Berlin đến TP HCM bắt đầu một năm làm tình nguyện. Cô tìm được việc dạy tiếng Anh miễn phí cho một trung tâm ở quận Bình Thạnh qua ứng dụng Worldpacker.",
+        "source": "Báo VN Express"
+      },
+      "2": {
+        "title": "Dân 'du mục số' đổ xô đến Việt Nam",
+        "content": "Ở một quán cà phê Mũi Né, Sam bật laptop dạy tiếng Anh cho 4 học viên. Chàng trai 33 tuổi người Anh từng đi qua 51 quốc gia, đến Việt Nam từ 4 năm trước và từng đi xe máy từ Cà Mau đến Hà Giang.",
+        "source": "Báo VN Express"
+      },
+      "3": {
+        "title": "Những “ông Tây” chọn TPHCM làm quê hương",
+        "content": "Ông Jefferson yêu thích làm vườn tại một khoảnh đất ở quận Bình Thạnh, TPHCM. Gắn bó 7 năm với khu vườn có nhiều loại cây như chuối, mía, xoài, bầu... ông coi đây là quê hương thứ hai của mình.",
+        "source": "Báo Phụ nữ"
+      }
+    },
+    "trending": {
+      "title": "Tin xu hướng",
+      "readNow": "Đọc ngay",
+      "alt": "Tin xu hướng",
+      "headline": "Bi hài khách Tây học cách \"sinh tồn\" trong nắng nóng đổ lửa của TPHCM: Tập... ngủ trưa, uống nước mía",
+      "paragraph1": "Zach (30 tuổi) là một người Mỹ sống ở TPHCM được 9 tháng. Công việc của anh là dạy tiếng Anh ở các trung tâm và trường THCS. Zach nói vui, anh đã phải “chiến đấu” với nhiệt độ trong suốt mùa nắng nóng cao điểm.",
+      "paragraph2": "Ở trường học, mọi người nghỉ trưa từ 11h30 đến 13h30 và tìm mọi cách để làm mát mình. Đầu tiên, Zach tìm đến quán cà phê hoặc cửa hàng tiện lợi có điều hòa. “Tôi cảm thấy nó đủ giải quyết cái nóng tạm thời nhưng một bữa trưa ở quán ăn không có quạt sẽ là thảm họa”, anh nói. Zach bắt đầu thói quen uống đá, anh cho đá vào mọi cốc cà phê và nước chanh.",
+      "paragraph3": "Người dân Oregon hay mặc áo hoodie, áo len và quần dài vào mùa thu hoặc đông để giữ ấm. Tuy nhiên, Zach đã sốc khi thấy người Việt Nam cũng mặc nó vào mùa hè để tránh nóng. Sau này, anh mới hiểu ra họ muốn tránh tiếp xúc trực tiếp với ánh nắng mặt trời.",
+      "paragraph4": "Anh có sở thích chụp ảnh phong cảnh và điều này là một thách thức nếu thực hiện nó dưới thời tiết gần 43 độ C. “Tôi luôn mang theo chai nước lớn, quần dài và mũ nữa. Tôi sợ bị cháy nắng lắm.",
+      "paragraph5": "Cái nóng có thể bất ngờ “tấn công” sức khỏe nếu tôi quên uống đủ nước hoặc nghỉ ngơi”, Zach nói.",
+      "source": "Trang thông tin điện tử tổng hợp"
+    },
+    "videos": {
+      "main": {
+        "url": "https://www.youtube.com/embed/yjnPq65n0l8?si=Xj0hVixhEqjKTYvh",
+        "link": "https://youtu.be/yjnPq65n0l8?si=7A3fVLpNc2kYZL47",
+        "title": "Người nước ngoài “phái phái” vì đồ ăn chay độc lạ Việt Nam",
+        "desc": "Amazing Vietnamese Foods là series về phản ứng của người nước ngoài khi được thử các món ăn \"độc lạ\" của ẩm thực Việt Nam. Với sự tham gia của các thực khách từ mọi quốc gia trên thế giới hứa hẹn sẽ mang lại những tình huống phản ứng vui nhộn, kịch tính và đầy bất ngờ..."
+      },
+      "small": [
+        {
+          "url": "https://www.youtube.com/embed/le21na5iGjQ?si=evOHGv090mdvPWKV",
+          "title": "Lần đầu ăn trái cây Việt Nam người nước ngoài chỉ biết cười haha",
+          "desc": "Du khách lần đầu thử sầu riêng, mít, chôm chôm… và có những phản ứng hài hước. Video gây cười nhưng cũng quảng bá trái cây nhiệt đới Việt Nam."
+        },
+        {
+          "url": "https://www.youtube.com/embed/Zc_DvR_1V40?si=WFZuevFi875GYaL-",
+          "title": "ĐẶC SẢN TÂY BẮC khiến người nước ngoài phấn khích cho CƠN BÃO ĐIỂM 10",
+          "desc": "Thực khách nước ngoài lần đầu ăn trứng vịt lộn - món ăn 'vừa lạ vừa sợ' trong mắt họ. Phản ứng bất ngờ và đáng yêu."
+        },
+        {
+          "url": "https://www.youtube.com/embed/rKxdxBuOfRs?si=ALlahWyMddFX2oIw",
+          "title": "Các loại bún của Việt Nam khiến 3 anh Tây sì sụp không còn 1 giọt",
+          "desc": "Bánh tráng trộn - món ăn vặt huyền thoại được đem đến cho khách nước ngoài lần đầu thử. Vị chua cay mặn ngọt khiến nhiều người mê ngay."
+        }
+      ]
+    }
+  },
+  "teacher": {
+    "totalCourse": "Số khóa học",
+    "ratings": "Đánh giá",
+    "experiences": "Kinh nghiệm",
+    "graduated": "Bằng cấp",
+    "language": "Ngôn ngữ",
+    "social": "Mạng xã hội",
+    "bookLesson": "Đặt lịch học",
+    "about": "Giới thiệu về",
+    "certification": "Chứng chỉ",
+    "courses": "Khóa học"
+  },
+  "classImage": {
+    "heading": "Hình ảnh lớp học",
+    "description": "Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand, South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt."
+  },
+  "programDetail": {
+    "totalLessons": "Số bài học",
+    "lessonUnit": "bài",
+    "duration": "Thời gian hoàn thành",
+    "studentsLearned": "Học viên đã học",
+    "rating": "Đánh giá",
+    "register": "Đăng ký học",
+    "tryFree": "Học thử miễn phí",
+    "courseDetail": "Chi tiết khoá học",
+    "certification": "Chứng nhận",
+    "target": "Phù hợp với",
+    "learningOutcomes": "Bạn sẽ học được:",
+    "similarCourses": "Các khoá học tương tự",
+    "viewAll": "Xem tất cả",
+    "testimonials": "Cảm nhận từ học viên",
+    "testimonialDesc": "Đội ngũ giáo viên bản ngữ đến từ Anh, Mỹ, Úc, Canada, New Zealand, Nam Phi… giàu kinh nghiệm giảng dạy, sáng tạo và phù hợp nhiều lứa tuổi."
+  },
+  "login": {
+    "title": "Chào mừng trở lại 👋",
+    "description": "Hôm nay là một ngày mới. Hãy đăng nhập để bắt đầu quản lý tài liệu.",
+    "email": "Email",
+    "emailPlaceholder": "Nhập email của bạn",
+    "password": "Mật khẩu",
+    "passwordPlaceholder": "Nhập mật khẩu của bạn",
+    "loginBtn": "Đăng nhập",
+    "error": "Sai email hoặc mật khẩu. Vui lòng thử lại."
+  }
 }

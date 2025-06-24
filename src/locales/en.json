@@ -7,10 +7,10 @@
   "group": "Group study",
   "teachers": "Teachers",
   "aboutUs": "About Us",
-  "news": "News",
+  "newsPage": "News",
   "support": "Support 24/7",
   "contactEmail": "Contact Email",
-  "login": "Login",
+  "loginPage": "Login",
   "tryForFree": "Try for Free!",
   "menu": "Menu",
 
@@ -90,5 +90,146 @@
   "consultation.placeholder.name": "Full name",
   "consultation.placeholder.phone": "Phone number",
   "consultation.placeholder.email": "Email account",
-  "consultation.placeholder.message": "Content needing support"
+  "consultation.placeholder.message": "Content needing support",
+
+  "teachers.title": "Our Teachers",
+
+  "intro.heading1": "We want to make a difference",
+  "intro.heading2": "We educate, and inspire",
+  "intro.subheading": "Discover the passion and expertise behind Sam's English School, where we are committed to providing exceptional English language education and building a supportive learning environment for students around the world.",
+  "intro.founderTitle": "Sam Mittal - Founder & Teacher at Sam's English School",
+  "intro.founderRole": "Founder and CEO",
+  "intro.founderBio1": "My name is Sam Mital, and I am passionate about education and language learning. With over 10 years of teaching experience, I have had the privilege of working in 15 different countries and teaching at many universities. As a former IELTS examiner, I have seen first-hand the transformative power of language education.",
+  "intro.founderBio2": "I founded Sam's English School to make a positive impact on people's lives through language learning. Our mission is to open up new possibilities for personal and professional growth by mastering English. We believe that learning a new language can open doors to a world of opportunities and enrich lives in meaningful ways.",
+  "intro.founderBio3": "At Sam's English School, we are committed to making a difference. We invite you to join us our community and start your journey of positive change and growth. Together, we can make a significant impact on your life and career.",
+  "intro.founderBio4": "Join us and experience the positive transformation that language learning can bring.",
+  "intro.missionTitle1": "Mission of",
+  "intro.missionTitle2": "Sam's English School",
+  "intro.missionDescription": "At Sam's English School, we believe that every student can become the best version of themselves through a quality and inspiring English learning environment. We do not just teach language, but also develop confidence, critical thinking and communication skills for students of all ages. With a dedicated team of native teachers and a personalized teaching method, Sam's is committed to accompanying students on a solid and inspiring journey to conquer English.",
+  "intro.visionTitle": "Our Vision",
+  "intro.visionDescription1": "At Sam's English School, we aim to build a generation of students who are confident, capable and ready to integrate globally through their ability to use English fluently.",
+  "intro.visionDescription2": "We constantly innovate teaching methods, creating a positive, modern and inspiring learning environment, helping students develop comprehensively in language, thinking and soft skills.",
+  "intro.visionDescription3": "Our vision is to become a leading English center, where every student is given the opportunity to reach out and shine on their learning and life journey.",
+  "intro.whyTitle": "Why Choose Sam's English School",
+  "intro.why": {
+    "0": {
+      "title": "Experienced teachers",
+      "desc": "A team of teachers from English-speaking countries, highly specialized and dedicated, helping students develop comprehensive language skills."
+    },
+    "1": {
+      "title": "Modern learning methods",
+      "desc": "Applying advanced teaching methods, focusing on practice and interaction, helping students learn quickly, remember for a long time, and naturally."
+    },
+    "2": {
+      "title": "Reasonable cost, quality",
+      "desc": "We offer high-quality learning programs with reasonable tuition fees, ensuring effectiveness and value for each course."
+    }
+  },
+  "news": {
+    "title": "News",
+    "latest": "Latest articles",
+    "seeAll": "See all",
+    "articles": {
+      "0": {
+        "title": "British teacher teaches children in the highlands, loves Vietnam for its kindness",
+        "content": "During his time in Vietnam, Sam Mittal (37 years old, British nationality) spent time going to the highlands, teaching English to the people because he wanted to help them change their lives.",
+        "source": "Dan Tri Newspaper"
+      },
+      "1": {
+        "title": "Foreigners volunteering in Vietnam",
+        "content": "A few months after graduating from high school, Mara carried her suitcase alone and flew from Berlin to Ho Chi Minh City to start a year of volunteering. She found a job teaching English for free at a center in Binh Thanh district through the Worldpacker application.",
+        "source": "VN Newspaper Express"
+      },
+      "2": {
+        "title": "Digital nomads flock to Vietnam",
+        "content": "At a Mui Ne coffee shop, Sam turns on his laptop to teach English to 4 students. The 33-year-old British man has been to 51 countries, came to Vietnam 4 years ago and rode a motorbike from Ca Mau to Ha Giang.",
+        "source": "VN Express Newspaper"
+      },
+      "3": {
+        "title": "Western men choose Ho Chi Minh City as their hometown",
+        "content": "Mr. Jefferson loves gardening on a plot of land in Binh Thanh District, Ho Chi Minh City. Having been attached to the garden for 7 years with many types of trees such as bananas, sugarcane, mangoes, squash... he considers this his second hometown.",
+        "source": "Women's Newspaper"
+      }
+    },
+    "trending": {
+      "title": "Trending News",
+      "readNow": "Read Now",
+      "alt": "Trending News",
+      "headline": "The comedy of Westerners learning how to \"survive\" in the scorching heat of Ho Chi Minh City: Practicing... napping, drinking sugarcane juice",
+      "paragraph1": "Zach (30 years old) is an American who has lived in Ho Chi Minh City for 9 months. His job is teaching English at centers and secondary schools. Zach jokingly said that he had to fight the temperature during the peak hot season.",
+      "paragraph2": "At school, people take a lunch break from 11:30 to 1:30 and find ways to cool themselves. First, Zach goes to a coffee shop or convenience store with air conditioning. I feel like it's enough to temporarily relieve the heat, but a lunch at a restaurant without a fan would be a disaster, he said. Zach started the habit of drinking iced coffee, he puts ice in every cup of coffee and lemonade.",
+      "paragraph3": "Oregonians often wear hoodies, sweaters and long pants in the fall or winter to keep warm. However, Zach was shocked to see Vietnamese people also wearing them in the summer to avoid the heat. Later, he understood that they wanted to avoid direct exposure to the sun.",
+      "paragraph4": "He has a hobby of taking landscape photos and this is a challenge if he does it in weather near 43 degrees Celsius. I always bring a big bottle of water, long pants and a hat. I'm afraid of sunburn.",
+      "paragraph5": "The heat can suddenly attack my health if I forget to drink enough water or rest, Zach said.",
+      "source": "General electronic information page"
+    },
+    "videos": {
+      "main": {
+        "url": "https://www.youtube.com/embed/yjnPq65n0l8?si=Xj0hVixhEqjKTYvh",
+        "link": "https://youtu.be/yjnPq65n0l8?si=7A3fVLpNc2kYZL47",
+        "title": "Foreigners are crazy about Vietnam's unique vegetarian food",
+        "desc": "Amazing Vietnamese Foods is a series about the reactions of foreigners when trying the unique dishes of Vietnamese cuisine. With the participation of diners from all over the world, it promises to bring funny, dramatic and surprising reactions..."
+      },
+      "small": [
+        {
+          "url": "https://www.youtube.com/embed/le21na5iGjQ?si=evOHGv090mdvPWKV",
+          "title": "Foreigners can only laugh haha ​​when eating Vietnamese fruit for the first time",
+          "desc": "Tourists try durian, jackfruit, rambutan for the first time... and have funny reactions. The video is funny but also promotes Vietnamese tropical fruits."
+        },
+        {
+          "url": "https://www.youtube.com/embed/Zc_DvR_1V40?si=WFZuevFi875GYaL-",
+          "title": "NORTHWEST SPECIALTIES make foreigners excited for STORM POINT 10",
+          "desc": "Foreign diners eat balut for the first time - a dish that is 'both strange and scary' in their eyes. Unexpected and adorable reactions."
+        },
+        {
+          "url": "https://www.youtube.com/embed/rKxdxBuOfRs?si=ALlahWyMddFX2oIw",
+          "title": "Vietnamese vermicelli dishes that make 3 Westerners slurp up not a single drop",
+          "desc": "Banh trang tron ​​- a legendary snack brought to foreign guests to try for the first time. The sour, spicy, salty and sweet taste makes many people immediately fall in love."
+        }
+      ]
+    }
+  },
+  "teacher": {
+    "totalCourse": "Number of courses",
+    "ratings": "Ratings",
+    "experiences": "Experience",
+    "graduated": "Degree",
+    "language": "Language",
+    "social": "Social Network",
+    "bookLesson": "Book a Lesson",
+    "about": "About",
+    "certification": "Certificate",
+    "courses": "Courses"
+  },
+  "classImage": {
+    "heading": "Classroom Image",
+    "description": "Native teachers Nationality: UK, USA, Australia, Canada, New Zealand, South Africa, … Teachers with extensive experience in teaching English, capable of teaching many age groups and creative in their teaching methods."
+  },
+  "programDetail": {
+    "totalLessons": "Number of lessons",
+    "lessonUnit": "lessons",
+    "duration": "Completion time",
+    "studentsLearned": "Students learned",
+    "rating": "Rating",
+    "register": "Register to study",
+    "tryFree": "Try Free",
+    "courseDetail": "Course Details",
+    "certification": "Certification",
+    "target": "Relevant for",
+    "learningOutcomes": "You will learn:",
+    "similarCourses": "Similar courses",
+    "viewAll": "View all",
+    "testimonials": "Students' testimonials",
+    "testimonialDesc": "A team of native teachers from the UK, US, Australia, Canada, New Zealand, South Africa... with rich teaching experience, creativity and suitable for many ages."
+  },
+  "login": {
+    "title": "Welcome back 👋",
+    "description": "Today is a new day. Please log in to start managing your documents.",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "loginBtn": "Log in",
+    "error": "Incorrect email or password. Please try again."
+  }
 }

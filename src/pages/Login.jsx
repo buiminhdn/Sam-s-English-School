@@ -2,6 +2,7 @@ import { useState } from "react";
 import { course1, course2, course3 } from "../assets/images";
 import { motion as _motion, AnimatePresence } from "framer-motion";
 import toast from "react-hot-toast";
+import { useTranslation } from "react-i18next";
 
 const images = [course1, course2, course3];
 
@@ -27,6 +28,7 @@ const accounts = [
 ];
 
 function Login() {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
   const [email, setEmail] = useState("");
@@ -63,27 +65,24 @@ function Login() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <p className="text-3xl font-semibold">Welcome Back 👋</p>
-        <p className="mt-3 text-gray-600">
-          Today is a new day. It's your day. You shape it. Sign in to start
-          managing your projects.
-        </p>
+        <p className="text-3xl font-semibold">{t("login.title")}</p>
+        <p className="mt-3 text-gray-600">{t("login.description")}</p>
 
-        <p className="text-base mt-4 font-medium">Email</p>
+        <p className="text-base mt-4 font-medium">{t("login.email")}</p>
         <input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
+          placeholder={t("login.emailPlaceholder")}
           className="border border-blue-100 bg-blue-50 p-3 mt-2 rounded-lg outline-blue-dark "
         />
 
-        <p className="text-base mt-5 font-medium">Mật khẩu</p>
+        <p className="text-base mt-5 font-medium">{t("login.password")}</p>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter your password"
+          placeholder={t("login.passwordPlaceholder")}
           className="border border-blue-100 bg-blue-50 p-3 mt-2 rounded-lg outline-blue-dark "
         />
 
@@ -91,7 +90,7 @@ function Login() {
           onClick={handleLogin}
           className="mt-7 p-3 hover:cursor-pointer bg-blue-dark rounded-lg border-2 border-blue-dark hover:bg-blue-light hover:text-blue-dark transition-colors duration-300 text-white font-medium text-base"
         >
-          Đăng nhập
+          {t("login.loginBtn")}
         </button>
       </_motion.div>
 

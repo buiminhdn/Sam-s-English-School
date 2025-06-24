@@ -6,8 +6,10 @@ import { useParams } from "react-router-dom";
 import { ROUTE_PATH, SOCIAL_LINKS } from "../routes/routePath";
 import { feedbackData } from "../assets/data/feedbackData";
 import ClassImage from "../components/ClassImage";
+import { useTranslation } from "react-i18next";
 
 function ProgramDetail() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const course = courseData.find((item) => item.id === Number(id));
 
@@ -54,20 +56,28 @@ function ProgramDetail() {
             </p>
 
             <p className="text-sm sm:text-base">
-              <span className="text-gray-700">Số bài học: </span>
-              <span className="font-medium">{course.lessons} bài</span>
+              <span className="text-gray-700">
+                {t("programDetail.totalLessons")}:{" "}
+              </span>
+              <span className="font-medium">
+                {course.lessons} {t("programDetail.lessonUnit")}
+              </span>
             </p>
             <p className="text-sm sm:text-base">
-              <span className="text-gray-700">Thời gian hoàn thành: </span>
+              <span className="text-gray-700">
+                {t("programDetail.duration")}:{" "}
+              </span>
               <span className="font-medium">{course.duration}</span>
             </p>
             <p className="text-sm sm:text-base">
-              <span className="text-gray-700">Học viên đã học: </span>
+              <span className="text-gray-700">
+                {t("programDetail.studentsLearned")}:{" "}
+              </span>
               <span className="font-medium">{course.studentsLearned}</span>
             </p>
 
             <div className="flex items-center gap-2 text-sm sm:text-base">
-              <p className="text-gray-700">Đánh giá: </p>
+              <p className="text-gray-700">{t("programDetail.rating")}: </p>
               <div className="flex text-yellow-dark gap-0.5">
                 {Array.from({ length: course.rating }).map((_, i) => (
                   <i key={i} className="fa-solid fa-star"></i>
@@ -80,13 +90,13 @@ function ProgramDetail() {
                 href={SOCIAL_LINKS.ZALO}
                 className="bg-blue-dark hover:shadow-xl transition-shadow duration-300 py-2.5 px-5 sm:px-7 rounded-lg text-white w-full sm:w-auto"
               >
-                Đăng ký học
+                {t("programDetail.register")}
               </a>
               <a
                 href={SOCIAL_LINKS.ZALO}
                 className="bg-blue-light hover:shadow-xl transition-shadow duration-300 py-2.5 px-5 rounded-lg text-blue-dark font-medium w-full sm:w-auto"
               >
-                Học thử miễn phí
+                {t("programDetail.tryFree")}
               </a>
             </div>
           </_motion.div>
@@ -100,16 +110,24 @@ function ProgramDetail() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <p className="font-semibold text-lg mb-2">Chi tiết khoá học</p>
+        <p className="font-semibold text-lg mb-2">
+          {t("programDetail.courseDetail")}
+        </p>
         <p className="leading-relaxed">{course.details}</p>
 
-        <p className="font-semibold text-lg mb-2 mt-5">Chứng nhận</p>
+        <p className="font-semibold text-lg mb-2 mt-5">
+          {t("programDetail.certification")}
+        </p>
         <p className="leading-relaxed">{course.certification}</p>
 
-        <p className="font-semibold text-lg mb-2 mt-5">Phù hợp với</p>
+        <p className="font-semibold text-lg mb-2 mt-5">
+          {t("programDetail.target")}
+        </p>
         <p className="leading-relaxed">{course.target}</p>
 
-        <p className="font-semibold text-lg mb-2 mt-5">Bạn sẽ học được:</p>
+        <p className="font-semibold text-lg mb-2 mt-5">
+          {t("programDetail.learningOutcomes")}
+        </p>
         <ul className="list-disc pl-5 leading-relaxed">
           {course.learningOutcomes.map((item, index) => (
             <li key={index}>{item}</li>
@@ -127,11 +145,11 @@ function ProgramDetail() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <p className="font-semibold text-xl sm:text-2xl">
-            Các khoá học tương tự
+            {t("programDetail.similarCourses")}
           </p>
           <div className="flex gap-2 items-center text-gray-800 text-base">
             <a href={ROUTE_PATH.PROGRAMS} className="hover:underline">
-              Xem tất cả
+              {t("programDetail.viewAll")}
             </a>
             <i className="fa-regular fa-angle-right"></i>
           </div>
@@ -175,11 +193,10 @@ function ProgramDetail() {
         transition={{ duration: 0.6 }}
       >
         <p className="font-semibold text-xl sm:text-2xl text-center">
-          Cảm nhận từ học viên
+          {t("programDetail.testimonials")}
         </p>
         <p className="w-full sm:w-4/5 lg:w-1/2 mx-auto mt-2 text-center text-gray-600 text-sm sm:text-base">
-          Đội ngũ giáo viên bản ngữ đến từ Anh, Mỹ, Úc, Canada, New Zealand, Nam
-          Phi… giàu kinh nghiệm giảng dạy, sáng tạo và phù hợp nhiều lứa tuổi.
+          {t("programDetail.testimonialDesc")}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
