@@ -231,5 +231,15 @@
     "passwordPlaceholder": "Enter your password",
     "loginBtn": "Log in",
     "error": "Incorrect email or password. Please try again."
+  },
+  "courseitem": {
+    "enrolled": "Students enrolled",
+    "classesTaken": "Classes enrolled",
+    "joinNow": "Join Now"
+  },
+  "teacheritem": {
+    "students": "Students",
+    "bookLesson": "Book a lesson",
+    "contactNow": "Contact now"
   }
 }

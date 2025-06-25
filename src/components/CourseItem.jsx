@@ -1,12 +1,8 @@
-function CourseItem({
-  id,
-  image,
-  title,
-  description,
-  enrolled,
-  classesTaken,
-  buttonText = "Tham gia ngay",
-}) {
+import { useTranslation } from "react-i18next";
+
+function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
+  const { t } = useTranslation();
+
   return (
     <div className="rounded-xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-500 h-full flex flex-col">
       <img
@@ -27,14 +23,18 @@ function CourseItem({
           <div className="bg-blue-light size-8 text-blue-dark rounded-md flex items-center justify-center">
             <i className="fa-regular fa-screen-users"></i>
           </div>
-          <p className="text-gray-700">{enrolled}</p>
+          <p className="text-gray-700">
+            {enrolled} {t("courseitem.enrolled")}
+          </p>
         </div>
 
         <div className="flex items-center gap-2 mt-3">
           <div className="bg-blue-light size-8 text-blue-dark rounded-md flex items-center justify-center">
             <i className="fa-regular fa-chalkboard-user"></i>
           </div>
-          <p className="text-gray-700">{classesTaken}</p>
+          <p className="text-gray-700">
+            {classesTaken} {t("courseitem.classesTaken")}
+          </p>
         </div>
 
         <a
@@ -42,7 +42,7 @@ function CourseItem({
           target="_blank"
           className="block text-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker hover:bg-yellow-darker hover:text-white transition-colors duration-300"
         >
-          {buttonText}
+          {t("courseitem.joinNow")}
         </a>
       </div>
     </div>

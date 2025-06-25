@@ -15,11 +15,7 @@ import {
   teacher3,
   teacher4,
   YellowCircle,
-  course1,
-  course2,
-  course3,
   Schools,
-  course4,
   QuestionsIllus,
 } from "../assets/images";
 import CourseItem from "../components/CourseItem";
@@ -29,47 +25,13 @@ import { motion as _motion, AnimatePresence } from "framer-motion";
 import Contact from "../components/Contact";
 import { questionsData } from "../assets/data/questionData";
 import { useTranslation } from "react-i18next";
+import { courseData } from "../assets/data/courseData";
 
 const teacherData = [
   { img: teacher1, name: "Emma Johnson", students: "530 students" }, // girl
   { img: teacher2, name: "Chloe Anderson", students: "470 students" }, // girl
   { img: teacher3, name: "Michael Thompson", students: "612 students" }, // man
   { img: teacher4, name: "Sophia Nguyen", students: "488 students" }, // girl
-];
-
-const courseData = [
-  {
-    image: course1,
-    title: "IELTS Preparation",
-    description:
-      "Prepare for the IELTS exam with a structured program focusing on listening, reading, writing, and speaking.",
-    enrolled: "2,550 Enrolled Students",
-    classesTaken: "512 Classes Taken",
-  },
-  {
-    image: course2,
-    title: "English for CEOs, Managers",
-    description:
-      "Tailored English training for professionals to lead meetings, presentations, and business negotiations confidently.",
-    enrolled: "1,200 Enrolled Students",
-    classesTaken: "310 Classes Taken",
-  },
-  {
-    image: course3,
-    title: "Communication & Pronunciation",
-    description:
-      "Boost your fluency and confidence in everyday conversations. Ideal for learners aiming to sound natural.",
-    enrolled: "1,860 Enrolled Students",
-    classesTaken: "435 Classes Taken",
-  },
-  {
-    image: course4,
-    title: "Starters, Movers, Flyers",
-    description:
-      "Cambridge English course for children aged 6-12 to build strong foundations in vocabulary, grammar, and confidence.",
-    enrolled: "2,700 Enrolled Students",
-    classesTaken: "590 Classes Taken",
-  },
 ];
 
 function Home() {
@@ -411,6 +373,7 @@ function Home() {
         </_motion.div>
 
         {/* Course items with staggered animation */}
+        {/* Course items with staggered animation */}
         <_motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-7 mt-10"
           initial="hidden"
@@ -424,9 +387,9 @@ function Home() {
             },
           }}
         >
-          {courseData.map((course, i) => (
+          {[...courseData].slice(0, 4).map((course) => (
             <_motion.div
-              key={i}
+              key={course.id}
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },

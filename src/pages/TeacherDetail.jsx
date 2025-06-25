@@ -9,7 +9,9 @@ import { useTranslation } from "react-i18next";
 import ClassImage from "../components/ClassImage";
 
 function TeacherDetail() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || "vi"; // fallback nếu chưa có
+
   const { id } = useParams();
   const teacher = teacherData.find((t) => t.id === parseInt(id));
 
@@ -78,9 +80,9 @@ function TeacherDetail() {
                       {teacher.rating} ({teacher.ratingCount})
                     </>
                   )}
-                  {i === 2 && teacher.experiences}
-                  {i === 3 && teacher.graduated}
-                  {i === 4 && teacher.languages}
+                  {i === 2 && teacher.experiences[lang]}
+                  {i === 3 && teacher.graduated[lang]}
+                  {i === 4 && teacher.languages[lang]}
                 </p>
               </_motion.div>
             ))}
@@ -123,12 +125,16 @@ function TeacherDetail() {
           <p className="text-lg font-semibold">
             {t("teacher.about")} {teacher.name}
           </p>
-          <p className="mt-2 text-gray-700">{teacher.about}</p>
+          <p className="mt-2 text-gray-700">
+            {teacher.about?.[lang] || teacher.about}
+          </p>
 
           <p className="text-lg font-semibold mt-5">
             {t("teacher.certification")}
           </p>
-          <p className="mt-2 text-gray-700">{teacher.certification}</p>
+          <p className="mt-2 text-gray-700">
+            {teacher.certification?.[lang] || teacher.certification}
+          </p>
 
           <p className="text-lg font-semibold mt-5">
             {t("teacher.courses")} ({randomCourses.length})

@@ -231,5 +231,15 @@
     "passwordPlaceholder": "Nhập mật khẩu của bạn",
     "loginBtn": "Đăng nhập",
     "error": "Sai email hoặc mật khẩu. Vui lòng thử lại."
+  },
+  "courseitem": {
+    "enrolled": "Học viên đã tham gia",
+    "classesTaken": "Lớp được đăng ký",
+    "joinNow": "Tham gia ngay"
+  },
+  "teacheritem": {
+    "students": "Học viên",
+    "bookLesson": "Đặt lịch học",
+    "contactNow": "Liên hệ ngay"
   }
 }

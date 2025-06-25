@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 function HorizontalTeacherItem({
   id,
   avatar,
@@ -7,6 +9,9 @@ function HorizontalTeacherItem({
   subject,
   students,
 }) {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || "vi";
+
   return (
     <div className="p-4 rounded-xl border border-gray-300 bg-white hover:shadow-2xl transition-shadow duration-500 flex flex-col md:flex-row gap-x-5">
       {/* Avatar */}
@@ -29,17 +34,19 @@ function HorizontalTeacherItem({
         </div>
 
         {/* Description */}
-        <p className="text-gray-500 mt-3 text-base">{description}</p>
+        <p className="text-gray-500 mt-3 text-base">{description[lang]}</p>
 
         {/* Subject & Students */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 mt-4 text-gray-500">
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-book"></i>
-            <p className="text-base">{subject}</p>
+            <p className="text-base">{subject[lang]}</p>
           </div>
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-user-group"></i>
-            <p className="text-base">{students} Học viên</p>
+            <p className="text-base">
+              {students} {t("teacheritem.students")}
+            </p>
           </div>
         </div>
 
@@ -49,13 +56,13 @@ function HorizontalTeacherItem({
             href={`/Teachers/${id}`}
             className="bg-blue-light text-blue-dark hover:bg-blue-dark hover:text-white hover:shadow-lg transition-all duration-500 font-medium py-3 md:py-2 px-4 rounded-lg text-center"
           >
-            Đặt lịch học
+            {t("teacheritem.bookLesson")}
           </a>
           <a
             href={`/Teachers/${id}`}
             className="bg-blue-dark text-white hover:bg-blue-light hover:text-blue-dark hover:shadow-lg transition-all duration-500 font-medium py-3 md:py-2 px-4 rounded-lg text-center"
           >
-            Liên hệ ngay
+            {t("teacheritem.contactNow")}
           </a>
         </div>
       </div>
