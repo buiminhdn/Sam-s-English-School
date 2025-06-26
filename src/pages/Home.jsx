@@ -28,15 +28,16 @@ import { useTranslation } from "react-i18next";
 import { courseData } from "../assets/data/courseData";
 
 const teacherData = [
-  { img: teacher1, name: "Emma Johnson", students: "530 students" }, // girl
-  { img: teacher2, name: "Chloe Anderson", students: "470 students" }, // girl
-  { img: teacher3, name: "Michael Thompson", students: "612 students" }, // man
-  { img: teacher4, name: "Sophia Nguyen", students: "488 students" }, // girl
+  { img: teacher1, name: "Emma Johnson", students: 530 },
+  { img: teacher2, name: "Chloe Anderson", students: 470 },
+  { img: teacher3, name: "Michael Thompson", students: 612 },
+  { img: teacher4, name: "Sophia Nguyen", students: 488 },
 ];
 
 function Home() {
   const [openIndex, setOpenIndex] = useState(0);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language || "vi";
 
   const toggleQuestion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -324,7 +325,7 @@ function Home() {
                 {name}
               </p>
               <p className="text-gray-300 text-sm sm:text-base mt-1 text-center">
-                {students}
+                {students} {t("students")}
               </p>
             </_motion.div>
           ))}
@@ -482,7 +483,7 @@ function Home() {
                   onClick={() => toggleQuestion(i)}
                   className="flex items-center justify-between cursor-pointer gap-7"
                 >
-                  <p className="ml-2 text-base sm:text-lg">{question}</p>
+                  <p className="ml-2 text-base sm:text-lg">{question[lang]}</p>
                   <div
                     className={`size-8 rounded-full flex flex-none justify-center items-center transition-transform duration-300 ${
                       isOpen
@@ -508,7 +509,7 @@ function Home() {
                       transition={{ duration: 0.4, ease: "easeInOut" }}
                       className="px-2 text-gray-700 text-sm sm:text-base overflow-hidden"
                     >
-                      {answer}
+                      {answer[lang]}
                     </_motion.div>
                   )}
                 </AnimatePresence>

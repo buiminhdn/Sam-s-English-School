@@ -5,6 +5,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 // Translation files
 import en from "./locales/en.json";
 import vi from "./locales/vi.json";
+import zh from "./locales/zh.json"; // Assuming you have a Chinese translation file
 
 i18n
   .use(LanguageDetector) // detect user language
@@ -13,6 +14,7 @@ i18n
     resources: {
       en: { translation: en },
       vi: { translation: vi },
+      zh: { translation: zh }, // Add Chinese translations
     },
     fallbackLng: "en",
     interpolation: {

@@ -125,16 +125,12 @@ function TeacherDetail() {
           <p className="text-lg font-semibold">
             {t("teacher.about")} {teacher.name}
           </p>
-          <p className="mt-2 text-gray-700">
-            {teacher.about?.[lang] || teacher.about}
-          </p>
+          <p className="mt-2 text-gray-700">{teacher.about[lang]}</p>
 
           <p className="text-lg font-semibold mt-5">
             {t("teacher.certification")}
           </p>
-          <p className="mt-2 text-gray-700">
-            {teacher.certification?.[lang] || teacher.certification}
-          </p>
+          <p className="mt-2 text-gray-700">{teacher.certification[lang]}</p>
 
           <p className="text-lg font-semibold mt-5">
             {t("teacher.courses")} ({randomCourses.length})

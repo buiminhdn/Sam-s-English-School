@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
 
 function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
 
   return (
     <div className="rounded-xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-500 h-full flex flex-col">
@@ -13,8 +14,8 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
 
       <div className="p-4 flex flex-col justify-between flex-1">
         <div>
-          <p className="text-lg font-medium">{title}</p>
-          <p className="mt-1 text-gray-600">{description}</p>
+          <p className="text-lg font-medium">{title[lang]}</p>
+          <p className="mt-1 text-gray-600">{description[lang]}</p>
         </div>
 
         <div className="w-full border border-gray-300 border-dashed my-4"></div>

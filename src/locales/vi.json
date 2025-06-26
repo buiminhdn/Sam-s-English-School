@@ -13,6 +13,7 @@
   "loginPage": "Đăng nhập",
   "tryForFree": "Đăng ký học thử!",
   "menu": "Menu",
+  "students": "Học viên",
 
   "footer.intro": "Tại Trường Anh ngữ Sam, chúng tôi cam kết tạo ra sự khác biệt. Chúng tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành trình thay đổi và phát triển tích cực.",
   "footer.linksTitle": "Liên kết",
@@ -241,5 +242,11 @@
     "students": "Học viên",
     "bookLesson": "Đặt lịch học",
     "contactNow": "Liên hệ ngay"
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Xin lỗi, chúng tôi không thể tìm thấy trang bạn đang tìm.",
+    "backHome": "Quay về trang chủ",
+    "contact": "Liên hệ hỗ trợ"
   }
 }

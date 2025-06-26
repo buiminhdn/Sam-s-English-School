@@ -13,6 +13,7 @@
   "loginPage": "Login",
   "tryForFree": "Try for Free!",
   "menu": "Menu",
+  "students": "Students",
 
   "footer.intro": "At Sam's English School, we are committed to making a difference. We invite you to join our community and begin your journey of positive change and growth.",
   "footer.linksTitle": "Links",
@@ -241,5 +242,11 @@
     "students": "Students",
     "bookLesson": "Book a lesson",
     "contactNow": "Contact now"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, we couldn’t find the page you’re looking for.",
+    "backHome": "Go back home",
+    "contact": "Contact support"
   }
 }

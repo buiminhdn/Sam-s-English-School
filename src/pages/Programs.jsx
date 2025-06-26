@@ -5,7 +5,7 @@ import TeacherItem from "../components/TeacherItem";
 import { motion as _motion } from "framer-motion";
 import FreeConsultation from "../components/FreeConsultation";
 import { teacherData } from "../assets/data/teacherData";
-import { SOCIAL_LINKS } from "../routes/routePath";
+import { ROUTE_PATH, SOCIAL_LINKS } from "../routes/routePath";
 import { programillus } from "../assets/images";
 import { courseData } from "../assets/data/courseData";
 import { useTranslation } from "react-i18next";
@@ -55,7 +55,7 @@ function Programs() {
           </p>
           <div className="flex items-center gap-3 group cursor-pointer">
             <a
-              href={SOCIAL_LINKS.ZALO}
+              href={ROUTE_PATH.TEACHERS}
               target="_blank"
               className="font-semibold text-yellow-darker group-hover:underline"
             >

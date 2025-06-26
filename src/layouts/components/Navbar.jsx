@@ -91,7 +91,7 @@ function Navbar() {
           </_motion.div>
 
           {/* Language + Login */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <Link
               to={ROUTE_PATH.LOGIN}
@@ -207,6 +207,7 @@ function Navbar() {
           >
             {t("loginPage")}
           </Link>
+          <LanguageSwitcher />
         </nav>
       </div>
 

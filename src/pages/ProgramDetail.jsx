@@ -9,7 +9,8 @@ import ClassImage from "../components/ClassImage";
 import { useTranslation } from "react-i18next";
 
 function ProgramDetail() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
   const { id } = useParams();
   const course = courseData.find((item) => item.id === Number(id));
 
@@ -52,7 +53,7 @@ function ProgramDetail() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-              {course.title}
+              {course.title[lang]}
             </p>
 
             <p className="text-sm sm:text-base">
@@ -67,7 +68,7 @@ function ProgramDetail() {
               <span className="text-gray-700">
                 {t("programDetail.duration")}:{" "}
               </span>
-              <span className="font-medium">{course.duration}</span>
+              <span className="font-medium">{course.duration[lang]}</span>
             </p>
             <p className="text-sm sm:text-base">
               <span className="text-gray-700">
@@ -113,23 +114,23 @@ function ProgramDetail() {
         <p className="font-semibold text-lg mb-2">
           {t("programDetail.courseDetail")}
         </p>
-        <p className="leading-relaxed">{course.details}</p>
+        <p className="leading-relaxed">{course.details[lang]}</p>
 
         <p className="font-semibold text-lg mb-2 mt-5">
           {t("programDetail.certification")}
         </p>
-        <p className="leading-relaxed">{course.certification}</p>
+        <p className="leading-relaxed">{course.certification[lang]}</p>
 
         <p className="font-semibold text-lg mb-2 mt-5">
           {t("programDetail.target")}
         </p>
-        <p className="leading-relaxed">{course.target}</p>
+        <p className="leading-relaxed">{course.target[lang]}</p>
 
         <p className="font-semibold text-lg mb-2 mt-5">
           {t("programDetail.learningOutcomes")}
         </p>
         <ul className="list-disc pl-5 leading-relaxed">
-          {course.learningOutcomes.map((item, index) => (
+          {course.learningOutcomes?.[lang]?.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
@@ -174,10 +175,10 @@ function ProgramDetail() {
               />
               <div>
                 <p className="font-medium text-base sm:text-lg line-clamp-2">
-                  {course.title}
+                  {course.title[lang]}
                 </p>
                 <p className="mt-1 text-gray-800 font-light text-sm sm:text-base line-clamp-4">
-                  {course.description}
+                  {course.description[lang]}
                 </p>
               </div>
             </_motion.a>
@@ -203,14 +204,14 @@ function ProgramDetail() {
           {feedbackData.map((item, index) => (
             <_motion.div
               key={item.id}
-              className="bg-gray-100 p-6 rounded-lg flex flex-col gap-4"
+              className="bg-gray-100 p-6 rounded-lg flex flex-col justify-between gap-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <p className="text-gray-700 text-sm sm:text-base">
-                {item.content}
+                {item.content[lang]}
               </p>
               <div className="flex gap-2 items-center">
                 <img
@@ -220,7 +221,7 @@ function ProgramDetail() {
                 />
                 <div>
                   <p className="font-medium text-base">{item.name}</p>
-                  <p className="text-gray-500 text-sm">{item.role}</p>
+                  <p className="text-gray-500 text-sm">{item.role[lang]}</p>
                 </div>
               </div>
             </_motion.div>

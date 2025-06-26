@@ -1,7 +1,11 @@
 import React from "react";
 import { SOCIAL_LINKS } from "../routes/routePath";
+import { useTranslation } from "react-i18next";
 
 function TeacherItem({ avatar, name, countryFlag, subject, studentCount }) {
+  const { i18n, t } = useTranslation();
+  const lang = i18n.language || "vi";
+
   return (
     <div className="rounded-xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-500">
       <img
@@ -21,11 +25,13 @@ function TeacherItem({ avatar, name, countryFlag, subject, studentCount }) {
         <div className="flex justify-evenly gap-5 mt-4 text-gray-500">
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-book"></i>
-            <p className="">{subject}</p>
+            <p className="">{subject[lang]}</p>
           </div>
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-user-group"></i>
-            <p className="">{studentCount} Học viên</p>
+            <p className="">
+              {studentCount} {t("teacheritem.students")}
+            </p>
           </div>
         </div>
         <a
@@ -33,7 +39,7 @@ function TeacherItem({ avatar, name, countryFlag, subject, studentCount }) {
           target="_blank"
           className=" flex items-center gap-3 justify-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker font-medium hover:bg-yellow-darker hover:border-yellow-dark hover:text-white transition-colors duration-300"
         >
-          <p>Book giáo viên</p>
+          <p>{t("teacheritem.bookLesson")}</p>
           <i className="fa-regular fa-chevrons-right"></i>
         </a>
       </div>
