@@ -12,15 +12,21 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Trim and validate fields
+    if (!name.trim() || !email.trim() || !phone.trim()) {
+      toast.error("Vui lòng điền đầy đủ thông tin.");
+      return;
+    }
+
     // ✅ Gộp cả 3 trường lại
     const combined = `Họ tên: ${name} - Email: ${email} - SĐT: ${phone}`;
 
     const formData = new FormData();
-    formData.append("entry.566193152", combined);
+    formData.append("entry.452579175", combined);
 
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSd0DfQS8yC-Yfh8runPu5LZVlYiL_1IL9zINFDzz1KibduTLQ/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSeB1cNbYs8Quy3eed8DVdVdLWjt5WYWq9_E7Vmk5q_0jjT2tg/formResponse",
         {
           method: "POST",
           mode: "no-cors",
@@ -137,7 +143,7 @@ function Contact() {
 
             <_motion.button
               type="submit"
-              className="border-2 border-yellow-dark bg-yellow-dark text-black hover:bg-transparent hover:text-white transition-colors duration-300 rounded-full p-3"
+              className="border-2 hover:cursor-pointer border-yellow-dark bg-yellow-dark text-black hover:bg-transparent hover:text-white transition-colors duration-300 rounded-full p-3"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },

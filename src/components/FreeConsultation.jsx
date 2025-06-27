@@ -40,13 +40,18 @@ function FreeConsultation({ theme = "yellow" }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!name.trim() || !email.trim() || !phone.trim() || !message.trim()) {
+      toast.error("Vui lòng điền đầy đủ thông tin.");
+      return;
+    }
+
     const combined = `Họ tên: ${name} - SĐT: ${phone} - Email: ${email} - Nội dung: ${message}`;
     const formData = new FormData();
-    formData.append("entry.566193152", combined); // 👈 Thay ID nếu khác
+    formData.append("entry.352651215", combined); // 👈 Thay ID nếu khác
 
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSd0DfQS8yC-Yfh8runPu5LZVlYiL_1IL9zINFDzz1KibduTLQ/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSezU82pEKpdh7aqwz88kjN_fLPV09ZGlwHyEXL18STpPmNing/formResponse",
         {
           method: "POST",
           mode: "no-cors",
