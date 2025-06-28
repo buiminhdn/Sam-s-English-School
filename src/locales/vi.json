@@ -15,7 +15,7 @@
   "menu": "Menu",
   "students": "Học viên",
 
-  "footer.intro": "Tại Trường Anh ngữ Sam, chúng tôi cam kết tạo ra sự khác biệt. Chúng tôi mời bạn tham gia cộng đồng của chúng tôi và bắt đầu hành trình thay đổi và phát triển tích cực.",
+  "footer.intro": "Tại Trường Anh ngữ Sam, chúng tôi cam kết mang đến trải nghiệm học tập khác biệt và đầy cảm hứng. Với phương pháp cá nhân hóa và đội ngũ giảng viên tận tâm, chúng tôi giúp học viên tự tin phát triển toàn diện. Hãy cùng chúng tôi tạo nên hành trình thay đổi tích cực - nơi bạn không chỉ học tiếng Anh, mà còn khám phá chính mình trong môi trường học tập năng động và gắn kết.",
   "footer.linksTitle": "Liên kết",
   "footer.courseTitle": "Khoá học",
   "footer.contactTitle": "Liên hệ",
@@ -23,10 +23,7 @@
   "footer.course2": "Tiếng anh cho CEO, giám đốc",
   "footer.course3": "Chương trình Cambridge",
   "footer.course4": "Kĩ năng giao tiếp",
-  "footer.phone": "(406) 555-0120",
-  "footer.email": "mangcoding123@gmail.com",
-  "footer.address1": "2972 Westheimer Rd. Santa Ana,",
-  "footer.address2": "Illinois 85486",
+  "footer.course5": "Đào tạo doanh nghiệp",
 
   "registerNow": "ĐĂNG KÝ NGAY",
   "seeMore": "XEM THÊM",
@@ -70,8 +67,8 @@
   "programs.benefit2": "Phát triển toàn diện 4 kỹ năng",
   "programs.benefit3": "Tư duy phản xạ tiếng Anh nhanh chóng",
 
-  "banner.title.line1": "Sam cung cấp cho bạn mức",
-  "banner.title.line2": "giảm giá 30% trong mùa này",
+  "banner.title.line1": "Sam mời bạn trải nghiệm",
+  "banner.title.line2": "lớp học demo miễn phí",
   "banner.dateRange": "Khuyến mãi có hiệu lực từ {{startDate}} - {{endDate}}",
   "banner.cta": "Khám phá ngay",
 

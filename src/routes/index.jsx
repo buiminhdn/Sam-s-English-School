@@ -40,10 +40,10 @@ const router = createBrowserRouter([
         path: ROUTE_PATH.PROGRAM_DETAIL,
         element: <ProgramDetail />,
       },
-      {
-        path: ROUTE_PATH.TEACHER_DETAIL,
-        element: <TeacherDetail />,
-      },
+      // {
+      //   path: ROUTE_PATH.TEACHER_DETAIL,
+      //   element: <TeacherDetail />,
+      // },
       {
         path: "*",
         element: <NotFound />,

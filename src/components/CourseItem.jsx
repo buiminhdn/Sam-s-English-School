@@ -41,7 +41,7 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
         <a
           href={`/Programs/${id}`}
           target="_blank"
-          className="block text-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker hover:bg-yellow-darker hover:text-white transition-colors duration-300"
+          className="block text-center border border-gray-100 bg-blue-light p-2.5 w-full rounded-lg mt-6 text-blue-dark hover:bg-blue-dark hover:text-white transition-colors duration-300"
         >
           {t("courseitem.joinNow")}
         </a>

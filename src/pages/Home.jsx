@@ -44,12 +44,12 @@ function Home() {
   };
   return (
     <>
-      <div className="container relative mt-20 pb-20 overflow-hidden">
+      <div className="container relative pt-20 pb-20 overflow-hidden">
         {/* Boy Holding Camera - Slide in from left */}
         <_motion.img
           src={BoyHoldCamera}
           alt="Boy Holding Camera"
-          className="hidden lg:block lg:absolute w-44 left-50"
+          className="hidden lg:block lg:absolute w-60 left-32 top-10"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -60,7 +60,7 @@ function Home() {
         <_motion.img
           src={BoyThumbUp}
           alt="Boy Thumb Up"
-          className="hidden lg:block lg:absolute w-64 right-40 top-20"
+          className="hidden lg:block lg:absolute w-84 right-20 bottom-0"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -88,7 +88,7 @@ function Home() {
 
         {/* Subtext */}
         <_motion.p
-          className="text-center mt-5 lg:mt-12"
+          className="text-center text-xl mt-5 lg:mt-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.0 }}
@@ -118,7 +118,7 @@ function Home() {
 
       <div className="container">
         {/* Header Section */}
-        <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-end gap-6">
+        <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-end gap-6 pt-10">
           {/* Heading */}
           <_motion.p
             className="text-4xl sm:text-5xl lg:text-7xl font-medium text-gray-800 text-center lg:text-left"
@@ -373,7 +373,6 @@ function Home() {
           </a>
         </_motion.div>
 
-        {/* Course items with staggered animation */}
         {/* Course items with staggered animation */}
         <_motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-7 mt-10"

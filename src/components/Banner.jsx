@@ -18,7 +18,7 @@ function Banner({ backgroundImage = bgProgram, buttonClass = "" }) {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="mt-10 rounded-4xl flex flex-col justify-center px-6 py-16 sm:px-10 lg:py-24 lg:px-32 xl:px-80"
+        className="mt-10 rounded-4xl flex flex-col justify-center px-6 py-16 sm:px-10 lg:py-24 lg:px-32 xl:px-56"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}

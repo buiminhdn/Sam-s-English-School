@@ -52,8 +52,8 @@ function Introduction() {
           <_motion.div
             className="text-base sm:w-3/5"
             initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            animate={{ opacity: 1, y: 0 }}
           >
             <p className="font-semibold text-lg sm:text-xl mb-3">
               {t("intro.founderTitle")}
@@ -76,8 +76,8 @@ function Introduction() {
           <_motion.div
             className="w-full sm:w-2/5 flex flex-col items-center sm:items-start"
             initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            animate={{ opacity: 1, y: 0 }}
           >
             <div className="w-60 sm:w-72">
               <img

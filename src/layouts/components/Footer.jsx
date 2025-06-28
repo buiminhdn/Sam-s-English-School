@@ -84,6 +84,7 @@ function Footer() {
                 { label: t("courses"), to: ROUTE_PATH.PROGRAMS },
                 { label: t("teachers"), to: ROUTE_PATH.TEACHERS },
                 { label: t("aboutUs"), to: ROUTE_PATH.INTRO },
+                { label: t("newsPage"), to: ROUTE_PATH.NEWS },
               ],
             },
             {
@@ -93,22 +94,17 @@ function Footer() {
                 { label: t("footer.course2"), to: ROUTE_PATH.PROGRAMS },
                 { label: t("footer.course3"), to: ROUTE_PATH.PROGRAMS },
                 { label: t("footer.course4"), to: ROUTE_PATH.PROGRAMS },
+                { label: t("footer.course5"), to: ROUTE_PATH.PROGRAMS },
               ],
             },
             {
               title: t("footer.contactTitle"),
               items: [
-                { icon: "fa-light fa-phone-volume", text: t("footer.phone") },
-                { icon: "fa-light fa-envelope", text: t("footer.email") },
+                { icon: "fa-light fa-phone-volume", text: "+84 707 060 068" },
+                { icon: "fa-brands fa-whatsapp", text: "+84 777 164 128" },
                 {
-                  icon: "fa-light fa-location-dot",
-                  text: (
-                    <>
-                      {t("footer.address1")}
-                      <br />
-                      {t("footer.address2")}
-                    </>
-                  ),
+                  icon: "fa-light fa-envelope",
+                  text: "sam@samenglishschool.com",
                 },
               ],
             },

@@ -78,7 +78,7 @@ function Navbar() {
               <i className="fa-xl fa-thin fa-phone"></i>
               <div>
                 <p className="text-sm font-light">{t("support")}</p>
-                <p className="text-base">+84 822-335-446</p>
+                <p className="text-base">+84 707-060-068</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -191,7 +191,7 @@ function Navbar() {
           <div className="mt-2 space-y-4 text-sm ">
             <div>
               <p className="font-light">{t("support")}</p>
-              <p className="text-base">+84 822-335-446</p>
+              <p className="text-base">+84 707-060-068</p>
             </div>
             <div>
               <p className="font-light">{t("contactEmail")}</p>
