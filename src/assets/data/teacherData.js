@@ -10,6 +10,14 @@ import {
   teacher14,
   teacher15,
   teacher16,
+  teacher17,
+  teacher18,
+  teacher19,
+  teacher20,
+  teacher21,
+  teacher22,
+  teacher23,
+  teacher24,
   teacher5,
   teacher6,
   teacher7,
@@ -24,38 +32,15 @@ export const teacherData = [
     avatar: teacher5,
     countryFlag: america,
     studentCount: 530,
-    totalCourse: 28,
-    rating: 4.7,
-    ratingCount: 182,
     subject: {
       vi: "IELTS",
       en: "IELTS",
-      zh: "雅思", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "8 năm",
-      en: "8 years",
-      zh: "8年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "Đại học California, Mỹ",
-      en: "University of California, USA",
-      zh: "美国加利福尼亚大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tây Ban Nha",
-      en: "English, Spanish",
-      zh: "英语，西班牙语", // Placeholder: Replace with actual Chinese translation
+      zh: "雅思",
     },
     about: {
       vi: "Thầy Daniel là chuyên gia trong lĩnh vực luyện thi IELTS với hơn 8 năm kinh nghiệm giảng dạy học viên đến từ nhiều quốc gia.",
       en: "Mr. Daniel is an expert in IELTS test preparation with over 8 years of teaching experience for students from various countries.",
-      zh: "Daniel老师是雅思备考专家，拥有超过8年为来自不同国家的学生授课的经验。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "Chứng chỉ TESOL, CELTA và nhiều thành tựu giảng dạy tại các trung tâm Anh ngữ quốc tế.",
-      en: "TESOL, CELTA certificates and many teaching achievements at international English centers.",
-      zh: "TESOL、CELTA证书以及在国际英语中心取得的众多教学成就。", // Placeholder: Replace with actual Chinese translation
+      zh: "Daniel老师是雅思备考专家，拥有超过8年为来自不同国家的学生授课的经验。",
     },
   },
   {
@@ -64,38 +49,15 @@ export const teacherData = [
     avatar: teacher6,
     countryFlag: australia,
     studentCount: 420,
-    totalCourse: 22,
-    rating: 4.6,
-    ratingCount: 155,
     subject: {
       vi: "Giao tiếp",
       en: "Communication",
-      zh: "沟通", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "7 năm",
-      en: "7 years",
-      zh: "7年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "Đại học Sydney, Úc",
-      en: "University of Sydney, Australia",
-      zh: "澳大利亚悉尼大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Hàn",
-      en: "English, Korean",
-      zh: "英语，韩语", // Placeholder: Replace with actual Chinese translation
+      zh: "沟通",
     },
     about: {
       vi: "Cô Maryam giúp học viên tự tin giao tiếp trong đời sống và công việc, phương pháp sôi nổi, linh hoạt.",
       en: "Ms. Maryam helps students gain confidence in everyday and workplace communication with dynamic and flexible teaching methods.",
-      zh: "Maryam老师帮助学生在日常生活和职场沟通中获得自信，采用生动灵活的教学方法。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "Chứng chỉ CELTA, kỹ năng sư phạm quốc tế và bằng giảng dạy từ Úc.",
-      en: "CELTA certificate, international pedagogical skills, and a teaching degree from Australia.",
-      zh: "CELTA证书、国际教学技能以及澳大利亚的教学学位。", // Placeholder: Replace with actual Chinese translation
+      zh: "Maryam老师帮助学生在日常生活和职场沟通中获得自信，采用生动灵活的教学方法。",
     },
   },
   {
@@ -104,38 +66,15 @@ export const teacherData = [
     avatar: teacher7,
     countryFlag: canada,
     studentCount: 315,
-    totalCourse: 19,
-    rating: 4.5,
-    ratingCount: 140,
     subject: {
       vi: "Phát âm",
       en: "Pronunciation",
-      zh: "发音", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "6 năm",
-      en: "6 years",
-      zh: "6年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "Đại học Toronto, Canada",
-      en: "University of Toronto, Canada",
-      zh: "加拿大多伦多大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Pháp",
-      en: "English, French",
-      zh: "英语，法语", // Placeholder: Replace with actual Chinese translation
+      zh: "发音",
     },
     about: {
       vi: "Thầy David chuyên chỉnh sửa phát âm chuẩn Anh - Mỹ, đặc biệt hiệu quả với người học mất gốc.",
       en: "Mr. David specializes in American and British pronunciation correction, especially effective for beginners.",
-      zh: "David老师专注于纠正美式和英式发音，对初学者尤其有效。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "Chứng chỉ TESOL và bằng ngôn ngữ học ứng dụng tại Canada.",
-      en: "TESOL certificate and a degree in applied linguistics in Canada.",
-      zh: "TESOL证书和加拿大应用语言学学位。", // Placeholder: Replace with actual Chinese translation
+      zh: "David老师专注于纠正美式和英式发音，对初学者尤其有效。",
     },
   },
   {
@@ -144,38 +83,15 @@ export const teacherData = [
     avatar: teacher8,
     countryFlag: england,
     studentCount: 280,
-    totalCourse: 15,
-    rating: 4.8,
-    ratingCount: 198,
     subject: {
       vi: "Tiếng Anh cho CEO",
       en: "English for CEOs",
-      zh: "CEO英语", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "10 năm",
-      en: "10 years",
-      zh: "10年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "Oxford University, Anh",
-      en: "Oxford University, UK",
-      zh: "英国牛津大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Đức",
-      en: "English, German",
-      zh: "英语，德语", // Placeholder: Replace with actual Chinese translation
+      zh: "CEO英语",
     },
     about: {
       vi: "Giảng viên cấp cao về tiếng Anh chuyên ngành quản lý và đàm phán quốc tế cho cấp lãnh đạo.",
       en: "Senior lecturer specializing in English for management and international negotiation for executives.",
-      zh: "高级讲师，专注于为高管提供管理和国际谈判的英语培训。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "MBA và TESOL chuyên sâu, giảng viên các chương trình đào tạo doanh nghiệp toàn cầu.",
-      en: "MBA and advanced TESOL, lecturer for global corporate training programs.",
-      zh: "MBA和高级TESOL，全球企业培训项目讲师。", // Placeholder: Replace with actual Chinese translation
+      zh: "高级讲师，专注于为高管提供管理和国际谈判的英语培训。",
     },
   },
   {
@@ -184,38 +100,15 @@ export const teacherData = [
     avatar: teacher9,
     countryFlag: america,
     studentCount: 600,
-    totalCourse: 27,
-    rating: 4.9,
-    ratingCount: 210,
     subject: {
       vi: "Tiếng Anh thương mại",
       en: "Business English",
-      zh: "商务英语", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "9 năm",
-      en: "9 years",
-      zh: "9年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "Harvard University",
-      en: "Harvard University",
-      zh: "哈佛大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh",
-      en: "English",
-      zh: "英语", // Placeholder: Replace with actual Chinese translation
+      zh: "商务英语",
     },
     about: {
       vi: "Cô Ane đào tạo tiếng Anh thương mại cho nhiều tập đoàn đa quốc gia, truyền cảm hứng và dễ hiểu.",
       en: "Ms. Ane trains business English for multinational corporations with an inspiring and clear approach.",
-      zh: "Ane老师为多家跨国公司培训商务英语，方法鼓舞人心且通俗易懂。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "Chứng chỉ CELTA, MBA và bằng đào tạo kỹ năng thuyết trình chuyên nghiệp.",
-      en: "CELTA certificate, MBA, and professional presentation skills training certification.",
-      zh: "CELTA证书、MBA和专业演示技能培训证书。", // Placeholder: Replace with actual Chinese translation
+      zh: "Ane老师为多家跨国公司培训商务英语，方法鼓舞人心且通俗易懂。",
     },
   },
   {
@@ -224,38 +117,15 @@ export const teacherData = [
     avatar: teacher10,
     countryFlag: australia,
     studentCount: 450,
-    totalCourse: 21,
-    rating: 4.6,
-    ratingCount: 160,
     subject: {
       vi: "Viết học thuật",
       en: "Academic Writing",
-      zh: "学术写作", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "6 năm",
-      en: "6 years",
-      zh: "6年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "University of Melbourne",
-      en: "University of Melbourne",
-      zh: "墨尔本大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Nga",
-      en: "English, Russian",
-      zh: "英语，俄语", // Placeholder: Replace with actual Chinese translation
+      zh: "学术写作",
     },
     about: {
       vi: "Giáo viên viết học thuật giàu kinh nghiệm, giúp học viên nâng cao kỹ năng viết luận và nghiên cứu.",
       en: "Experienced academic writing teacher helping learners improve their essay and research writing skills.",
-      zh: "经验丰富的学术写作老师，帮助学员提升论文和研究写作技能。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "Chứng chỉ chuyên môn từ Úc và kinh nghiệm giảng dạy tại các trường đại học.",
-      en: "Professional certifications from Australia and teaching experience at universities.",
-      zh: "澳大利亚专业证书和大学教学经验。", // Placeholder: Replace with actual Chinese translation
+      zh: "经验丰富的学术写作老师，帮助学员提升论文和研究写作技能。",
     },
   },
   {
@@ -264,38 +134,15 @@ export const teacherData = [
     avatar: teacher11,
     countryFlag: canada,
     studentCount: 370,
-    totalCourse: 20,
-    rating: 4.5,
-    ratingCount: 137,
     subject: {
       vi: "Đàm thoại",
       en: "Conversation",
-      zh: "会话", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "5 năm",
-      en: "5 years",
-      zh: "5年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "University of British Columbia",
-      en: "University of British Columbia",
-      zh: "不列颠哥伦比亚大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Bồ Đào Nha",
-      en: "English, Portuguese",
-      zh: "英语，葡萄牙语", // Placeholder: Replace with actual Chinese translation
+      zh: "会话",
     },
     about: {
       vi: "Cô Sharen là giáo viên thân thiện, chuyên luyện đàm thoại tự nhiên và phản xạ tiếng Anh hàng ngày.",
       en: "Ms. Sharen is a friendly teacher specializing in natural English conversation and daily speaking practice.",
-      zh: "Sharen老师是一位友好的教师，专注于自然英语会话和日常口语练习。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "Chứng chỉ TESOL và bằng Sư phạm ngôn ngữ tại Canalada.",
-      en: "TESOL certification and a degree in language education from Canada.",
-      zh: "TESOL证书和加拿大语言教育学位。", // Placeholder: Replace with actual Chinese translation
+      zh: "Sharen老师是一位友好的教师，专注于自然英语会话和日常口语练习。",
     },
   },
   {
@@ -304,38 +151,15 @@ export const teacherData = [
     avatar: teacher12,
     countryFlag: england,
     studentCount: 290,
-    totalCourse: 18,
-    rating: 4.7,
-    ratingCount: 125,
     subject: {
       vi: "Tiếng Anh cho trẻ em",
       en: "English for Children",
-      zh: "少儿英语", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "6 năm",
-      en: "6 years",
-      zh: "6年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "University of Leeds",
-      en: "University of Leeds",
-      zh: "利兹大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Ý",
-      en: "English, Italian",
-      zh: "英语，意大利语", // Placeholder: Replace with actual Chinese translation
+      zh: "少儿英语",
     },
     about: {
       vi: "Thầy Enrico luôn sáng tạo với lớp học thiếu nhi, sử dụng trò chơi, hình ảnh và tương tác sinh động.",
       en: "Mr. Enrico is creative in kids' classes, using games, visuals, and engaging interactions.",
-      zh: "Enrico老师在儿童课堂上富有创意，使用游戏、视觉内容和引人入胜的互动。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "Chứng chỉ giảng dạy trẻ em và bằng sư phạm ngôn ngữ Anh.",
-      en: "Children's teaching certification and English pedagogy degree.",
-      zh: "儿童教学证书和英语教育学位。", // Placeholder: Replace with actual Chinese translation
+      zh: "Enrico老师在儿童课堂上富有创意，使用游戏、视觉内容和引人入胜的互动。",
     },
   },
   {
@@ -344,38 +168,15 @@ export const teacherData = [
     avatar: teacher13,
     countryFlag: america,
     studentCount: 520,
-    totalCourse: 24,
-    rating: 4.6,
-    ratingCount: 170,
     subject: {
       vi: "Nói IELTS",
       en: "IELTS Speaking",
-      zh: "雅思口语", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "8 năm",
-      en: "8 years",
-      zh: "8年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "New York University",
-      en: "New York University",
-      zh: "纽约大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh",
-      en: "English",
-      zh: "英语", // Placeholder: Replace with actual Chinese translation
+      zh: "雅思口语",
     },
     about: {
       vi: "Chuyên luyện kỹ năng nói IELTS từ 5.5 lên 7.5, hướng dẫn chiến lược và từ vựng chuyên sâu.",
       en: "Specialized in helping students improve IELTS speaking from 5.5 to 7.5 with strategic guidance and vocabulary.",
-      zh: "专注于帮助学生将雅思口语从5.5提升至7.5，提供策略指导和深入词汇。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "CELTA, IELTS Trainer Certificate từ Hội đồng Anh.",
-      en: "CELTA, IELTS Trainer Certificate from the British Council.",
-      zh: "CELTA、英国文化协会雅思培训师证书。", // Placeholder: Replace with actual Chinese translation
+      zh: "专注于帮助学生将雅思口语从5.5提升至7.5，提供策略指导和深入词汇。",
     },
   },
   {
@@ -384,38 +185,15 @@ export const teacherData = [
     avatar: teacher14,
     countryFlag: australia,
     studentCount: 480,
-    totalCourse: 20,
-    rating: 4.4,
-    ratingCount: 130,
     subject: {
       vi: "Ngữ pháp",
       en: "Grammar",
-      zh: "语法", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "7 năm",
-      en: "7 years",
-      zh: "7年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "University of Queensland",
-      en: "University of Queensland",
-      zh: "昆士兰大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Thổ Nhĩ Kỳ",
-      en: "English, Turkish",
-      zh: "英语，土耳其语", // Placeholder: Replace with actual Chinese translation
+      zh: "语法",
     },
     about: {
       vi: "Thầy Mert giúp học viên nắm chắc nền tảng ngữ pháp qua các ví dụ dễ hiểu và bài tập thực tế.",
       en: "Mr. Mert helps students master grammar fundamentals with clear examples and practical exercises.",
-      zh: "Mert老师通过清晰的示例和实用练习帮助学生掌握语法基础。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "TESOL, chuyên ngành ngôn ngữ học ứng dụng.",
-      en: "TESOL, major in applied linguistics.",
-      zh: "TESOL，应用语言学专业。", // Placeholder: Replace with actual Chinese translation
+      zh: "Mert老师通过清晰的示例和实用练习帮助学生掌握语法基础。",
     },
   },
   {
@@ -424,38 +202,15 @@ export const teacherData = [
     avatar: teacher15,
     countryFlag: canada,
     studentCount: 410,
-    totalCourse: 22,
-    rating: 4.7,
-    ratingCount: 148,
     subject: {
       vi: "TOEFL",
       en: "TOEFL",
-      zh: "托福", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "9 năm",
-      en: "9 years",
-      zh: "9年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "McGill University",
-      en: "McGill University",
-      zh: "麦吉尔大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Nhật",
-      en: "English, Japanese",
-      zh: "英语，日语", // Placeholder: Replace with actual Chinese translation
+      zh: "托福",
     },
     about: {
       vi: "Chuyên gia luyện thi TOEFL cho học viên chuẩn bị du học, dạy kỹ càng từng kỹ năng.",
       en: "TOEFL expert for study abroad students, teaching each skill thoroughly.",
-      zh: "托福专家，为准备出国留学的学生教授每项技能。", // Placeholder: Replace with actual Chinese translation
-    },
-    certification: {
-      vi: "TOEFL iBT Trainer, bằng TESL từ Canada.",
-      en: "TOEFL iBT Trainer, TESL certificate from Canada.",
-      zh: "托福iBT培训师，加拿大TESL证书。", // Placeholder: Replace with actual Chinese translation
+      zh: "托福专家，为准备出国留学的学生教授每项技能。",
     },
   },
   {
@@ -464,38 +219,151 @@ export const teacherData = [
     avatar: teacher16,
     countryFlag: england,
     studentCount: 360,
-    totalCourse: 17,
-    rating: 4.6,
-    ratingCount: 142,
     subject: {
       vi: "Du lịch",
       en: "Travel English",
-      zh: "旅游英语", // Placeholder: Replace with actual Chinese translation
-    },
-    experiences: {
-      vi: "5 năm",
-      en: "5 years",
-      zh: "5年", // Placeholder: Replace with actual Chinese translation
-    },
-    graduated: {
-      vi: "University of Manchester",
-      en: "University of Manchester",
-      zh: "曼彻斯特大学", // Placeholder: Replace with actual Chinese translation
-    },
-    languages: {
-      vi: "Tiếng Anh, Tiếng Tây Ban Nha",
-      en: "English, Spanish",
-      zh: "英语，西班牙语", // Placeholder: Replace with actual Chinese translation
+      zh: "旅游英语",
     },
     about: {
       vi: "Cô Isabella mang lại sự tự tin khi giao tiếp tiếng Anh trong các chuyến đi nước ngoài.",
       en: "Ms. Isabella builds confidence in English communication during international travel.",
-      zh: "Isabella老师帮助学生在国际旅行中建立英语沟通的自信。", // Placeholder: Replace with actual Chinese translation
+      zh: "Isabella老师帮助学生在国际旅行中建立英语沟通的自信。",
     },
-    certification: {
-      vi: "Chứng chỉ TESOL, chuyên đề tiếng Anh du lịch quốc tế.",
-      en: "TESOL certification, specialized in international travel English.",
-      zh: "TESOL证书，专攻国际旅游英语。", // Placeholder: Replace with actual Chinese translation
+  },
+  {
+    id: 13,
+    name: "Sophie Nguyen",
+    avatar: teacher17,
+    countryFlag: america,
+    studentCount: 390,
+    subject: {
+      vi: "Viết IELTS",
+      en: "IELTS Writing",
+      zh: "雅思写作",
+    },
+    about: {
+      vi: "Cô Sophie chuyên giúp học viên nâng cao kỹ năng viết IELTS với phương pháp rõ ràng và hiệu quả.",
+      en: "Ms. Sophie specializes in improving students' IELTS writing skills with clear and effective methods.",
+      zh: "Sophie老师专注于通过清晰有效的方法提高学生的雅思写作技能。",
+    },
+  },
+  {
+    id: 14,
+    name: "James Patel",
+    avatar: teacher18,
+    countryFlag: australia,
+    studentCount: 340,
+    subject: {
+      vi: "Giao tiếp nâng cao",
+      en: "Advanced Communication",
+      zh: "高级沟通",
+    },
+    about: {
+      vi: "Thầy James giúp học viên đạt được sự lưu loát trong giao tiếp tiếng Anh nâng cao.",
+      en: "Mr. James helps students achieve fluency in advanced English communication.",
+      zh: "James老师帮助学生在高级英语交流中达到流利。",
+    },
+  },
+  {
+    id: 15,
+    name: "Emma Wilson",
+    avatar: teacher19,
+    countryFlag: canada,
+    studentCount: 400,
+    subject: {
+      vi: "Phát âm nâng cao",
+      en: "Advanced Pronunciation",
+      zh: "高级发音",
+    },
+    about: {
+      vi: "Cô Emma chuyên cải thiện phát âm nâng cao, giúp học viên nói tiếng Anh chuẩn và tự nhiên.",
+      en: "Ms. Emma specializes in advanced pronunciation, helping students speak English accurately and naturally.",
+      zh: "Emma老师专注于高级发音，帮助学生准确自然地说英语。",
+    },
+  },
+  {
+    id: 16,
+    name: "Liam Brown",
+    avatar: teacher20,
+    countryFlag: england,
+    studentCount: 350,
+    subject: {
+      vi: "Tiếng Anh thương mại nâng cao",
+      en: "Advanced Business English",
+      zh: "高级商务英语",
+    },
+    about: {
+      vi: "Thầy Liam đào tạo tiếng Anh thương mại nâng cao cho các chuyên gia và doanh nhân.",
+      en: "Mr. Liam trains advanced business English for professionals and entrepreneurs.",
+      zh: "Liam老师为专业人士和企业家培训高级商务英语。",
+    },
+  },
+  {
+    id: 17,
+    name: "Michael Chen",
+    avatar: teacher21,
+    countryFlag: america,
+    studentCount: 380,
+    subject: {
+      vi: "Từ vựng IELTS",
+      en: "IELTS Vocabulary",
+      zh: "雅思词汇",
+    },
+    about: {
+      vi: "Thầy Michael chuyên giảng dạy từ vựng IELTS, giúp học viên mở rộng vốn từ một cách hiệu quả.",
+      en: "Mr. Michael specializes in teaching IELTS vocabulary, helping students expand their word bank effectively.",
+      zh: "Michael老师专注于教授雅思词汇，帮助学生有效扩展词汇量。",
+    },
+  },
+  {
+    id: 18,
+    name: "Andrew Kim",
+    avatar: teacher22,
+    countryFlag: australia,
+    studentCount: 320,
+    subject: {
+      vi: "Nghe IELTS",
+      en: "IELTS Listening",
+      zh: "雅思听力",
+    },
+    about: {
+      vi: "Thầy Andrew giúp học viên cải thiện kỹ năng nghe IELTS với các chiến lược thực tiễn và bài tập chuyên sâu.",
+      en: "Mr. Andrew helps students improve their IELTS listening skills with practical strategies and focused exercises.",
+      zh: "Andrew老师通过实用策略和专注练习帮助学生提高雅思听力技能。",
+    },
+  },
+  {
+    id: 19,
+    name: "Robert Taylor",
+    avatar: teacher23,
+    countryFlag: canada,
+    studentCount: 360,
+    subject: {
+      vi: "Tiếng Anh cho kỹ thuật",
+      en: "Technical English",
+      zh: "技术英语",
+    },
+    about: {
+      vi: "Thầy Robert chuyên đào tạo tiếng Anh kỹ thuật cho các chuyên gia trong lĩnh vực công nghệ và kỹ thuật.",
+      en: "Mr. Robert specializes in training technical English for professionals in technology and engineering.",
+      zh: "Robert老师专注于为技术和工程领域的专业人士培训技术英语。",
+    },
+  },
+  {
+    id: 20,
+    name: "William Harris",
+    avatar: teacher24,
+    countryFlag: england,
+    studentCount: 330,
+    subject: {
+      vi: "Tiếng Anh học thuật",
+      en: "Academic English",
+      zh: "学术英语",
+    },
+    about: {
+      vi: "Thầy William hỗ trợ học viên phát triển kỹ năng tiếng Anh học thuật cho môi trường đại học và nghiên cứu.",
+      en: "Mr. William assists students in developing academic English skills for university and research environments.",
+      zh: "William老师帮助学生发展大学和研究环境所需的学术英语技能。",
     },
   },
 ];

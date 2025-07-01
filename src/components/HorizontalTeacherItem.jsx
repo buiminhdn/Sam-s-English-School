@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { SOCIAL_LINKS } from "../routes/routePath";
 
 function HorizontalTeacherItem({
-  id,
   avatar,
   name,
   countryFlag,
@@ -53,13 +53,15 @@ function HorizontalTeacherItem({
         {/* Buttons */}
         <div className="mt-5 flex flex-col sm:flex-row gap-3 w-full">
           <a
-            href={`/Teachers/${id}`}
+            href={SOCIAL_LINKS.ZALO}
+            target="_blank"
             className="bg-blue-light text-blue-dark hover:bg-blue-dark hover:text-white hover:shadow-lg transition-all duration-500 font-medium py-3 md:py-2 px-4 rounded-lg text-center"
           >
             {t("teacheritem.bookLesson")}
           </a>
           <a
-            href={`/Teachers/${id}`}
+            href={SOCIAL_LINKS.ZALO}
+            target="_blank"
             className="bg-blue-dark text-white hover:bg-blue-light hover:text-blue-dark hover:shadow-lg transition-all duration-500 font-medium py-3 md:py-2 px-4 rounded-lg text-center"
           >
             {t("teacheritem.contactNow")}
