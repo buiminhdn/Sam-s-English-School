@@ -34,6 +34,14 @@ import teacher21 from "./teacher21.jpg";
 import teacher22 from "./teacher22.jpg";
 import teacher23 from "./teacher23.jpg";
 import teacher24 from "./teacher24.jpg";
+import teacher25 from "./teacher25.jpg";
+import teacher26 from "./teacher26.jpg";
+import teacher27 from "./teacher27.jpg";
+import teacher28 from "./teacher28.jpg";
+import teacher29 from "./teacher29.jpg";
+import teacher30 from "./teacher30.jpg";
+import teacher31 from "./teacher31.jpg";
+import teacher32 from "./teacher32.jpg";
 import YellowCircle from "./YellowCircle.png";
 import course1 from "./course1.png";
 import course2 from "./course2.jpg";
@@ -117,6 +125,14 @@ export {
   teacher22,
   teacher23,
   teacher24,
+  teacher25,
+  teacher26,
+  teacher27,
+  teacher28,
+  teacher29,
+  teacher30,
+  teacher31,
+  teacher32,
   YellowCircle,
   course1,
   course2,
