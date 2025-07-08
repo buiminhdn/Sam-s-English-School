@@ -14,8 +14,8 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
 
       <div className="p-4 flex flex-col justify-between flex-1">
         <div>
-          <p className="text-lg font-medium">{title[lang]}</p>
-          <p className="mt-1 text-gray-600">{description[lang]}</p>
+          <p className="text-2xl font-semibold">{title[lang]}</p>
+          <p className="mt-2 text-gray-600">{description[lang]}</p>
         </div>
 
         <div className="w-full border border-gray-300 border-dashed my-4"></div>
@@ -41,7 +41,7 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
         <a
           href={`/Programs/${id}`}
           target="_blank"
-          className="block text-center border border-gray-100 bg-blue-light p-2.5 w-full rounded-lg mt-6 text-blue-dark hover:bg-blue-dark hover:text-white transition-colors duration-300"
+          className="block text-center border-2 border-blue-dark font-medium bg-blue-dark text-white p-2.5 w-full rounded-lg mt-6 hover:text-blue-dark hover:bg-blue-light transition-colors duration-300"
         >
           {t("courseitem.joinNow")}
         </a>

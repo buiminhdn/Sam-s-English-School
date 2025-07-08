@@ -1,5 +1,5 @@
 import { teacherData } from "../assets/data/teacherData";
-import { bgProgramBlue } from "../assets/images";
+import { onlineClass } from "../assets/images";
 import Banner from "../components/Banner";
 import FreeConsultation from "../components/FreeConsultation";
 import HorizontalTeacherItem from "../components/HorizontalTeacherItem";
@@ -12,9 +12,9 @@ function Teachers() {
   return (
     <>
       <Banner
-        backgroundImage={bgProgramBlue}
+        backgroundImage={onlineClass}
         buttonStyle="button"
-        buttonClass="bg-blue-dark text-white"
+        buttonClass="bg-white"
       />
       {/* Heading */}
       <_motion.p

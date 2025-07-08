@@ -11,7 +11,7 @@ function TeacherItem({ avatar, name, countryFlag, subject, studentCount }) {
       <img
         src={avatar}
         alt={name}
-        className="rounded-t-xl h-70 w-full object-cover"
+        className="rounded-t-xl h-70 w-70 object-cover"
       />
       <div className="p-4">
         <div className="flex justify-center items-center gap-3 mt-2">

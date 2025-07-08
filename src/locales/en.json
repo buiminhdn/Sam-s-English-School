@@ -15,6 +15,8 @@
   "menu": "Menu",
   "students": "Students",
 
+  "teachingHours": "teaching hours",
+
   "footer.intro": "At Sam’s English School, we are committed to providing a unique and inspiring learning experience. With personalized teaching methods and a dedicated team of instructors, we empower learners to grow with confidence. Join us on a journey of positive transformation — where you don’t just learn English, but also discover your true potential in a dynamic and supportive environment.",
   "footer.linksTitle": "Links",
   "footer.courseTitle": "Course",
@@ -79,7 +81,6 @@
   "filter.genre.oneOnOne": "1 on 1",
   "filter.genre.group": "Group",
   "filter.sort.latest": "Nearest",
-  "filter.sort.price": "Price",
   "filter.sort.popular": "Popular",
   "filter.sortBy": "Sort by",
   "filter.searchPlaceholder": "Search Course, Teacher Name",
@@ -145,22 +146,22 @@
         "source": "VN Express Newspaper"
       },
       "3": {
-        "title": "Western men choose Ho Chi Minh City as their hometown",
-        "content": "Mr. Jefferson loves gardening on a plot of land in Binh Thanh District, Ho Chi Minh City. Having been attached to the garden for 7 years with many types of trees such as bananas, sugarcane, mangoes, squash... he considers this his second hometown.",
-        "source": "Women's Newspaper"
+        "title": "Funny and Tragic: Western Tourist Learns to Survive the Blazing Heat of Ho Chi Minh City – Practicing... Napping and Drinking Sugarcane Juice",
+        "content": "Zach (30 years old) is an American who has been living in Ho Chi Minh City for 9 months. He works as an English teacher at language centers and secondary schools. Zach jokingly said that he has been 'fighting' against the extreme heat during the peak of the hot season.",
+        "source": "General News and Information Portal"
       }
     },
     "trending": {
       "title": "Trending News",
       "readNow": "Read Now",
       "alt": "Trending News",
-      "headline": "The comedy of Westerners learning how to \"survive\" in the scorching heat of Ho Chi Minh City: Practicing... napping, drinking sugarcane juice",
-      "paragraph1": "Zach (30 years old) is an American who has lived in Ho Chi Minh City for 9 months. His job is teaching English at centers and secondary schools. Zach jokingly said that he had to fight the temperature during the peak hot season.",
-      "paragraph2": "At school, people take a lunch break from 11:30 to 1:30 and find ways to cool themselves. First, Zach goes to a coffee shop or convenience store with air conditioning. I feel like it's enough to temporarily relieve the heat, but a lunch at a restaurant without a fan would be a disaster, he said. Zach started the habit of drinking iced coffee, he puts ice in every cup of coffee and lemonade.",
-      "paragraph3": "Oregonians often wear hoodies, sweaters and long pants in the fall or winter to keep warm. However, Zach was shocked to see Vietnamese people also wearing them in the summer to avoid the heat. Later, he understood that they wanted to avoid direct exposure to the sun.",
-      "paragraph4": "He has a hobby of taking landscape photos and this is a challenge if he does it in weather near 43 degrees Celsius. I always bring a big bottle of water, long pants and a hat. I'm afraid of sunburn.",
-      "paragraph5": "The heat can suddenly attack my health if I forget to drink enough water or rest, Zach said.",
-      "source": "General electronic information page"
+      "headline": "Foreigners Who Choose Ho Chi Minh City as Their Home",
+      "paragraph1": "Like Jay, Sam – 34 years old, from the UK – shared that although he has traveled to 65 countries, he still chose to live in Ho Chi Minh City and considers it his home. Sam was deeply impressed by Vietnam during a cross-country motorbike trip with five friends. He recounted a rainy afternoon in Cai Be (Tien Giang), when the group stood in front of a small house with baskets of fruit on a bench at the door—presumably for sale to passersby. Soaked, hungry, and cold, Sam asked to buy some fruit to stave off hunger.",
+      "paragraph2": "Sam chose to live in Ho Chi Minh City because it’s easy to find an apartment, European food, or Western-style restaurants here. The cost of living is also much lower compared to the UK. For instance, renting a two-bedroom apartment in the UK costs about $3,000/month, while in HCMC, he only pays around 12–15 million VND (roughly $500) for a fully equipped two-bedroom apartment with a swimming pool.",
+      "paragraph3": "Not knowing Vietnamese, he had to use hand gestures to communicate with the three people in the house. They warmly offered the fruit to the whole group. Sam shared: “When I tried to pay, they refused, signaling not to worry. They just wanted to give, expecting nothing in return, even though they looked very poor. Their kindness and warmth really touched me. That’s also why I came back to Vietnam.”",
+      "paragraph4": "Sam’s main job now is teaching English, mostly online. With a flexible schedule, he can work from anywhere, which allows him to always be on the move. He and a few friends have traveled through all the provinces and cities in Vietnam, then returned to HCMC like coming back home.",
+      "paragraph5": "After six years here, there are still things Sam dislikes—for example, many people sing karaoke all night.",
+      "source": "Phu Nu Newspaper"
     },
     "videos": {
       "main": {

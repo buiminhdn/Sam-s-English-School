@@ -84,8 +84,10 @@ import video5 from "./video5.png";
 import student1 from "./student1.jpg";
 import student2 from "./student2.jpg";
 import student3 from "./student3.jpg";
+import onlineClass from "./onlineClass.jpg";
 
 export {
+  onlineClass,
   class1,
   founder,
   bgProgram,

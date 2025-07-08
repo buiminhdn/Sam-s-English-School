@@ -31,7 +31,7 @@ const teacherData = [
   { img: teacher1, name: "Emma Johnson", students: 530 },
   { img: teacher2, name: "Chloe Anderson", students: 470 },
   { img: teacher3, name: "Michael Thompson", students: 612 },
-  { img: teacher4, name: "Sophia Nguyen", students: 488 },
+  { img: teacher4, name: "Sophia Loren", students: 488 },
 ];
 
 function Home() {
@@ -49,7 +49,7 @@ function Home() {
         <_motion.img
           src={BoyHoldCamera}
           alt="Boy Holding Camera"
-          className="hidden lg:block lg:absolute w-60 left-32 top-10"
+          className="hidden lg:block lg:absolute w-80 left-24 top-20"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -60,7 +60,7 @@ function Home() {
         <_motion.img
           src={BoyThumbUp}
           alt="Boy Thumb Up"
-          className="hidden lg:block lg:absolute w-84 right-20 bottom-0"
+          className="hidden lg:block lg:absolute w-120 -right-20 bottom-0"
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -325,7 +325,7 @@ function Home() {
                 {name}
               </p>
               <p className="text-gray-300 text-sm sm:text-base mt-1 text-center">
-                {students} {t("students")}
+                {students} {t("teachingHours")}
               </p>
             </_motion.div>
           ))}

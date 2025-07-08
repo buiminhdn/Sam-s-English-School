@@ -25,7 +25,7 @@ function Banner({ backgroundImage = bgProgram, buttonClass = "" }) {
       >
         {/* Title */}
         <_motion.p
-          className="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug"
+          className="font-semibold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-snug"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,7 +37,7 @@ function Banner({ backgroundImage = bgProgram, buttonClass = "" }) {
 
         {/* Subtitle */}
         <_motion.p
-          className="text-base sm:text-lg font-light mt-4"
+          className="text-base text-white sm:text-lg font-light mt-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}

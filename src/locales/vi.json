@@ -15,6 +15,8 @@
   "menu": "Menu",
   "students": "Học viên",
 
+  "teachingHours": "giờ dạy",
+
   "footer.intro": "Tại Trường Anh ngữ Sam, chúng tôi cam kết mang đến trải nghiệm học tập khác biệt và đầy cảm hứng. Với phương pháp cá nhân hóa và đội ngũ giảng viên tận tâm, chúng tôi giúp học viên tự tin phát triển toàn diện. Hãy cùng chúng tôi tạo nên hành trình thay đổi tích cực - nơi bạn không chỉ học tiếng Anh, mà còn khám phá chính mình trong môi trường học tập năng động và gắn kết.",
   "footer.linksTitle": "Liên kết",
   "footer.courseTitle": "Khoá học",
@@ -78,7 +80,6 @@
   "filter.genre.oneOnOne": "1 kèm 1",
   "filter.genre.group": "Nhóm",
   "filter.sort.latest": "Gần nhất",
-  "filter.sort.price": "Giá cả",
   "filter.sort.popular": "Phổ biến",
   "filter.sortBy": "Sắp xếp theo",
   "filter.searchPlaceholder": "Tìm kiếm Khóa học, Tên giáo viên",
@@ -144,22 +145,22 @@
         "source": "Báo VN Express"
       },
       "3": {
-        "title": "Những “ông Tây” chọn TPHCM làm quê hương",
-        "content": "Ông Jefferson yêu thích làm vườn tại một khoảnh đất ở quận Bình Thạnh, TPHCM. Gắn bó 7 năm với khu vườn có nhiều loại cây như chuối, mía, xoài, bầu... ông coi đây là quê hương thứ hai của mình.",
-        "source": "Báo Phụ nữ"
+        "title": "Bi hài khách Tây học cách sinh tồn trong nắng nóng đổ lửa của TPHCM: Tập... ngủ trưa, uống nước mía",
+        "content": "Zach (30 tuổi) là một người Mỹ sống ở TPHCM được 9 tháng. Công việc của anh là dạy tiếng Anh ở các trung tâm và trường THCS. Zach nói vui, anh đã phải “chiến đấu” với nhiệt độ trong suốt mùa nắng nóng cao điểm.",
+        "source": "Trang thông tin điện tử tổng hợp"
       }
     },
     "trending": {
       "title": "Tin xu hướng",
       "readNow": "Đọc ngay",
       "alt": "Tin xu hướng",
-      "headline": "Bi hài khách Tây học cách \"sinh tồn\" trong nắng nóng đổ lửa của TPHCM: Tập... ngủ trưa, uống nước mía",
-      "paragraph1": "Zach (30 tuổi) là một người Mỹ sống ở TPHCM được 9 tháng. Công việc của anh là dạy tiếng Anh ở các trung tâm và trường THCS. Zach nói vui, anh đã phải “chiến đấu” với nhiệt độ trong suốt mùa nắng nóng cao điểm.",
-      "paragraph2": "Ở trường học, mọi người nghỉ trưa từ 11h30 đến 13h30 và tìm mọi cách để làm mát mình. Đầu tiên, Zach tìm đến quán cà phê hoặc cửa hàng tiện lợi có điều hòa. “Tôi cảm thấy nó đủ giải quyết cái nóng tạm thời nhưng một bữa trưa ở quán ăn không có quạt sẽ là thảm họa”, anh nói. Zach bắt đầu thói quen uống đá, anh cho đá vào mọi cốc cà phê và nước chanh.",
-      "paragraph3": "Người dân Oregon hay mặc áo hoodie, áo len và quần dài vào mùa thu hoặc đông để giữ ấm. Tuy nhiên, Zach đã sốc khi thấy người Việt Nam cũng mặc nó vào mùa hè để tránh nóng. Sau này, anh mới hiểu ra họ muốn tránh tiếp xúc trực tiếp với ánh nắng mặt trời.",
-      "paragraph4": "Anh có sở thích chụp ảnh phong cảnh và điều này là một thách thức nếu thực hiện nó dưới thời tiết gần 43 độ C. “Tôi luôn mang theo chai nước lớn, quần dài và mũ nữa. Tôi sợ bị cháy nắng lắm.",
-      "paragraph5": "Cái nóng có thể bất ngờ “tấn công” sức khỏe nếu tôi quên uống đủ nước hoặc nghỉ ngơi”, Zach nói.",
-      "source": "Trang thông tin điện tử tổng hợp"
+      "headline": "Những “ông Tây” chọn TPHCM làm quê hương",
+      "paragraph1": "Cũng như Jay, Sam - 34 tuổi, đến từ Anh - cho biết, đã du lịch qua 65 quốc gia nhưng anh vẫn chọn sống ở TPHCM và xem đây như nhà của mình. Sam có ấn tượng mạnh về Việt Nam từ chuyến xuyên Việt bằng mô tô cùng 5 người bạn. Anh kể, một chiều mưa tầm tã ở Cái Bè (Tiền Giang), nhóm anh đứng trước một căn nhà nhỏ có những rổ trái cây đặt trên băng ghế trước cửa, anh đoán họ dùng để bán cho người qua đường. Mắc mưa, đói và lạnh, Sam hỏi mua trái cây lót dạ.",
+      "paragraph2": "Sam chọn sống ở TPHCM vì ở đây, anh dễ dàng tìm được căn hộ, thức ăn hay nhà hàng kiểu Âu. Vật giá ở đây cũng rất rẻ nếu so với Anh. Ví dụ, để thuê một căn hộ 2 phòng ngủ ở Anh, anh phải mất khoảng 3.000 USD/tháng nhưng ở TPHCM, anh chỉ tốn 12-15 triệu đồng (trên dưới 500 USD) là thuê được căn hộ 2 phòng ngủ có hồ bơi và đầy đủ tiện nghi. ",
+      "paragraph3": "Không biết tiếng Việt, anh phải dùng tay để giao tiếp với 3 người trong ngôi nhà này. Họ niềm nở mang trái cây mời cả nhóm ăn. Sam kể: “Khi tôi muốn trả tiền, họ từ chối, ra hiệu đừng ngại. Họ chỉ muốn cho, không cần tiền dù trông họ có vẻ rất nghèo. Sự tốt bụng và niềm nở của họ khiến tôi cảm nhận sự nồng ấm. Đó cũng là lý do khiến tôi quay lại Việt Nam”.",
+      "paragraph4": "Công việc chính của Sam hiện nay là dạy tiếng Anh, phần lớn là dạy online. Có thể linh động sắp xếp lịch dạy và ngồi dạy ở bất kỳ đâu nên Sam dường như luôn dịch chuyển. Anh cùng vài người bạn du lịch qua tất cả các tỉnh, thành của Việt Nam rồi quay về TPHCM như trở về nhà. ",
+      "paragraph5": "Sau 6 năm ở đây, cũng có nhiều điều khiến Sam không thích. Chẳng hạn, nhiều người hát karaoke thâu đêm.",
+      "source": "Báo Phụ nữ"
     },
     "videos": {
       "main": {

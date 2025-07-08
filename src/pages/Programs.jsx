@@ -6,7 +6,7 @@ import { motion as _motion } from "framer-motion";
 import FreeConsultation from "../components/FreeConsultation";
 import { teacherData } from "../assets/data/teacherData";
 import { ROUTE_PATH, SOCIAL_LINKS } from "../routes/routePath";
-import { programillus } from "../assets/images";
+import { onlineClass, programillus } from "../assets/images";
 import { courseData } from "../assets/data/courseData";
 import { useTranslation } from "react-i18next";
 
@@ -15,7 +15,10 @@ function Programs() {
 
   return (
     <>
-      <Banner buttonClass="bg-yellow-dark font-medium" />
+      <Banner
+        buttonClass="bg-yellow-dark font-medium"
+        backgroundImage={onlineClass}
+      />
 
       <Filter />
 

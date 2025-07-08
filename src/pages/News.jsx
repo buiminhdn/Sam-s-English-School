@@ -37,8 +37,8 @@ function News() {
       source: t("news.articles.2.source"),
     },
     {
-      url: "https://www.phunuonline.com.vn/nhung-ong-tay-chon-tphcm-lam-que-huong-a1509509.html",
-      img: article4,
+      url: "https://afamily.vn/bi-hai-khach-tay-hoc-cach-sinh-ton-trong-nang-nong-do-lua-cua-tphcm-tap-ngu-trua-uong-nuoc-mia-20240428133802872.chn?zarsrc=30&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo",
+      img: article5,
       title: t("news.articles.3.title"),
       content: t("news.articles.3.content"),
       source: t("news.articles.3.source"),
@@ -123,7 +123,7 @@ function News() {
           </p>
           <div className="flex gap-2 items-center text-blue-dark hover:underline text-base">
             <a
-              href="https://afamily.vn/bi-hai-khach-tay-hoc-cach-sinh-ton-trong-nang-nong-do-lua-cua-tphcm-tap-ngu-trua-uong-nuoc-mia-20240428133802872.chn?zarsrc=30&utm_source=zalo&utm_medium=zalo&utm_campaign=zalo"
+              href="https://www.phunuonline.com.vn/nhung-ong-tay-chon-tphcm-lam-que-huong-a1509509.html"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -142,7 +142,7 @@ function News() {
         >
           {/* Left image */}
           <_motion.img
-            src={article5}
+            src={article4}
             alt="Tin xu hướng"
             className="w-full lg:w-3/5 h-auto object-cover rounded-xl"
             initial={{ opacity: 0, x: -50 }}

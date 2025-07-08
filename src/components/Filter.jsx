@@ -17,11 +17,7 @@ function Filter() {
     t("filter.genre.group"),
   ];
 
-  const sortOptions = [
-    t("filter.sort.latest"),
-    t("filter.sort.price"),
-    t("filter.sort.popular"),
-  ];
+  const sortOptions = [t("filter.sort.latest"), t("filter.sort.popular")];
 
   return (
     <_motion.form
@@ -45,7 +41,7 @@ function Filter() {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            className={`min-w-[7rem] sm:min-w-[9rem] px-4 py-2 rounded-xl border border-gray-200 hover:cursor-pointer transition-colors duration-200 ${
+            className={`min-w-[7rem] sm:min-w-[9rem] font-medium px-4 py-2 rounded-xl border border-gray-200 hover:cursor-pointer transition-colors duration-200 ${
               activeGenre === genre
                 ? "bg-blue-dark text-white"
                 : "bg-gray-50 text-gray-600"
@@ -84,7 +80,7 @@ function Filter() {
           <button
             type="button"
             onClick={() => setDropdownOpen((prev) => !prev)}
-            className="w-full lg:w-48 bg-gray-50 border border-gray-200 h-full py-3 lg:py-2 px-4 flex items-center justify-between rounded-lg hover:cursor-pointer"
+            className="w-full lg:w-60 bg-gray-50 border border-gray-200 h-full py-3 lg:py-2 px-4 flex items-center justify-between rounded-lg hover:cursor-pointer"
           >
             <p className="text-nowrap text-sm sm:text-base">
               <span className="text-gray-500 font-light">
@@ -98,7 +94,7 @@ function Filter() {
           <AnimatePresence>
             {dropdownOpen && (
               <_motion.ul
-                className="absolute top-full right-0 mt-1 bg-white shadow-lg border border-gray-200 rounded-lg w-full lg:w-48 z-10"
+                className="absolute top-full right-0 mt-1 bg-white shadow-lg border border-gray-200 rounded-lg w-full lg:w-60 z-10"
                 initial={{ opacity: 0, y: -5 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -5 }}

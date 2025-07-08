@@ -18,7 +18,7 @@ function HorizontalTeacherItem({
       <img
         src={avatar}
         alt=""
-        className="w-full md:w-auto h-60 md:h-70 rounded-xl object-cover"
+        className="w-full md:w-70 h-60 md:h-70 rounded-xl object-cover"
       />
 
       {/* Info */}
