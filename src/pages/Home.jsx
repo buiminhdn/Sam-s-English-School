@@ -17,6 +17,20 @@ import {
   YellowCircle,
   Schools,
   QuestionsIllus,
+  hero,
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  logo9,
+  america,
+  australia,
+  canada,
+  england,
 } from "../assets/images";
 import CourseItem from "../components/CourseItem";
 import { ROUTE_PATH, SOCIAL_LINKS } from "../routes/routePath";
@@ -26,12 +40,37 @@ import Contact from "../components/Contact";
 import { questionsData } from "../assets/data/questionData";
 import { useTranslation } from "react-i18next";
 import { courseData } from "../assets/data/courseData";
+import Marquee from "react-fast-marquee";
 
 const teacherData = [
-  { img: teacher1, name: "Emma Johnson", students: 530 },
-  { img: teacher2, name: "Chloe Anderson", students: 470 },
-  { img: teacher3, name: "Michael Thompson", students: 612 },
-  { img: teacher4, name: "Sophia Loren", students: 488 },
+  {
+    img: teacher1,
+    name: "Emma Johnson",
+    students: 530,
+    flag: america,
+    teachingHours: "2050",
+  },
+  {
+    img: teacher2,
+    name: "Chloe Anderson",
+    students: 470,
+    flag: england,
+    teachingHours: "1800",
+  },
+  {
+    img: teacher3,
+    name: "Michael Thompson",
+    students: 612,
+    flag: canada,
+    teachingHours: "2300",
+  },
+  {
+    img: teacher4,
+    name: "Sophia Loren",
+    students: 488,
+    flag: australia,
+    teachingHours: "1900",
+  },
 ];
 
 function Home() {
@@ -44,78 +83,98 @@ function Home() {
   };
   return (
     <>
-      <div className="container relative pt-20 pb-20 overflow-hidden">
-        {/* Boy Holding Camera - Slide in from left */}
-        <_motion.img
-          src={BoyHoldCamera}
-          alt="Boy Holding Camera"
-          className="hidden lg:block lg:absolute w-80 left-24 top-20"
-          initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
-        />
+      <div className="container flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0">
+        <div className="flex-1 text-center lg:text-left">
+          <_motion.p
+            className="text-3xl sm:text-5xl lg:text-[70px] leading-22 font-semibold text-gray-800"
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            {t("home.Headline1")}
+            <span className="hidden sm:inline">
+              <br />
+            </span>
+            <span className="text-purple-dark">{t("home.Headline2")}</span>{" "}
+            {t("home.Headline3")}{" "}
+            <span className="text-yellow-darker">{t("home.Headline4")}</span>
+            <span className="hidden sm:inline">
+              <br />
+            </span>
+            {t("home.Headline5")}
+          </_motion.p>
 
-        {/* Boy Thumbs Up - Slide in from right */}
-        <_motion.img
-          src={BoyThumbUp}
-          alt="Boy Thumb Up"
-          className="hidden lg:block lg:absolute w-120 -right-20 bottom-0"
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
-        />
+          <_motion.p
+            className="text-gray-500 text-base sm:text-lg lg:text-xl mt-5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+          >
+            {t("home.Subtext1")}
+            <span className="hidden sm:inline">
+              <br />
+            </span>
+            {t("home.Subtext2")}
+          </_motion.p>
 
-        <_motion.p
-          className="text-6xl lg:text-8xl text-center font-medium text-gray-800"
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          {t("home.Headline1")}
-          <span className="hidden sm:inline">
-            <br />
-          </span>
-          <span className="text-purple-dark"> {t("home.Headline2")}</span>{" "}
-          {t("home.Headline3")}{" "}
-          <span className="text-yellow-darker"> {t("home.Headline4")} </span>
-          <span className="hidden sm:inline">
-            <br />
-          </span>
-          {t("home.Headline5")}
-        </_motion.p>
-
-        {/* Subtext */}
-        <_motion.p
-          className="text-center text-xl mt-5 lg:mt-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-        >
-          {t("home.Subtext1")}
-          <span className="hidden sm:inline">
-            <br />
-          </span>
-          {t("home.Subtext2")}
-        </_motion.p>
-
-        {/* CTA Button */}
-        <_motion.a
-          href={SOCIAL_LINKS.ZALO}
-          target="_blank"
-          className=" mx-auto mt-5 lg:mt-12 w-fit bg-blue-dark p-3 flex items-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-        >
-          <p className="text-white ml-1.5">{t("registerNow")}</p>
-          <div className="bg-white px-2.5 py-1 rounded-full">
-            <i className="fa-regular fa-arrow-up-right fa-beat"></i>
+          <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 sm:gap-12 mt-10">
+            <div className="flex items-center gap-2">
+              <i className="fa-regular fa-circle-check text-blue-600 fa-xl sm:fa-2xl"></i>
+              <p className="text-sm sm:text-lg font-normal">Flexible</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <i className="fa-regular fa-circle-check text-blue-600 fa-xl sm:fa-2xl"></i>
+              <p className="text-sm sm:text-lg font-normal text-black">
+                Learning path
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <i className="fa-regular fa-circle-check text-blue-600 fa-xl sm:fa-2xl"></i>
+              <p className="text-sm sm:text-lg font-normal text-black">
+                Community
+              </p>
+            </div>
           </div>
-        </_motion.a>
+
+          <_motion.a
+            href={SOCIAL_LINKS.ZALO}
+            target="_blank"
+            className="mt-10 mx-auto lg:mx-0 w-fit bg-blue-dark px-3 py-3 flex items-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+          >
+            <p className="text-white ml-1.5">{t("registerNow")}</p>
+            <div className="bg-white px-2.5 py-1 rounded-full">
+              <i className="fa-regular fa-arrow-up-right fa-beat"></i>
+            </div>
+          </_motion.a>
+        </div>
+
+        <_motion.img
+          src={hero}
+          alt="Hero image"
+          className=""
+          initial={{ scale: 0.95, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        />
       </div>
 
+      <div className="mt-30 mb-20">
+        <Marquee pauseOnHover gradient={false} speed={50}>
+          <img src={logo1} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo2} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo3} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo4} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo5} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo6} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo7} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo8} alt="Logo 1" className="mx-10 h-20" />
+          <img src={logo9} alt="Logo 1" className="mx-10 h-20" />
+          {/* Add more logos as needed */}
+        </Marquee>
+      </div>
       <div className="container">
         {/* Header Section */}
         <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-end gap-6 pt-10">
@@ -311,24 +370,40 @@ function Home() {
             },
           }}
         >
-          {teacherData.map(({ img, name, students }, index) => (
-            <_motion.div
-              key={index}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.5 }}
-            >
-              <img src={img} alt={`Teacher ${index + 1}`} className="w-full" />
-              <p className="text-white text-xl sm:text-2xl font-medium mt-5 text-center">
-                {name}
-              </p>
-              <p className="text-gray-300 text-sm sm:text-base mt-1 text-center">
-                {students} {t("teachingHours")}
-              </p>
-            </_motion.div>
-          ))}
+          {teacherData.map(
+            ({ img, name, students, flag, teachingHours }, index) => (
+              <_motion.div
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.5 }}
+              >
+                <img
+                  src={img}
+                  alt={`Teacher ${index + 1}`}
+                  className="w-full"
+                />
+                <div className="flex items-center gap-3 justify-center mt-5">
+                  <p className="text-white text-xl sm:text-2xl font-medium text-center">
+                    {name}
+                  </p>
+                  <img
+                    src={flag}
+                    alt="flag"
+                    className="size-5 object-cover rounded-full"
+                  />
+                </div>
+                <p className="text-gray-300 text-sm sm:text-base mt-2 text-center">
+                  {teachingHours} {t("teachingHours")}
+                </p>
+                <p className="text-gray-300 text-sm sm:text-base mt-1 text-center">
+                  {students} {t("students")}
+                </p>
+              </_motion.div>
+            )
+          )}
         </_motion.div>
 
         {/* CTA Button */}
