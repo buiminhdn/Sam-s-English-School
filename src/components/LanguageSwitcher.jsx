@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { chinaflag, englishflag, vietnamflag } from "../assets/images";
 
 const languages = [
-  { code: "en", label: "English", icon: "🇬🇧" },
-  { code: "vi", label: "Tiếng Việt", icon: "🇻🇳" },
-  { code: "zh", label: "中文", icon: "🇨🇳" },
+  { code: "en", label: "English", flag: englishflag },
+  { code: "vi", label: "Tiếng Việt", flag: vietnamflag },
+  { code: "zh", label: "中文", flag: chinaflag },
 ];
 
 function LanguageSwitcher() {
@@ -24,10 +25,10 @@ function LanguageSwitcher() {
     <div className="relative inline-block text-left z-50">
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex justify-between w-full lg:w-fit items-center gap-2 px-4 py-2 text-sm font-medium text-gray-800 bg-white border border-gray-300 rounded-sm shadow-sm hover:bg-gray-50 focus:outline-none"
+        className="inline-flex justify-between w-full lg:w-fit items-center gap-3 px-3 py-2 text-sm font-medium text-gray-800 bg-white border border-gray-300 rounded-sm shadow-sm hover:bg-gray-50 focus:outline-none"
       >
-        <div className="flex gap-3">
-          <span>{selected.icon}</span>
+        <div className="flex items-center gap-3">
+          <img src={selected.flag} alt="" className="h-4 w-6 object-cover" />
           <span>{selected.label}</span>
         </div>
         <svg
@@ -57,7 +58,11 @@ function LanguageSwitcher() {
                   currentLang === lang.code ? "bg-gray-100" : ""
                 } w-full px-4 py-2 text-left text-sm flex text-black items-center gap-2 hover:bg-gray-100`}
               >
-                <span>{lang.icon}</span>
+                <img
+                  src={lang.flag}
+                  alt=""
+                  className="h-4 w-6 mr-2 object-cover"
+                />
                 <span>{lang.label}</span>
               </button>
             ))}

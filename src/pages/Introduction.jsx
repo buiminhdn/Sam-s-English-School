@@ -1,10 +1,10 @@
 import {
-  class1,
-  course2,
-  course3,
-  course4,
-  course6,
   founder,
+  mem1,
+  mem2,
+  mem3,
+  mem4,
+  mem5,
   whychoose1,
   whychoose2,
   whychoose3,
@@ -13,7 +13,7 @@ import FreeConsultation from "../components/FreeConsultation";
 import { motion as _motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const courseImages = [course6, course2, course3, course4];
+const courseImages = [mem1, mem2, mem3, mem4];
 
 function Introduction() {
   const { t } = useTranslation();
@@ -26,12 +26,12 @@ function Introduction() {
         {/* Heading */}
         <div className="text-center flex flex-col gap-3">
           <_motion.p
-            className="text-2xl sm:text-3xl font-semibold mx-auto text-center"
+            className="text-2xl sm:text-4xl font-semibold mx-auto text-center leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {t("intro.heading1")}
+            <span className="text-[#b79e44]">{t("intro.heading1")}</span>
             <br className="hidden sm:inline" />
             {t("intro.heading2")}
           </_motion.p>
@@ -47,7 +47,7 @@ function Introduction() {
         </div>
 
         {/* Founder Section */}
-        <div className="mt-10 w-full max-w-7xl mx-auto flex flex-col-reverse sm:flex-row gap-10 sm:gap-16">
+        <div className="mt-10 w-full max-w-6xl mx-auto flex flex-col-reverse sm:flex-row gap-10 sm:gap-16">
           {/* Left: Content */}
           <_motion.div
             className="text-base sm:w-3/5"
@@ -58,7 +58,7 @@ function Introduction() {
             <p className="font-semibold text-lg sm:text-xl mb-3">
               {t("intro.founderTitle")}
             </p>
-            <p className="text-sm sm:text-base text-justify leading-relaxed text-gray-700">
+            <p className="text-sm sm:text-base text-justify text-gray-800">
               {t("intro.founderBio1")}
               <br />
               <br />
@@ -138,7 +138,7 @@ function Introduction() {
 
       <div className="container mt-30 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Text Section */}
-        <div>
+        <div className="mr-0 lg:mr-20">
           <_motion.p
             className="text-4xl font-semibold leading-tight"
             initial={{ opacity: 0, x: -30 }}
@@ -168,9 +168,9 @@ function Introduction() {
 
         {/* Image Section */}
         <_motion.img
-          src={class1}
+          src={mem5}
           alt=""
-          className="w-full pl-0 lg:pl-20"
+          className="w-full rounded-lg object-cover"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}

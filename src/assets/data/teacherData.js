@@ -35,6 +35,74 @@ import {
 
 export const teacherData = [
   {
+    id: 25,
+    name: "Olivia Thompson",
+    avatar: teacher29,
+    countryFlag: america,
+    studentCount: 380,
+    subject: {
+      vi: "Nói IELTS",
+      en: "IELTS Speaking",
+      zh: "雅思口语",
+    },
+    about: {
+      vi: "Cô Olivia chuyên đào tạo tiếng Anh cho các chuyên gia y tế, giúp họ giao tiếp hiệu quả trong môi trường y khoa quốc tế.",
+      en: "Ms. Olivia specializes in training English for healthcare professionals, enabling effective communication in international medical settings.",
+      zh: "Olivia老师专注于为医疗专业人士培训英语，帮助他们在国际医疗环境中有效沟通。",
+    },
+  },
+  {
+    id: 12,
+    name: "Isabella Garcia",
+    avatar: teacher16,
+    countryFlag: england,
+    studentCount: 360,
+    subject: {
+      vi: "Du lịch",
+      en: "Travel English",
+      zh: "旅游英语",
+    },
+    about: {
+      vi: "Cô Isabella mang lại sự tự tin khi giao tiếp tiếng Anh trong các chuyến đi nước ngoài.",
+      en: "Ms. Isabella builds confidence in English communication during international travel.",
+      zh: "Isabella老师帮助学生在国际旅行中建立英语沟通的自信。",
+    },
+  },
+  {
+    id: 17,
+    name: "Michael Chen",
+    avatar: teacher21,
+    countryFlag: america,
+    studentCount: 380,
+    subject: {
+      vi: "Từ vựng IELTS",
+      en: "IELTS Vocabulary",
+      zh: "雅思词汇",
+    },
+    about: {
+      vi: "Thầy Michael chuyên giảng dạy từ vựng IELTS, giúp học viên mở rộng vốn từ một cách hiệu quả.",
+      en: "Mr. Michael specializes in teaching IELTS vocabulary, helping students expand their word bank effectively.",
+      zh: "Michael老师专注于教授雅思词汇，帮助学生有效扩展词汇量。",
+    },
+  },
+  {
+    id: 24,
+    name: "Noah Adams",
+    avatar: teacher28,
+    countryFlag: england,
+    studentCount: 360,
+    subject: {
+      vi: "Tiếng Anh cho tài chính",
+      en: "English for Finance",
+      zh: "金融英语",
+    },
+    about: {
+      vi: "Thầy Noah cung cấp các khóa học tiếng Anh chuyên sâu cho ngành tài chính, giúp học viên tự tin trong môi trường làm việc quốc tế.",
+      en: "Mr. Noah provides in-depth English courses for the finance industry, helping students thrive in international work environments.",
+      zh: "Noah老师为金融行业提供深入的英语课程，帮助学生在国际工作环境中蓬勃发展。",
+    },
+  },
+  {
     id: 20,
     name: "William Harris",
     avatar: teacher24,
@@ -102,40 +170,7 @@ export const teacherData = [
       zh: "Ethan老师专注于为营销专业人士培训英语，注重行业特定词汇和沟通。",
     },
   },
-  {
-    id: 24,
-    name: "Noah Adams",
-    avatar: teacher28,
-    countryFlag: england,
-    studentCount: 360,
-    subject: {
-      vi: "Tiếng Anh cho tài chính",
-      en: "English for Finance",
-      zh: "金融英语",
-    },
-    about: {
-      vi: "Thầy Noah cung cấp các khóa học tiếng Anh chuyên sâu cho ngành tài chính, giúp học viên tự tin trong môi trường làm việc quốc tế.",
-      en: "Mr. Noah provides in-depth English courses for the finance industry, helping students thrive in international work environments.",
-      zh: "Noah老师为金融行业提供深入的英语课程，帮助学生在国际工作环境中蓬勃发展。",
-    },
-  },
-  {
-    id: 25,
-    name: "Olivia Thompson",
-    avatar: teacher29,
-    countryFlag: america,
-    studentCount: 380,
-    subject: {
-      vi: "Tiếng Anh cho y tế",
-      en: "English for Healthcare",
-      zh: "医疗英语",
-    },
-    about: {
-      vi: "Cô Olivia chuyên đào tạo tiếng Anh cho các chuyên gia y tế, giúp họ giao tiếp hiệu quả trong môi trường y khoa quốc tế.",
-      en: "Ms. Olivia specializes in training English for healthcare professionals, enabling effective communication in international medical settings.",
-      zh: "Olivia老师专注于为医疗专业人士培训英语，帮助他们在国际医疗环境中有效沟通。",
-    },
-  },
+
   {
     id: 26,
     name: "Amelia Davis",
@@ -375,25 +410,8 @@ export const teacherData = [
     },
   },
   {
-    id: 12,
-    name: "Isabella Garcia",
-    avatar: teacher16,
-    countryFlag: england,
-    studentCount: 360,
-    subject: {
-      vi: "Du lịch",
-      en: "Travel English",
-      zh: "旅游英语",
-    },
-    about: {
-      vi: "Cô Isabella mang lại sự tự tin khi giao tiếp tiếng Anh trong các chuyến đi nước ngoài.",
-      en: "Ms. Isabella builds confidence in English communication during international travel.",
-      zh: "Isabella老师帮助学生在国际旅行中建立英语沟通的自信。",
-    },
-  },
-  {
     id: 13,
-    name: "Sophie Nguyen",
+    name: "Sophie Lee",
     avatar: teacher17,
     countryFlag: america,
     studentCount: 390,
@@ -459,23 +477,7 @@ export const teacherData = [
       zh: "Liam老师为专业人士和企业家培训高级商务英语。",
     },
   },
-  {
-    id: 17,
-    name: "Michael Chen",
-    avatar: teacher21,
-    countryFlag: america,
-    studentCount: 380,
-    subject: {
-      vi: "Từ vựng IELTS",
-      en: "IELTS Vocabulary",
-      zh: "雅思词汇",
-    },
-    about: {
-      vi: "Thầy Michael chuyên giảng dạy từ vựng IELTS, giúp học viên mở rộng vốn từ một cách hiệu quả.",
-      en: "Mr. Michael specializes in teaching IELTS vocabulary, helping students expand their word bank effectively.",
-      zh: "Michael老师专注于教授雅思词汇，帮助学生有效扩展词汇量。",
-    },
-  },
+
   {
     id: 18,
     name: "Andrew Kim",

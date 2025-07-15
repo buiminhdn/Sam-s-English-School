@@ -96,7 +96,7 @@ function FreeConsultation({ theme = "yellow" }) {
           <div className="mt-8">
             {[
               { label: "Zalo", value: "+84 707-060-068" },
-              { label: "WhatsApp", value: "+84 822-335-446" },
+              { label: "WhatsApp", value: "+84 707-060-068" },
               { label: "Email", value: "sam@samenglishschool.com" },
             ].map((item, index) => (
               <_motion.div

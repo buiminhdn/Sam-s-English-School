@@ -7,13 +7,13 @@ function TeacherItem({ avatar, name, countryFlag, subject, studentCount }) {
   const lang = i18n.language || "vi";
 
   return (
-    <div className="rounded-xl bg-white shadow-md hover:shadow-2xl transition-shadow duration-500">
+    <div className="rounded-xl h-full bg-white shadow-md hover:shadow-2xl transition-shadow duration-500">
       <img
         src={avatar}
         alt={name}
         className="rounded-t-xl h-70 w-full object-cover"
       />
-      <div className="p-4">
+      <div className="p-4 h-full">
         <div className="flex justify-center items-center gap-3 mt-2">
           <p className="text-2xl font-medium">{name}</p>
           <img
@@ -37,7 +37,7 @@ function TeacherItem({ avatar, name, countryFlag, subject, studentCount }) {
         <a
           href={SOCIAL_LINKS.ZALO}
           target="_blank"
-          className=" flex items-center gap-3 justify-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker font-medium hover:bg-yellow-darker hover:border-yellow-dark hover:text-white transition-colors duration-300"
+          className="flex items-center gap-3 justify-center border-2 border-yellow-dark bg-yellow-light p-2.5 w-full rounded-lg mt-6 text-yellow-darker font-medium hover:bg-yellow-darker hover:border-yellow-dark hover:text-white transition-colors duration-300"
         >
           <p>{t("teacheritem.bookLesson")}</p>
           <i className="fa-regular fa-chevrons-right"></i>

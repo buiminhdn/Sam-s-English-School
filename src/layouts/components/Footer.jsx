@@ -101,7 +101,11 @@ function Footer() {
               title: t("footer.contactTitle"),
               items: [
                 { icon: "fa-light fa-phone-volume", text: "+84 707 060 068" },
-                { icon: "fa-brands fa-whatsapp", text: "+84 777 164 128" },
+                { icon: "fa-brands fa-whatsapp", text: "+84 707 060 068" },
+                {
+                  icon: "fa-light fa-globe",
+                  text: "samacademy.uk",
+                },
                 {
                   icon: "fa-light fa-envelope",
                   text: "sam@samenglishschool.com",

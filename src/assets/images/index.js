@@ -95,8 +95,24 @@ import logo6 from "./logo6.png";
 import logo7 from "./logo7.png";
 import logo8 from "./logo8.png";
 import logo9 from "./logo9.png";
+import vietnamflag from "./vietnam-flag.png";
+import englishflag from "./english-flag.png";
+import chinaflag from "./china-flag.png";
+import mem1 from "./mem1.png";
+import mem2 from "./mem2.png";
+import mem3 from "./mem3.png";
+import mem4 from "./mem4.png";
+import mem5 from "./mem5.png";
 
 export {
+  mem1,
+  mem2,
+  mem3,
+  mem4,
+  mem5,
+  vietnamflag,
+  englishflag,
+  chinaflag,
   logo1,
   logo2,
   logo3,

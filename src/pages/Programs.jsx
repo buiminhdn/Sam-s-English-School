@@ -36,6 +36,42 @@ function Programs() {
         ))}
       </_motion.div>
 
+      <div className="detail-banner relative mt-24">
+        <div className="py-14 flex flex-wrap px-5 md:px-20 justify-around gap-10 text-white">
+          <div className="flex gap-5 items-center">
+            <i className="fa-solid fa-users-viewfinder text-5xl"></i>
+            <div className="flex flex-col items-center">
+              <p className="text-4xl font-medium">120+</p>
+              <p className="text-lg mt-1">Online Courses</p>
+            </div>
+          </div>
+
+          <div className="flex gap-5 items-center">
+            <i className="fa-solid fa-book-open-reader text-5xl"></i>
+            <div className="flex flex-col items-center">
+              <p className="text-4xl font-medium">3000</p>
+              <p className="text-lg mt-1">Student Enrolled</p>
+            </div>
+          </div>
+
+          <div className="flex gap-5 items-center">
+            <i className="fa-solid fa-chalkboard-user text-5xl"></i>
+            <div className="flex flex-col items-center">
+              <p className="text-4xl font-medium">70+</p>
+              <p className="text-lg mt-1">Expert Instructors</p>
+            </div>
+          </div>
+
+          <div className="flex gap-5 items-center">
+            <i className="fa-regular fa-clock text-5xl"></i>
+            <div className="flex flex-col items-center">
+              <p className="text-4xl font-medium">9000</p>
+              <p className="text-lg mt-1">Hours Content</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <_motion.div
         className="container mt-20"
         initial="hidden"
