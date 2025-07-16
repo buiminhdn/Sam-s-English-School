@@ -6,6 +6,11 @@ function DefaultLayout() {
   return (
     <div>
       {/* <TopNavbar /> */}
+      <a target="_blank" href="https://zalo.me/0707060068" className="btn-call">
+        <div className="btn-call__ico">
+          <i className="fa-solid fa-phone"></i>
+        </div>
+      </a>
       <Navbar />
       <div className="min-h-screen">
         <Outlet />
