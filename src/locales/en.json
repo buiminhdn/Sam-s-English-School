@@ -15,6 +15,33 @@
   "menu": "Menu",
   "students": "Students",
 
+  "programs": {
+    "banner": {
+      "new": "New",
+      "text": "Enrollments open! Join our English programs"
+    },
+    "hero": {
+      "title": "Unlock Your English Potential",
+      "description": "Whether you're preparing for exams, work, or travel — our English Center helps you communicate confidently and fluently with expert teachers and personalized programs.",
+      "cta": {
+        "learnMore": "Learn more",
+        "watchVideo": "Watch video"
+      }
+    }
+  },
+
+  "teachers2": {
+    "hero": {
+      "subtitle": "Meet Our Teachers",
+      "title": "Inspiring, Certified & Experienced",
+      "description": "Our passionate teachers bring language to life through personalized instruction and real-world experience.",
+      "cta": {
+        "viewAll": "View All Teachers",
+        "become": "Become a Teacher"
+      }
+    }
+  },
+
   "teachingHours": "teaching hours",
 
   "footer.intro": "At Sam’s English School, we are committed to providing a unique and inspiring learning experience. With personalized teaching methods and a dedicated team of instructors, we empower learners to grow with confidence. Join us on a journey of positive transformation — where you don’t just learn English, but also discover your true potential in a dynamic and supportive environment.",

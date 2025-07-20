@@ -21,7 +21,7 @@ function Filter() {
 
   return (
     <_motion.form
-      className="mt-10 mx-auto w-full max-w-screen-xl px-4"
+      className="mt-14 mx-auto w-full max-w-screen-xl px-4"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

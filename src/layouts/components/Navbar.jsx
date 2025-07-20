@@ -75,9 +75,9 @@ function Navbar() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <div className="flex items-center gap-3">
-              <i className="fa-xl fa-brands fa-whatsapp"></i>
+              <i className="fa-xl fa-thin fa-headset"></i>
               <div>
-                <p className="text-sm font-light">Whatsapp</p>
+                <p className="text-sm font-light">Zalo</p>
                 <p className="text-base">+84 707-060-068</p>
               </div>
             </div>

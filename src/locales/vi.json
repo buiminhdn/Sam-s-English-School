@@ -15,6 +15,33 @@
   "menu": "Menu",
   "students": "Học viên",
 
+  "programs": {
+    "banner": {
+      "new": "Mới",
+      "text": "Đã mở đăng ký! Tham gia các chương trình tiếng Anh của chúng tôi"
+    },
+    "hero": {
+      "title": "Khai phá tiềm năng tiếng Anh của bạn",
+      "description": "Dù bạn đang chuẩn bị cho kỳ thi, công việc hay du lịch – Trung tâm tiếng Anh của chúng tôi sẽ giúp bạn giao tiếp tự tin và trôi chảy với đội ngũ giáo viên tận tâm và chương trình cá nhân hoá.",
+      "cta": {
+        "learnMore": "Tìm hiểu thêm",
+        "watchVideo": "Xem video"
+      }
+    }
+  },
+
+  "teachers2": {
+    "hero": {
+      "subtitle": "Gặp gỡ giáo viên của chúng tôi",
+      "title": "Truyền cảm hứng, Chuyên nghiệp & Dày dạn kinh nghiệm",
+      "description": "Đội ngũ giáo viên tận tâm của chúng tôi mang ngôn ngữ đến gần hơn với học viên qua phương pháp giảng dạy cá nhân hóa và trải nghiệm thực tế.",
+      "cta": {
+        "viewAll": "Xem tất cả giáo viên",
+        "become": "Trở thành giáo viên"
+      }
+    }
+  },
+
   "teachingHours": "giờ dạy",
 
   "footer.intro": "Tại Trường Anh ngữ Sam, chúng tôi cam kết mang đến trải nghiệm học tập khác biệt và đầy cảm hứng. Với phương pháp cá nhân hóa và đội ngũ giảng viên tận tâm, chúng tôi giúp học viên tự tin phát triển toàn diện. Hãy cùng chúng tôi tạo nên hành trình thay đổi tích cực - nơi bạn không chỉ học tiếng Anh, mà còn khám phá chính mình trong môi trường học tập năng động và gắn kết.",
