@@ -12,11 +12,11 @@ i18n
   .use(initReactI18next) // pass i18n to react-i18next
   .init({
     resources: {
-      en: { translation: en },
       vi: { translation: vi },
+      en: { translation: en },
       zh: { translation: zh }, // Add Chinese translations
     },
-    fallbackLng: "en",
+    fallbackLng: "vi",
     interpolation: {
       escapeValue: false, // React already escapes
     },
