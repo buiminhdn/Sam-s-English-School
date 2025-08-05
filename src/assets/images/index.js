@@ -84,6 +84,9 @@ import video5 from "./video5.png";
 import student1 from "./student1.jpg";
 import student2 from "./student2.jpg";
 import student3 from "./student3.jpg";
+import student4 from "./student4.jpg";
+import student5 from "./student5.jpg";
+import student6 from "./student6.jpg";
 import onlineClass from "./onlineClass.jpg";
 import hero from "./hero.png";
 import logo1 from "./logo1.png";
@@ -103,8 +106,33 @@ import mem2 from "./mem2.png";
 import mem3 from "./mem3.png";
 import mem4 from "./mem4.png";
 import mem5 from "./mem5.png";
+import QR from "./QR.jpg";
+import class2 from "./class2.jpg";
+import class3 from "./class3.jpg";
+import class4 from "./class4.jpg";
+import class5 from "./class5.png";
+import class6 from "./class6.png";
+import class7 from "./class7.png";
+import class8 from "./class8.png";
+import class9 from "./class9.png";
+import class10 from "./class10.png";
+import class11 from "./class11.png";
+import class12 from "./class12.png";
+import class13 from "./class13.png";
+import class14 from "./class14.png";
+import class15 from "./class15.png";
+import class16 from "./class16.png";
+import class17 from "./class17.png";
+import class18 from "./class18.png";
+import class19 from "./class19.png";
+import class20 from "./class20.png";
+import class21 from "./class21.png";
+import class22 from "./class22.png";
+import class23 from "./class23.png";
 
 export {
+  class2,
+  QR,
   mem1,
   mem2,
   mem3,
@@ -210,4 +238,28 @@ export {
   student1,
   student2,
   student3,
+  student4,
+  student5,
+  student6,
+  class3,
+  class4,
+  class5,
+  class6,
+  class7,
+  class8,
+  class9,
+  class10,
+  class11,
+  class12,
+  class13,
+  class14,
+  class15,
+  class16,
+  class17,
+  class18,
+  class19,
+  class20,
+  class21,
+  class22,
+  class23,
 };

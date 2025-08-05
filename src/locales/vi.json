@@ -11,7 +11,7 @@
   "support": "Hỗ trợ 24/7",
   "contactEmail": "Email liên hệ",
   "loginPage": "Đăng nhập",
-  "tryForFree": "Đăng ký học thử miễn phí!",
+  "tryForFree": "Lớp học thử miễn phí!",
   "menu": "Menu",
   "students": "Học viên",
 
@@ -232,7 +232,7 @@
   },
   "classImage": {
     "heading": "Hình ảnh lớp học",
-    "description": "Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand, South Africa, … Giáo viên dày dạn kinh nghiệm giảng dạy tiếng Anh, có khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt."
+    "description": "Đội ngũ giáo viên bản ngữ Quốc tịch: Anh, Mỹ, Úc, Canada, New Zealand, South Africa, … Giáo viên dày dặn kinh nghiệm giảng dạy tiếng Anh, có khả năng dạy nhiều độ tuổi và sáng tạo trong cách truyền đạt."
   },
   "programDetail": {
     "totalLessons": "Số bài học",
@@ -276,5 +276,48 @@
     "description": "Xin lỗi, chúng tôi không thể tìm thấy trang bạn đang tìm.",
     "backHome": "Quay về trang chủ",
     "contact": "Liên hệ hỗ trợ"
+  },
+
+  "testimonials": {
+    "title": "Học viên nói gì",
+    "subtitle": "Hàng ngàn học viên tin tưởng chúng tôi để cải thiện tiếng Anh mỗi ngày",
+    "students": [
+      {
+        "name": "Nguyễn Văn An",
+        "role": "Học viên IELTS 6.5+",
+        "text": "Khóa học rất chất lượng, thầy cô tận tâm và luôn hỗ trợ kịp thời. Mình đã tăng từ 5.0 lên 6.5 chỉ sau 2 tháng.",
+        "date": "Tháng 6, 2025"
+      },
+      {
+        "name": "Lê Thị Mai",
+        "role": "Học viên Giao tiếp",
+        "text": "Mình đã tự tin hơn khi giao tiếp với khách nước ngoài nhờ phương pháp học rất thực tế và dễ hiểu tại trung tâm.",
+        "date": "Tháng 5, 2025"
+      },
+      {
+        "name": "Trần Quốc Huy",
+        "role": "Du học sinh Anh",
+        "text": "Nhờ học ở đây mà mình đã đạt đủ điều kiện tiếng Anh để nộp hồ sơ du học. Trung tâm rất uy tín và chuyên nghiệp.",
+        "date": "Tháng 4, 2025"
+      },
+      {
+        "name": "Phạm Thị Ngọc",
+        "role": "Nhân viên văn phòng",
+        "text": "Mình học lớp tiếng Anh giao tiếp buổi tối. Sau 3 tháng, mình đã có thể tự tin thuyết trình bằng tiếng Anh trong công việc.",
+        "date": "Tháng 3, 2025"
+      },
+      {
+        "name": "Vũ Minh Khoa",
+        "role": "Học viên TOEIC 700+",
+        "text": "Giảng viên rất nhiệt tình và lộ trình học rõ ràng. Mình đã đạt mục tiêu TOEIC trong vòng 8 tuần.",
+        "date": "Tháng 2, 2025"
+      },
+      {
+        "name": "Đặng Thảo Linh",
+        "role": "Sinh viên năm 3",
+        "text": "Mình từng rất sợ tiếng Anh, nhưng nhờ trung tâm mà mình đã vượt qua được rào cản tâm lý và tiến bộ rõ rệt.",
+        "date": "Tháng 1, 2025"
+      }
+    ]
   }
 }

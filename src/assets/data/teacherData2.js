@@ -33,17 +33,18 @@ import {
   teacher9,
 } from "../images";
 
-export const teacherData = [
+export const teacherData2 = [
   {
     id: 25,
     name: "Olivia Thompson",
     avatar: teacher29,
     countryFlag: america,
     studentCount: 380,
-    subject: {
-      vi: "Nói IELTS",
-      en: "IELTS Speaking",
-      zh: "雅思口语",
+    teacherHours: 950,
+    subjects: {
+      vi: ["Nói IELTS", "Viết IELTS", "Ngữ pháp IELTS"],
+      en: ["IELTS Speaking", "IELTS Writing", "IELTS Grammar"],
+      zh: ["雅思口语", "雅思写作", "雅思语法"],
     },
     about: {
       vi: "Cô Olivia chuyên đào tạo tiếng Anh cho các chuyên gia y tế, giúp họ giao tiếp hiệu quả trong môi trường y khoa quốc tế.",
@@ -57,10 +58,15 @@ export const teacherData = [
     avatar: teacher16,
     countryFlag: england,
     studentCount: 360,
-    subject: {
-      vi: "Du lịch",
-      en: "Travel English",
-      zh: "旅游英语",
+    teacherHours: 850,
+    subjects: {
+      vi: ["Du lịch", "Giao tiếp tiếng Anh", "Tiếng Anh khách sạn"],
+      en: [
+        "Travel English",
+        "Conversational English",
+        "English for Hospitality",
+      ],
+      zh: ["旅游英语", "英语会话", "酒店英语"],
     },
     about: {
       vi: "Cô Isabella mang lại sự tự tin khi giao tiếp tiếng Anh trong các chuyến đi nước ngoài.",
@@ -74,10 +80,11 @@ export const teacherData = [
     avatar: teacher21,
     countryFlag: america,
     studentCount: 380,
-    subject: {
-      vi: "Từ vựng IELTS",
-      en: "IELTS Vocabulary",
-      zh: "雅思词汇",
+    teacherHours: 900,
+    subjects: {
+      vi: ["Từ vựng IELTS", "Đọc IELTS", "Nghe IELTS"],
+      en: ["IELTS Vocabulary", "IELTS Reading", "IELTS Listening"],
+      zh: ["雅思词汇", "雅思阅读", "雅思听力"],
     },
     about: {
       vi: "Thầy Michael chuyên giảng dạy từ vựng IELTS, giúp học viên mở rộng vốn từ một cách hiệu quả.",
@@ -91,10 +98,11 @@ export const teacherData = [
     avatar: teacher28,
     countryFlag: england,
     studentCount: 360,
-    subject: {
-      vi: "Tiếng Anh cho tài chính",
-      en: "English for Finance",
-      zh: "金融英语",
+    teacherHours: 870,
+    subjects: {
+      vi: ["Tiếng Anh cho tài chính", "Tiếng Anh kinh doanh", "Viết học thuật"],
+      en: ["English for Finance", "Business English", "Academic Writing"],
+      zh: ["金融英语", "商务英语", "学术写作"],
     },
     about: {
       vi: "Thầy Noah cung cấp các khóa học tiếng Anh chuyên sâu cho ngành tài chính, giúp học viên tự tin trong môi trường làm việc quốc tế.",
@@ -108,10 +116,11 @@ export const teacherData = [
     avatar: teacher24,
     countryFlag: england,
     studentCount: 330,
-    subject: {
-      vi: "Tiếng Anh học thuật",
-      en: "Academic English",
-      zh: "学术英语",
+    teacherHours: 700,
+    subjects: {
+      vi: ["Tiếng Anh học thuật", "Viết học thuật", "Giao tiếp tiếng Anh"],
+      en: ["Academic English", "Academic Writing", "Conversational English"],
+      zh: ["学术英语", "学术写作", "英语会话"],
     },
     about: {
       vi: "Thầy William hỗ trợ học viên phát triển kỹ năng tiếng Anh học thuật cho môi trường đại học và nghiên cứu.",
@@ -119,17 +128,17 @@ export const teacherData = [
       zh: "William老师帮助学生发展大学和研究环境所需的学术英语技能。",
     },
   },
-
   {
     id: 21,
     name: "Henry Lee",
     avatar: teacher25,
     countryFlag: america,
     studentCount: 370,
-    subject: {
-      vi: "Đọc IELTS",
-      en: "IELTS Reading",
-      zh: "雅思阅读",
+    teacherHours: 920,
+    subjects: {
+      vi: ["Đọc IELTS", "Nghe IELTS", "Ngữ pháp IELTS"],
+      en: ["IELTS Reading", "IELTS Listening", "IELTS Grammar"],
+      zh: ["雅思阅读", "雅思听力", "雅思语法"],
     },
     about: {
       vi: "Thầy Henry chuyên hướng dẫn kỹ năng đọc IELTS, giúp học viên nâng cao khả năng hiểu và phân tích văn bản.",
@@ -143,10 +152,15 @@ export const teacherData = [
     avatar: teacher26,
     countryFlag: australia,
     studentCount: 340,
-    subject: {
-      vi: "Tiếng Anh cho du lịch",
-      en: "Travel English",
-      zh: "旅游英语",
+    teacherHours: 750,
+    subjects: {
+      vi: [
+        "Tiếng Anh cho du lịch",
+        "Giao tiếp tiếng Anh",
+        "Tiếng Anh hàng không",
+      ],
+      en: ["Travel English", "Conversational English", "English for Aviation"],
+      zh: ["旅游英语", "英语会话", "航空英语"],
     },
     about: {
       vi: "Thầy Lucas giúp học viên tự tin sử dụng tiếng Anh trong các tình huống du lịch và giao tiếp quốc tế.",
@@ -160,10 +174,19 @@ export const teacherData = [
     avatar: teacher27,
     countryFlag: canada,
     studentCount: 350,
-    subject: {
-      vi: "Tiếng Anh cho tiếp thị",
-      en: "English for Marketing",
-      zh: "营销英语",
+    teacherHours: 800,
+    subjects: {
+      vi: [
+        "Tiếng Anh cho tiếp thị",
+        "Tiếng Anh kinh doanh",
+        "Tiếng Anh dịch vụ khách hàng",
+      ],
+      en: [
+        "English for Marketing",
+        "Business English",
+        "English for Customer Service",
+      ],
+      zh: ["营销英语", "商务英语", "客户服务英语"],
     },
     about: {
       vi: "Thầy Ethan chuyên đào tạo tiếng Anh cho các chuyên gia tiếp thị, tập trung vào từ vựng và giao tiếp chuyên ngành.",
@@ -177,10 +200,19 @@ export const teacherData = [
     avatar: teacher30,
     countryFlag: australia,
     studentCount: 350,
-    subject: {
-      vi: "Tiếng Anh cho khách sạn",
-      en: "English for Hospitality",
-      zh: "酒店英语",
+    teacherHours: 780,
+    subjects: {
+      vi: [
+        "Tiếng Anh cho khách sạn",
+        "Tiếng Anh du lịch",
+        "Dịch vụ khách hàng",
+      ],
+      en: [
+        "English for Hospitality",
+        "Travel English",
+        "English for Customer Service",
+      ],
+      zh: ["酒店英语", "旅游英语", "客户服务英语"],
     },
     about: {
       vi: "Cô Amelia giúp học viên nâng cao kỹ năng tiếng Anh trong ngành khách sạn và du lịch, tập trung vào giao tiếp với khách quốc tế.",
@@ -194,10 +226,11 @@ export const teacherData = [
     avatar: teacher31,
     countryFlag: canada,
     studentCount: 340,
-    subject: {
-      vi: "Viết sáng tạo",
-      en: "Creative Writing",
-      zh: "创意写作",
+    teacherHours: 720,
+    subjects: {
+      vi: ["Viết sáng tạo", "Tiếng Anh học thuật", "Viết học thuật"],
+      en: ["Creative Writing", "Academic English", "Academic Writing"],
+      zh: ["创意写作", "学术英语", "学术写作"],
     },
     about: {
       vi: "Cô Charlotte hướng dẫn học viên phát triển kỹ năng viết sáng tạo, giúp họ thể hiện ý tưởng một cách độc đáo và hấp dẫn.",
@@ -212,10 +245,11 @@ export const teacherData = [
     avatar: teacher32,
     countryFlag: england,
     studentCount: 360,
-    subject: {
-      vi: "Tiếng Anh cho luật",
-      en: "English for Law",
-      zh: "法律英语",
+    teacherHours: 780,
+    subjects: {
+      vi: ["Tiếng Anh cho luật", "Tiếng Anh kinh doanh", "Viết học thuật"],
+      en: ["English for Law", "Business English", "Academic Writing"],
+      zh: ["法律英语", "商务英语", "学术写作"],
     },
     about: {
       vi: "Cô Sophia chuyên giảng dạy tiếng Anh cho các chuyên gia luật, tập trung vào từ vựng pháp lý và kỹ năng giao tiếp chuyên ngành.",
@@ -229,10 +263,11 @@ export const teacherData = [
     avatar: teacher5,
     countryFlag: america,
     studentCount: 530,
-    subject: {
-      vi: "IELTS",
-      en: "IELTS",
-      zh: "雅思",
+    teacherHours: 950,
+    subjects: {
+      vi: ["IELTS", "Nói IELTS", "Viết IELTS"],
+      en: ["IELTS", "IELTS Speaking", "IELTS Writing"],
+      zh: ["雅思", "雅思口语", "雅思写作"],
     },
     about: {
       vi: "Thầy Daniel là chuyên gia trong lĩnh vực luyện thi IELTS với hơn 8 năm kinh nghiệm giảng dạy học viên đến từ nhiều quốc gia.",
@@ -246,10 +281,11 @@ export const teacherData = [
     avatar: teacher6,
     countryFlag: australia,
     studentCount: 420,
-    subject: {
-      vi: "Giao tiếp",
-      en: "Communication",
-      zh: "沟通",
+    teacherHours: 850,
+    subjects: {
+      vi: ["Giao tiếp", "Đàm thoại", "Phát âm"],
+      en: ["Communication", "Conversation", "Pronunciation"],
+      zh: ["沟通", "会话", "发音"],
     },
     about: {
       vi: "Cô Maryam giúp học viên tự tin giao tiếp trong đời sống và công việc, phương pháp sôi nổi, linh hoạt.",
@@ -263,10 +299,11 @@ export const teacherData = [
     avatar: teacher7,
     countryFlag: canada,
     studentCount: 315,
-    subject: {
-      vi: "Phát âm",
-      en: "Pronunciation",
-      zh: "发音",
+    teacherHours: 650,
+    subjects: {
+      vi: ["Phát âm", "Giao tiếp", "Đàm thoại"],
+      en: ["Pronunciation", "Communication", "Conversation"],
+      zh: ["发音", "沟通", "会话"],
     },
     about: {
       vi: "Thầy David chuyên chỉnh sửa phát âm chuẩn Anh - Mỹ, đặc biệt hiệu quả với người học mất gốc.",
@@ -280,10 +317,11 @@ export const teacherData = [
     avatar: teacher8,
     countryFlag: england,
     studentCount: 280,
-    subject: {
-      vi: "Tiếng Anh cho CEO",
-      en: "English for CEOs",
-      zh: "CEO英语",
+    teacherHours: 600,
+    subjects: {
+      vi: ["Tiếng Anh cho CEO", "Tiếng Anh kinh doanh", "Đàm phán quốc tế"],
+      en: ["English for CEOs", "Business English", "International Negotiation"],
+      zh: ["CEO英语", "商务英语", "国际谈判"],
     },
     about: {
       vi: "Giảng viên cấp cao về tiếng Anh chuyên ngành quản lý và đàm phán quốc tế cho cấp lãnh đạo.",
@@ -291,17 +329,25 @@ export const teacherData = [
       zh: "高级讲师，专注于为高管提供管理和国际谈判的英语培训。",
     },
   },
-
   {
     id: 5,
     name: "Ane Smith",
     avatar: teacher9,
     countryFlag: america,
     studentCount: 600,
-    subject: {
-      vi: "Tiếng Anh thương mại",
-      en: "Business English",
-      zh: "商务英语",
+    teacherHours: 1000,
+    subjects: {
+      vi: [
+        "Tiếng Anh thương mại",
+        "Tiếng Anh cho tiếp thị",
+        "Đàm phán quốc tế",
+      ],
+      en: [
+        "Business English",
+        "English for Marketing",
+        "International Negotiation",
+      ],
+      zh: ["商务英语", "营销英语", "国际谈判"],
     },
     about: {
       vi: "Cô Ane đào tạo tiếng Anh thương mại cho nhiều tập đoàn đa quốc gia, truyền cảm hứng và dễ hiểu.",
@@ -315,10 +361,11 @@ export const teacherData = [
     avatar: teacher10,
     countryFlag: australia,
     studentCount: 450,
-    subject: {
-      vi: "Viết học thuật",
-      en: "Academic Writing",
-      zh: "学术写作",
+    teacherHours: 880,
+    subjects: {
+      vi: ["Viết học thuật", "Tiếng Anh học thuật", "Viết sáng tạo"],
+      en: ["Academic Writing", "Academic English", "Creative Writing"],
+      zh: ["学术写作", "学术英语", "创意写作"],
     },
     about: {
       vi: "Giáo viên viết học thuật giàu kinh nghiệm, giúp học viên nâng cao kỹ năng viết luận và nghiên cứu.",
@@ -332,10 +379,11 @@ export const teacherData = [
     avatar: teacher11,
     countryFlag: canada,
     studentCount: 370,
-    subject: {
-      vi: "Đàm thoại",
-      en: "Conversation",
-      zh: "会话",
+    teacherHours: 790,
+    subjects: {
+      vi: ["Đàm thoại", "Giao tiếp", "Phát âm"],
+      en: ["Conversation", "Communication", "Pronunciation"],
+      zh: ["会话", "沟通", "发音"],
     },
     about: {
       vi: "Cô Sharen là giáo viên thân thiện, chuyên luyện đàm thoại tự nhiên và phản xạ tiếng Anh hàng ngày.",
@@ -349,10 +397,11 @@ export const teacherData = [
     avatar: teacher12,
     countryFlag: england,
     studentCount: 290,
-    subject: {
-      vi: "Tiếng Anh cho trẻ em",
-      en: "English for Children",
-      zh: "少儿英语",
+    teacherHours: 620,
+    subjects: {
+      vi: ["Tiếng Anh cho trẻ em", "Giao tiếp", "Phát âm"],
+      en: ["English for Children", "Communication", "Pronunciation"],
+      zh: ["少儿英语", "沟通", "发音"],
     },
     about: {
       vi: "Thầy Enrico luôn sáng tạo với lớp học thiếu nhi, sử dụng trò chơi, hình ảnh và tương tác sinh động.",
@@ -366,10 +415,11 @@ export const teacherData = [
     avatar: teacher13,
     countryFlag: america,
     studentCount: 520,
-    subject: {
-      vi: "Nói IELTS",
-      en: "IELTS Speaking",
-      zh: "雅思口语",
+    teacherHours: 930,
+    subjects: {
+      vi: ["Nói IELTS", "Nghe IELTS", "Ngữ pháp IELTS"],
+      en: ["IELTS Speaking", "IELTS Listening", "IELTS Grammar"],
+      zh: ["雅思口语", "雅思听力", "雅思语法"],
     },
     about: {
       vi: "Chuyên luyện kỹ năng nói IELTS từ 5.5 lên 7.5, hướng dẫn chiến lược và từ vựng chuyên sâu.",
@@ -384,10 +434,11 @@ export const teacherData = [
     avatar: teacher14,
     countryFlag: australia,
     studentCount: 480,
-    subject: {
-      vi: "Ngữ pháp",
-      en: "Grammar",
-      zh: "语法",
+    teacherHours: 900,
+    subjects: {
+      vi: ["Ngữ pháp", "Viết IELTS", "Tiếng Anh học thuật"],
+      en: ["Grammar", "IELTS Writing", "Academic English"],
+      zh: ["语法", "雅思写作", "学术英语"],
     },
     about: {
       vi: "Thầy Mert giúp học viên nắm chắc nền tảng ngữ pháp qua các ví dụ dễ hiểu và bài tập thực tế.",
@@ -401,10 +452,11 @@ export const teacherData = [
     avatar: teacher15,
     countryFlag: canada,
     studentCount: 410,
-    subject: {
-      vi: "TOEFL",
-      en: "TOEFL",
-      zh: "托福",
+    teacherHours: 850,
+    subjects: {
+      vi: ["TOEFL", "Viết học thuật", "Giao tiếp"],
+      en: ["TOEFL", "Academic Writing", "Communication"],
+      zh: ["托福", "学术写作", "沟通"],
     },
     about: {
       vi: "Chuyên gia luyện thi TOEFL cho học viên chuẩn bị du học, dạy kỹ càng từng kỹ năng.",
@@ -418,10 +470,11 @@ export const teacherData = [
     avatar: teacher17,
     countryFlag: america,
     studentCount: 390,
-    subject: {
-      vi: "Viết IELTS",
-      en: "IELTS Writing",
-      zh: "雅思写作",
+    teacherHours: 820,
+    subjects: {
+      vi: ["Viết IELTS", "Nói IELTS", "Ngữ pháp IELTS"],
+      en: ["IELTS Writing", "IELTS Speaking", "IELTS Grammar"],
+      zh: ["雅思写作", "雅思口语", "雅思语法"],
     },
     about: {
       vi: "Cô Sophie chuyên giúp học viên nâng cao kỹ năng viết IELTS với phương pháp rõ ràng và hiệu quả.",
@@ -435,10 +488,11 @@ export const teacherData = [
     avatar: teacher18,
     countryFlag: australia,
     studentCount: 340,
-    subject: {
-      vi: "Giao tiếp nâng cao",
-      en: "Advanced Communication",
-      zh: "高级沟通",
+    teacherHours: 720,
+    subjects: {
+      vi: ["Giao tiếp nâng cao", "Đàm thoại", "Phát âm"],
+      en: ["Advanced Communication", "Conversation", "Pronunciation"],
+      zh: ["高级沟通", "会话", "发音"],
     },
     about: {
       vi: "Thầy James giúp học viên đạt được sự lưu loát trong giao tiếp tiếng Anh nâng cao.",
@@ -446,17 +500,17 @@ export const teacherData = [
       zh: "James老师帮助学生在高级英语交流中达到流利。",
     },
   },
-
   {
     id: 15,
     name: "Emma Wilson",
     avatar: teacher19,
     countryFlag: canada,
     studentCount: 400,
-    subject: {
-      vi: "Phát âm nâng cao",
-      en: "Advanced Pronunciation",
-      zh: "高级发音",
+    teacherHours: 830,
+    subjects: {
+      vi: ["Phát âm nâng cao", "Giao tiếp", "Đàm thoại"],
+      en: ["Advanced Pronunciation", "Communication", "Conversation"],
+      zh: ["高级发音", "沟通", "会话"],
     },
     about: {
       vi: "Cô Emma chuyên cải thiện phát âm nâng cao, giúp học viên nói tiếng Anh chuẩn và tự nhiên.",
@@ -470,10 +524,19 @@ export const teacherData = [
     avatar: teacher20,
     countryFlag: england,
     studentCount: 350,
-    subject: {
-      vi: "Tiếng Anh thương mại nâng cao",
-      en: "Advanced Business English",
-      zh: "高级商务英语",
+    teacherHours: 750,
+    subjects: {
+      vi: [
+        "Tiếng Anh thương mại nâng cao",
+        "Tiếng Anh kinh doanh",
+        "Đàm phán quốc tế",
+      ],
+      en: [
+        "Advanced Business English",
+        "Business English",
+        "International Negotiation",
+      ],
+      zh: ["高级商务英语", "商务英语", "国际谈判"],
     },
     about: {
       vi: "Thầy Liam đào tạo tiếng Anh thương mại nâng cao cho các chuyên gia và doanh nhân.",
@@ -487,10 +550,11 @@ export const teacherData = [
     avatar: teacher22,
     countryFlag: australia,
     studentCount: 320,
-    subject: {
-      vi: "Nghe IELTS",
-      en: "IELTS Listening",
-      zh: "雅思听力",
+    teacherHours: 680,
+    subjects: {
+      vi: ["Nghe IELTS", "Đọc IELTS", "Ngữ pháp IELTS"],
+      en: ["IELTS Listening", "IELTS Reading", "IELTS Grammar"],
+      zh: ["雅思听力", "雅思阅读", "雅思语法"],
     },
     about: {
       vi: "Thầy Andrew giúp học viên cải thiện kỹ năng nghe IELTS với các chiến lược thực tiễn và bài tập chuyên sâu.",
@@ -504,10 +568,11 @@ export const teacherData = [
     avatar: teacher23,
     countryFlag: canada,
     studentCount: 360,
-    subject: {
-      vi: "Tiếng Anh cho kỹ thuật",
-      en: "Technical English",
-      zh: "技术英语",
+    teacherHours: 770,
+    subjects: {
+      vi: ["Tiếng Anh cho kỹ thuật", "Tiếng Anh IT", "Tiếng Anh kinh doanh"],
+      en: ["Technical English", "English for IT", "Business English"],
+      zh: ["技术英语", "IT英语", "商务英语"],
     },
     about: {
       vi: "Thầy Robert chuyên đào tạo tiếng Anh kỹ thuật cho các chuyên gia trong lĩnh vực công nghệ và kỹ thuật.",

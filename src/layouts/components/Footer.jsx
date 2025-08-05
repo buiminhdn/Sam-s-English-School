@@ -47,33 +47,49 @@ function Footer() {
             variants={itemVariants}
           />
           <_motion.p
-            className="mt-5 sm:mt-7 text-sm sm:text-base"
+            className="mt-5 sm:mt-7 text-sm sm:text-lg"
             variants={itemVariants}
           >
             {t("footer.intro")}
           </_motion.p>
           <_motion.div
-            className="mt-6 flex gap-5 text-xl sm:text-2xl"
+            className="mt-8 flex gap-8 text-xl sm:text-2xl"
             variants={itemVariants}
           >
-            <a href={SOCIAL_LINKS.FACEBOOK} target="_blank">
-              <i className="fa-brands fa-facebook-f hover:text-yellow-dark transition-colors" />
+            <a
+              href={SOCIAL_LINKS.FACEBOOK}
+              target="_blank"
+              className="hover:scale-125 transition-all duration-300"
+            >
+              <i className="fa-brands fa-lg fa-facebook-f hover:text-yellow-dark transition-colors" />
             </a>
-            <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank">
-              <i className="fa-brands fa-instagram hover:text-yellow-dark transition-colors" />
+            <a
+              href={SOCIAL_LINKS.INSTAGRAM}
+              target="_blank"
+              className="hover:scale-125 transition-all duration-300"
+            >
+              <i className="fa-brands fa-lg fa-instagram hover:text-yellow-dark transition-colors" />
             </a>
-            <a href={SOCIAL_LINKS.FACEBOOK} target="_blank">
-              <i className="fa-brands fa-linkedin hover:text-yellow-dark transition-colors" />
+            <a
+              href={SOCIAL_LINKS.FACEBOOK}
+              target="_blank"
+              className="hover:scale-125 transition-all duration-300"
+            >
+              <i className="fa-brands fa-lg fa-linkedin hover:text-yellow-dark transition-colors" />
             </a>
-            <a href={SOCIAL_LINKS.TIKTOK} target="_blank">
-              <i className="fa-brands fa-tiktok hover:text-yellow-dark transition-colors" />
+            <a
+              href={SOCIAL_LINKS.TIKTOK}
+              target="_blank"
+              className="hover:scale-125 transition-all duration-300"
+            >
+              <i className="fa-brands fa-lg fa-tiktok hover:text-yellow-dark transition-colors" />
             </a>
           </_motion.div>
         </_motion.div>
 
         {/* Right Column */}
         <_motion.div
-          className="flex flex-wrap sm:justify-between gap-10"
+          className="flex flex-wrap sm:justify-between my-auto gap-10"
           variants={itemVariants}
         >
           {[
@@ -106,28 +122,32 @@ function Footer() {
                   icon: "fa-light fa-envelope",
                   text: "sam@samenglishschool.com",
                 },
+                {
+                  icon: "fa-brands fa-linkedin-in",
+                  text: "linkedin/sam-mittal-6086352b4",
+                },
               ],
             },
           ].map(({ title, items }) => (
             <_motion.div key={title} variants={itemVariants}>
-              <p className="text-base font-semibold">{title}</p>
+              <p className="text-lg font-semibold">{title}</p>
               <_motion.div className="mt-6 flex flex-col gap-4 text-sm text-gray-300">
                 {items.map((item, idx) =>
                   item.to ? (
                     <Link
                       key={`${item.to}-${idx}`}
                       to={item.to}
-                      className="hover:text-white transition-colors duration-200"
+                      className="hover:text-white text-base transition-colors duration-200"
                     >
                       {item.label}
                     </Link>
                   ) : (
                     <div
                       key={item.text?.toString() || idx}
-                      className="flex items-start gap-3"
+                      className="flex items-center gap-3"
                     >
-                      <i className={`${item.icon} mt-1`} />
-                      <p>{item.text}</p>
+                      <i className={`${item.icon} fa-lg mt-1`} />
+                      <p className="text-base">{item.text}</p>
                     </div>
                   )
                 )}

@@ -15,7 +15,7 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
       <div className="p-4 flex flex-col justify-between flex-1">
         <div>
           <p className="text-2xl font-semibold">{title[lang]}</p>
-          <p className="mt-2 text-gray-600">{description[lang]}</p>
+          <p className="mt-2 text-base text-gray-600">{description[lang]}</p>
         </div>
 
         <div className="w-full border border-gray-300 border-dashed my-4"></div>
@@ -24,7 +24,7 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
           <div className="bg-blue-light size-8 text-blue-dark rounded-md flex items-center justify-center">
             <i className="fa-regular fa-screen-users"></i>
           </div>
-          <p className="text-gray-700">
+          <p className="text-gray-700 text-base">
             {enrolled} {t("courseitem.enrolled")}
           </p>
         </div>
@@ -33,7 +33,7 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
           <div className="bg-blue-light size-8 text-blue-dark rounded-md flex items-center justify-center">
             <i className="fa-regular fa-chalkboard-user"></i>
           </div>
-          <p className="text-gray-700">
+          <p className="text-gray-700 text-base">
             {classesTaken} {t("courseitem.classesTaken")}
           </p>
         </div>
@@ -41,7 +41,7 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
         <a
           href={`/Programs/${id}`}
           target="_blank"
-          className="block text-center border-2 border-blue-dark font-medium bg-blue-dark text-white p-2.5 w-full rounded-lg mt-6 hover:text-blue-dark hover:bg-blue-light transition-colors duration-300"
+          className="block text-base text-center border-2 border-blue-dark font-medium bg-blue-dark text-white p-2.5 w-full rounded-lg mt-6 hover:text-blue-dark hover:bg-blue-light transition-colors duration-300"
         >
           {t("courseitem.joinNow")}
         </a>

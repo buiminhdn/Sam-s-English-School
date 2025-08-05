@@ -16,6 +16,7 @@ i18n
       en: { translation: en },
       zh: { translation: zh }, // Add Chinese translations
     },
+    lng: "vi",
     fallbackLng: "vi",
     interpolation: {
       escapeValue: false, // React already escapes

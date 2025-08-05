@@ -8,20 +8,20 @@ const images = [course1, course2, course3];
 
 const accounts = [
   {
-    email: "teacher1@samsenglish.com",
-    password: "pass123",
+    email: "teacher101",
+    password: "sam1111",
     redirect:
       "https://drive.google.com/drive/folders/1qZNMiLIthHPs9QhRcOSLbXUv17qgkVYE?usp=sharing",
   },
   {
-    email: "teacher2@samsenglish.com",
-    password: "pass456",
+    email: "teacher102",
+    password: "sam1111",
     redirect:
       "https://drive.google.com/drive/folders/1q0gzfHDt7dg4lPpI9YjtSwZkpeAG3p2x?usp=sharing",
   },
   {
-    email: "teacher3@samsenglish.com",
-    password: "pass789",
+    email: "teacher103",
+    password: "sam1111",
     redirect:
       "https://drive.google.com/drive/folders/1IBrqYhAmEqaJ0SvCOjRt-gVglqcIE41l?usp=sharing",
   },

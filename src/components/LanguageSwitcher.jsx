@@ -22,10 +22,10 @@ function LanguageSwitcher() {
   };
 
   return (
-    <div className="relative inline-block text-left z-50">
+    <div className="relative inline-block text-left z-20">
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex justify-between w-full lg:w-fit items-center gap-3 px-3 py-2 text-sm font-medium text-gray-800 bg-white border border-gray-300 rounded-sm shadow-sm hover:bg-gray-50 focus:outline-none"
+        className="inline-flex justify-between w-full lg:w-fit text-lg items-center gap-3 px-3 py-2 font-medium text-gray-800 bg-white border border-gray-300 rounded-sm shadow-sm hover:bg-gray-50 focus:outline-none"
       >
         <div className="flex items-center gap-3">
           <img src={selected.flag} alt="" className="h-4 w-6 object-cover" />
@@ -56,7 +56,7 @@ function LanguageSwitcher() {
                 onClick={() => handleChange(lang)}
                 className={`${
                   currentLang === lang.code ? "bg-gray-100" : ""
-                } w-full px-4 py-2 text-left text-sm flex text-black items-center gap-2 hover:bg-gray-100`}
+                } w-full px-4 py-2 text-lg text-left flex text-black items-center gap-2 hover:bg-gray-100`}
               >
                 <img
                   src={lang.flag}

@@ -91,7 +91,7 @@ function Contact() {
           }}
         >
           <_motion.p
-            className="text-white text-2xl sm:text-3xl md:text-4xl leading-snug sm:leading-tight"
+            className="text-white text-2xl sm:text-3xl md:text-5xl leading-snug sm:leading-tight"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
@@ -110,7 +110,7 @@ function Contact() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full"
+              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full text-xl"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -122,7 +122,7 @@ function Contact() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full"
+              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full text-xl"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -134,7 +134,7 @@ function Contact() {
               required
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full"
+              className="bg-white text-black rounded-full px-5 py-3 outline-none w-full text-xl"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -143,7 +143,7 @@ function Contact() {
 
             <_motion.button
               type="submit"
-              className="border-2 hover:cursor-pointer border-yellow-dark bg-yellow-dark text-black hover:bg-transparent hover:text-white transition-colors duration-300 rounded-full p-3"
+              className="border-2 hover:cursor-pointer text-2xl border-yellow-dark bg-yellow-dark text-black hover:bg-transparent hover:text-white transition-colors duration-300 rounded-full p-3"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },

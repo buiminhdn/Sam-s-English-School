@@ -11,7 +11,7 @@
   "support": "Support 24/7",
   "contactEmail": "Contact Email",
   "loginPage": "Login",
-  "tryForFree": "Book Free Demo Class!",
+  "tryForFree": "Free Trial Lesson!",
   "menu": "Menu",
   "students": "Students",
 
@@ -279,5 +279,48 @@
     "description": "Sorry, we couldn’t find the page you’re looking for.",
     "backHome": "Go back home",
     "contact": "Contact support"
+  },
+
+  "testimonials": {
+    "title": "What Students Are Saying",
+    "subtitle": "Thousands of learners trust us to improve their English every day",
+    "students": [
+      {
+        "name": "Nguyễn Văn An",
+        "role": "IELTS 6.5+ Student",
+        "text": "The course is very high quality, the teachers are dedicated and always provide timely support. I improved from 5.0 to 6.5 in just 2 months.",
+        "date": "June 2025"
+      },
+      {
+        "name": "Lê Thị Mai",
+        "role": "Communication Course Student",
+        "text": "I feel more confident communicating with foreigners thanks to the practical and easy-to-understand teaching methods at the center.",
+        "date": "May 2025"
+      },
+      {
+        "name": "Trần Quốc Huy",
+        "role": "UK Study Abroad Student",
+        "text": "Thanks to studying here, I met the English requirements for my study abroad application. The center is very reputable and professional.",
+        "date": "April 2025"
+      },
+      {
+        "name": "Phạm Thị Ngọc",
+        "role": "Office Worker",
+        "text": "I took the evening communication class. After 3 months, I could confidently present in English at work.",
+        "date": "March 2025"
+      },
+      {
+        "name": "Vũ Minh Khoa",
+        "role": "TOEIC 700+ Student",
+        "text": "The instructors are very enthusiastic, and the learning path is clear. I achieved my TOEIC goal in 8 weeks.",
+        "date": "February 2025"
+      },
+      {
+        "name": "Đặng Thảo Linh",
+        "role": "Third-Year Student",
+        "text": "I used to be very afraid of English, but thanks to the center, I overcame my psychological barriers and made significant progress.",
+        "date": "January 2025"
+      }
+    ]
   }
 }

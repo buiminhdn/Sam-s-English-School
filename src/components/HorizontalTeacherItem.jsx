@@ -6,8 +6,9 @@ function HorizontalTeacherItem({
   name,
   countryFlag,
   description,
-  subject,
+  subjects,
   students,
+  teacherHours,
 }) {
   const { t, i18n } = useTranslation();
   const lang = i18n.language || "vi";
@@ -34,18 +35,28 @@ function HorizontalTeacherItem({
         </div>
 
         {/* Description */}
-        <p className="text-gray-500 mt-3 text-base">{description[lang]}</p>
+        <p className="text-gray-500 mt-3 text-base">
+          {description[lang] || "No description available"}
+        </p>
 
         {/* Subject & Students */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 mt-4 text-gray-500">
+        <div className="flex flex-wrap flex-col sm:flex-row gap-3 sm:gap-5 mt-4 text-gray-500">
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-book"></i>
-            <p className="text-base">{subject[lang]}</p>
+            <p className="text-base">
+              {subjects[lang]?.join(", ") || "No subjects available"}
+            </p>
           </div>
           <div className="flex items-center gap-3">
             <i className="fa-lg fa-light fa-user-group"></i>
             <p className="text-base">
               {students} {t("teacheritem.students")}
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <i className="fa-lg fa-light fa-clock"></i>
+            <p className="text-base">
+              {teacherHours} {t("teachingHours")}
             </p>
           </div>
         </div>

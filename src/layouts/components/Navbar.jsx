@@ -6,6 +6,7 @@ import { ROUTE_PATH, SOCIAL_LINKS } from "../../routes/routePath";
 import { logo } from "../../assets/images";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
 import { useLocation } from "react-router-dom";
+import Popup from "../../components/Popup";
 
 const menuItems = [
   {
@@ -77,22 +78,22 @@ function Navbar() {
             <div className="flex items-center gap-3">
               <i className="fa-xl fa-thin fa-headset"></i>
               <div>
-                <p className="text-sm font-light">Zalo</p>
-                <p className="text-base">+84 707-060-068</p>
+                <p className="font-light">Zalo</p>
+                <p className="text-lg">+84 707-060-068</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <i className="fa-xl fa-thin fa-phone"></i>
               <div>
-                <p className="text-sm font-light">{t("support")}</p>
-                <p className="text-base">+84 707-060-068</p>
+                <p className="font-light">{t("support")}</p>
+                <p className="text-lg">+84 707-060-068</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <i className="fa-xl fa-thin fa-envelope-open"></i>
               <div>
-                <p className="text-sm font-light">{t("contactEmail")}</p>
-                <p className="text-base">sam@samenglishschool.com</p>
+                <p className="font-light">{t("contactEmail")}</p>
+                <p className="text-lg">sam@samenglishschool.com</p>
               </div>
             </div>
           </_motion.div>
@@ -103,7 +104,7 @@ function Navbar() {
             <Link
               to={ROUTE_PATH.LOGIN}
               target="_blank"
-              className="bg-white text-black py-2 px-4 rounded-sm border border-blue-dark hover:bg-blue-dark transition duration-300 hover:border-white hover:text-white"
+              className="bg-white text-lg text-black py-2 px-4 rounded-sm border border-blue-dark hover:bg-blue-dark transition duration-300 hover:border-white hover:text-white"
             >
               {t("loginPage")}
             </Link>
@@ -121,8 +122,8 @@ function Navbar() {
 
       {/* Bottom Navbar - Desktop */}
       <div className="hidden lg:block border-b border-gray-300">
-        <div className="container py-4 flex justify-between items-center">
-          <div className="font-medium flex gap-12">
+        <div className="container py-5 flex justify-between items-center">
+          <div className="font-medium text-lg flex gap-12">
             {menuItems.map(({ to, labelKey, hasDropdown, dropdownItems }) => (
               <div key={labelKey} className="relative group">
                 <Link
@@ -155,14 +156,12 @@ function Navbar() {
             ))}
           </div>
 
-          <a
-            href={SOCIAL_LINKS.ZALO}
-            target="_blank"
-            className="bg-yellow-dark font-medium text-black py-3 px-5 rounded-sm hover:shadow-xl transition duration-300"
-          >
-            {t("tryForFree")}
-          </a>
+          <Popup className="text-lg" />
         </div>
+      </div>
+
+      <div className="lg:hidden border-b border-gray-300 flex justify-center py-4 text-sm">
+        <Popup />
       </div>
 
       {/* Slide-in Mobile Menu */}

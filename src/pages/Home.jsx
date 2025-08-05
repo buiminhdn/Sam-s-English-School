@@ -33,6 +33,8 @@ import {
   england,
 } from "../assets/images";
 import CourseItem from "../components/CourseItem";
+import ImageGrid from "../components/ImageGrid";
+import Testimonials from "../components/Testimonials";
 import { ROUTE_PATH, SOCIAL_LINKS } from "../routes/routePath";
 import { useState } from "react";
 import { motion as _motion, AnimatePresence } from "framer-motion";
@@ -86,18 +88,18 @@ function Home() {
       <div className="container flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-0">
         <div className="flex-1 text-center lg:text-left">
           <_motion.p
-            className="text-3xl sm:text-5xl lg:text-[70px] leading-22 font-semibold text-gray-800"
+            className="text-3xl sm:text-5xl lg:text-[70px] sm:leading-22 font-semibold text-gray-800"
             initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            {t("home.Headline1")}
+            {t("home.Headline1")}{" "}
             <span className="hidden sm:inline">
               <br />
             </span>
             <span className="text-purple-dark">{t("home.Headline2")}</span>{" "}
             {t("home.Headline3")}{" "}
-            <span className="text-yellow-darker">{t("home.Headline4")}</span>
+            <span className="text-yellow-darker">{t("home.Headline4")} </span>
             <span className="hidden sm:inline">
               <br />
             </span>
@@ -105,7 +107,7 @@ function Home() {
           </_motion.p>
 
           <_motion.p
-            className="text-gray-500 text-base sm:text-lg lg:text-xl mt-5"
+            className="text-gray-500 text-base sm:text-lg lg:text-2xl mt-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -120,17 +122,17 @@ function Home() {
           <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 sm:gap-12 mt-10">
             <div className="flex items-center gap-2">
               <i className="fa-regular fa-circle-check text-blue-600 fa-xl sm:fa-2xl"></i>
-              <p className="text-sm sm:text-lg font-normal">Flexible</p>
+              <p className="text-sm sm:text-2xl font-normal">Flexible</p>
             </div>
             <div className="flex items-center gap-2">
               <i className="fa-regular fa-circle-check text-blue-600 fa-xl sm:fa-2xl"></i>
-              <p className="text-sm sm:text-lg font-normal text-black">
+              <p className="text-sm sm:text-2xl font-normal text-black">
                 Learning path
               </p>
             </div>
             <div className="flex items-center gap-2">
               <i className="fa-regular fa-circle-check text-blue-600 fa-xl sm:fa-2xl"></i>
-              <p className="text-sm sm:text-lg font-normal text-black">
+              <p className="text-sm sm:text-2xl font-normal text-black">
                 Community
               </p>
             </div>
@@ -139,7 +141,7 @@ function Home() {
           <_motion.a
             href={SOCIAL_LINKS.ZALO}
             target="_blank"
-            className="mt-10 mx-auto lg:mx-0 w-fit bg-blue-dark px-3 py-3 flex items-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            className="mt-10 mx-auto text-lg lg:mx-0 w-fit bg-blue-dark px-3 py-3 flex items-center gap-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.4 }}
@@ -161,6 +163,9 @@ function Home() {
         />
       </div>
 
+      {/* <Gallery /> */}
+
+      {/* Icons */}
       <div className="mt-30 mb-20">
         <Marquee pauseOnHover gradient={false} speed={50}>
           <img src={logo1} alt="Logo 1" className="mx-10 h-20" />
@@ -175,6 +180,8 @@ function Home() {
           {/* Add more logos as needed */}
         </Marquee>
       </div>
+
+      {/* why choose */}
       <div className="container">
         {/* Header Section */}
         <div className="flex flex-col-reverse lg:flex-row justify-between items-center lg:items-end gap-6 pt-10">
@@ -255,7 +262,7 @@ function Home() {
               <p className="font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-6 sm:mt-8 whitespace-pre-line">
                 {item.title}
               </p>
-              <p className="text-base sm:text-lg font-light leading-6 mt-6 sm:mt-8">
+              <p className="text-base sm:text-xl font-light leading-6 mt-6 sm:mt-8">
                 {item.desc}
               </p>
             </_motion.div>
@@ -288,7 +295,7 @@ function Home() {
 
           {/* Subtext */}
           <_motion.p
-            className="text-base sm:text-lg font-light mt-8"
+            className="text-base sm:text-xl font-light mt-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -395,10 +402,10 @@ function Home() {
                     className="size-5 object-cover rounded-full"
                   />
                 </div>
-                <p className="text-gray-300 text-sm sm:text-base mt-2 text-center">
+                <p className="text-gray-300 text-sm sm:text-lg mt-2 text-center">
                   {teachingHours} {t("teachingHours")}
                 </p>
-                <p className="text-gray-300 text-sm sm:text-base mt-1 text-center">
+                <p className="text-gray-300 text-sm sm:text-lg mt-1 text-center">
                   {students} {t("students")}
                 </p>
               </_motion.div>
@@ -409,14 +416,14 @@ function Home() {
         {/* CTA Button */}
         <_motion.a
           href={ROUTE_PATH.TEACHERS}
-          className="mt-12 sm:mt-16 lg:mt-20 w-fit mx-auto border-2 border-white p-2 flex items-center gap-3 rounded-full text-white transition-colors duration-300 hover:bg-white hover:text-black group"
+          className="mt-12 sm:mt-16 text-lg lg:mt-20 w-fit mx-auto border-2 border-white p-2 flex items-center gap-3 rounded-full text-white transition-colors duration-300 hover:bg-white hover:text-black group"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="ml-3 mr-1 font-medium">{t("seeMore")}</p>
-          <div className="bg-white px-2 py-1 rounded-full text-blue-dark group-hover:bg-blue-dark group-hover:text-white transition-colors duration-300">
+          <div className="bg-white px-2.5 py-1 rounded-full text-blue-dark group-hover:bg-blue-dark group-hover:text-white transition-colors duration-300">
             <i className="fa-regular fa-arrow-right"></i>
           </div>
         </_motion.a>
@@ -483,6 +490,8 @@ function Home() {
         </_motion.div>
       </div>
 
+      <Testimonials />
+
       <div className="container mt-28">
         {/* Animated heading */}
         <_motion.p
@@ -507,6 +516,8 @@ function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
       </div>
+
+      <ImageGrid />
 
       <div className="container mt-28 px-4 sm:px-6 flex flex-col lg:flex-row gap-10 relative">
         {/* Left Side (Heading + Illustration) */}
@@ -557,7 +568,7 @@ function Home() {
                   onClick={() => toggleQuestion(i)}
                   className="flex items-center justify-between cursor-pointer gap-7"
                 >
-                  <p className="ml-2 text-base sm:text-lg">{question[lang]}</p>
+                  <p className="ml-2 text-base sm:text-xl">{question[lang]}</p>
                   <div
                     className={`size-8 rounded-full flex flex-none justify-center items-center transition-transform duration-300 ${
                       isOpen
@@ -581,7 +592,7 @@ function Home() {
                         collapsed: { opacity: 0, height: 0, marginTop: 0 },
                       }}
                       transition={{ duration: 0.4, ease: "easeInOut" }}
-                      className="px-2 text-gray-700 text-sm sm:text-base overflow-hidden"
+                      className="px-2 text-gray-700 text-sm sm:text-lg overflow-hidden"
                     >
                       {answer[lang]}
                     </_motion.div>

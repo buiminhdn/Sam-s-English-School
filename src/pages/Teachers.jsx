@@ -1,4 +1,4 @@
-import { teacherData } from "../assets/data/teacherData";
+import { teacherData2 } from "../assets/data/teacherData2";
 import FreeConsultation from "../components/FreeConsultation";
 import HorizontalTeacherItem from "../components/HorizontalTeacherItem";
 import { motion as _motion } from "framer-motion";
@@ -82,7 +82,7 @@ function Teachers() {
 
       {/* Grid of Teachers */}
       <div className="container mt-6 mb-30 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
-        {teacherData.map((teacher, i) => (
+        {teacherData2.map((teacher, i) => (
           <_motion.div
             key={teacher.id}
             initial={{ opacity: 0, x: -30 }}
@@ -96,8 +96,9 @@ function Teachers() {
               name={teacher.name}
               countryFlag={teacher.countryFlag}
               description={teacher.about}
-              subject={teacher.subject}
+              subjects={teacher.subjects}
               students={teacher.studentCount}
+              teacherHours={teacher.teacherHours}
             />
           </_motion.div>
         ))}

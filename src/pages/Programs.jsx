@@ -25,10 +25,12 @@ function Programs() {
         style={{
           backgroundImage: `url(${onlineClass})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top center",
+          backgroundColor: "rgba(0, 0, 0, 0.3)", // đen mờ 40%
+          backgroundBlendMode: "overlay", // hòa trộn màu nền + ảnh nền
         }}
       >
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-20 lg:px-12">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-30 lg:px-12">
           <_motion.a
             href="#"
             className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200"
