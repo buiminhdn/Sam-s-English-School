@@ -71,7 +71,7 @@ function Footer() {
               <i className="fa-brands fa-lg fa-instagram hover:text-yellow-dark transition-colors" />
             </a>
             <a
-              href={SOCIAL_LINKS.FACEBOOK}
+              href={SOCIAL_LINKS.LINKEDIN}
               target="_blank"
               className="hover:scale-125 transition-all duration-300"
             >

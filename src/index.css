@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 @theme {
   --color-blue-dark: #0a2351;
   --color-blue-light: #d8e6ff;

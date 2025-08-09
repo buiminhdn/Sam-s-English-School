@@ -9,6 +9,8 @@ import {
 import TestimonialCard from "./TestimonialCard";
 import { useTranslation } from "react-i18next";
 import { motion as _motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
 const avatarMap = {
   "Nguyễn Văn An": student1,
@@ -26,18 +28,6 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
     },
   },
 };
@@ -68,7 +58,7 @@ function Testimonials() {
     <div class="mt-24 mb-20 container">
       <div class="">
         <_motion.div
-          class="mb-16 text-center"
+          class="text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -83,17 +73,34 @@ function Testimonials() {
         </_motion.div>
 
         <_motion.div
-          className="grid gap-x-6 gap-y-14 md:grid-cols-2 lg:grid-cols-3"
+          className="relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
         >
-          {testimonials.map((item, index) => (
-            <_motion.div key={index} variants={itemVariants}>
-              <TestimonialCard {...item} />
-            </_motion.div>
-          ))}
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={{
+              nextEl: ".custom-swiper-button-next",
+              prevEl: ".custom-swiper-button-prev",
+            }}
+            pagination={{ clickable: true }}
+            loop
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="px-8"
+          >
+            {testimonials.map((item, index) => (
+              <SwiperSlide key={index}>
+                <TestimonialCard {...item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </_motion.div>
       </div>
     </div>

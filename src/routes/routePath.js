@@ -19,5 +19,5 @@ export const SOCIAL_LINKS = {
   FACEBOOK: "https://www.facebook.com/samsenglishschool1111",
   INSTAGRAM: "https://www.instagram.com/samsenglishschool",
   TIKTOK: "https://www.tiktok.com/@samsenglishschool",
-  LINKEDIN: "https://www.facebook.com/samsenglishschool1111",
+  LINKEDIN: "https://www.linkedin.com/in/sam-mittal-6086352b4",
 };
