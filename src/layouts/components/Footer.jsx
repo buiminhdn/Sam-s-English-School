@@ -78,6 +78,13 @@ function Footer() {
               <i className="fa-brands fa-lg fa-linkedin hover:text-yellow-dark transition-colors" />
             </a>
             <a
+              href={SOCIAL_LINKS.YOUTUBE}
+              target="_blank"
+              className="hover:scale-125 transition-all duration-300"
+            >
+              <i className="fa-brands fa-lg fa-youtube hover:text-yellow-dark transition-colors" />
+            </a>
+            <a
               href={SOCIAL_LINKS.TIKTOK}
               target="_blank"
               className="hover:scale-125 transition-all duration-300"
@@ -121,10 +128,6 @@ function Footer() {
                 {
                   icon: "fa-light fa-envelope",
                   text: "sam@samenglishschool.com",
-                },
-                {
-                  icon: "fa-brands fa-linkedin-in",
-                  text: "linkedin/sam-mittal-6086352b4",
                 },
               ],
             },
