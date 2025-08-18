@@ -156,7 +156,7 @@ function Home() {
         <_motion.img
           src={hero}
           alt="Hero image"
-          className=""
+          className="w-full lg:w-1/2"
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}

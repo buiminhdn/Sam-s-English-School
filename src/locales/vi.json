@@ -194,14 +194,14 @@
     },
     "videos": {
       "main": {
-        "url": "https://www.youtube.com/embed/woXG5moB1PI?si=DQHllZpPo5Vwtj00",
-        "link": "https://youtu.be/woXG5moB1PI?si=elf0ijKxBSU-VX37",
+        "url": "https://www.youtube.com/embed/S094FcLLhHQ?si=5XCodVqalOX_cIGL",
+        "link": "https://www.youtube.com/watch?v=RPyLEFAA2Fg",
         "title": "Tham gia lớp học vui nhộn cùng Sam's English School",
         "desc": "Cùng khám phá những khoảnh khắc thú vị trong lớp học của Sam's English School, nơi học viên được học tiếng Anh qua trải nghiệm thực tế và tương tác sinh động cùng giáo viên nước ngoài."
       },
       "small": [
         {
-          "url": "https://www.youtube.com/embed/EOJT1DJk8Wg?si=_oibJRzo4w7oHvPS",
+          "url": "https://www.youtube.com/embed/RPyLEFAA2Fg?si=2jeFKCseZJFTM7rT",
           "title": "Trải nghiệm lớp học tiếng Anh vui nhộn cùng bạn bè quốc tế",
           "desc": "Khám phá một buổi học đầy tiếng cười tại Sam's English School, nơi bạn có thể vừa học vừa chơi và kết nối cùng bạn bè bốn phương."
         },
@@ -211,7 +211,7 @@
           "desc": "Cùng tham gia lớp học tiếng Anh với giáo viên bản xứ và trải nghiệm những hoạt động đầy hào hứng, giúp bạn tự tin hơn khi giao tiếp."
         },
         {
-          "url": "https://www.youtube.com/embed/5Ns1aQvCL9s?si=Hk4ciOtUZbC_Vscn",
+          "url": "https://www.youtube.com/embed/EOJT1DJk8Wg?si=_oibJRzo4w7oHvPS",
           "title": "Không khí lớp học sôi động tại Sam's English School",
           "desc": "Học viên hào hứng tham gia các trò chơi, thảo luận nhóm và phản xạ tiếng Anh ngay tại lớp học – một môi trường học tập cực kỳ năng động và vui vẻ."
         }
