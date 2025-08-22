@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import { QR } from "../assets/images";
 
-function Popup({ className = "" }) {
-  const { t } = useTranslation(); // NEW
+function Popup({ buttonContent = "Try for Free", buttonClass = "" }) {
   const [showPopup, setShowPopup] = useState(false);
 
   const openPopup = (e) => {
@@ -30,13 +28,16 @@ function Popup({ className = "" }) {
 
   return (
     <>
-      <button
+      {/* <button
         onClick={openPopup}
         className={`bg-yellow-dark hover:cursor-pointer font-medium text-black py-3 px-5 rounded-sm shadow-xl hover:scale-110 transition duration-300 ${
           className || ""
         }`}
       >
         {t("tryForFree")}
+      </button> */}
+      <button onClick={openPopup} className={buttonClass}>
+        {buttonContent}
       </button>
 
       {showPopup && (

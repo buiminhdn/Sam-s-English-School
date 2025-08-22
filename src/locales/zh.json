@@ -201,19 +201,29 @@
       },
       "small": [
         {
-          "url": "https://www.youtube.com/embed/EOJT1DJk8Wg?si=_oibJRzo4w7oHvPS",
-          "title": "与国际朋友一起体验有趣的英语课堂",
-          "desc": "在 Sam's English School 体验充满欢笑的英语课程，学习、玩耍、结交来自世界各地的朋友。"
+          "url": "https://www.youtube.com/embed/RPyLEFAA2Fg?si=2jeFKCseZJFTM7rT",
+          "title": "与国际朋友一起的有趣英语课堂体验",
+          "desc": "在 Sam's 英语学校探索充满欢笑的课堂，在这里你可以学习、玩乐，并与来自世界各地的朋友建立联系。"
         },
         {
-          "url": "https://www.youtube.com/embed/MfcJYIyTBfY?si=FzYHGCxwqFK1Xhiv",
-          "title": "在 Sam's 与外教一起上特别课程",
-          "desc": "参与由外教带领的有趣英语课堂，参与各种有趣的活动，提升你的口语自信。"
+          "url": "https://www.youtube.com/embed/x5Lr8edn1s0?si=-lXJnwl0zLnYS4EI",
+          "title": "在 Sam's 与外教一起的特别课程",
+          "desc": "加入与母语教师的英语课堂，体验精彩的活动，帮助你在交流中更加自信。"
         },
         {
-          "url": "https://www.youtube.com/embed/5Ns1aQvCL9s?si=Hk4ciOtUZbC_Vscn",
-          "title": "Sam's English School 的活跃课堂氛围",
-          "desc": "学生们积极参与游戏、小组讨论和英语反应练习，在一个充满活力和快乐的学习环境中成长。"
+          "url": "https://www.youtube.com/embed/uUFpVRHK3d4?si=WZm9mAAOVSNOp_T6",
+          "title": "Sam's 英语学校热闹的课堂氛围",
+          "desc": "学生们积极参与游戏、小组讨论，并在课堂中即时用英语交流——一个充满活力和欢乐的学习环境。"
+        },
+        {
+          "url": "https://www.youtube.com/embed/1alGsDL5zBY?si=ghAO7INdstqxsV3z",
+          "title": "在 Sam's 的精彩英语学习旅程",
+          "desc": "探索课堂上的难忘时刻，学生们在这里不仅提升知识，还结交新朋友。"
+        },
+        {
+          "url": "https://www.youtube.com/embed/Wpi2NwTpB-k?si=ZeP4E_MI9NrWflfm",
+          "title": "通过小组活动练习英语交流",
+          "desc": "体验小组学习活动，锻炼快速反应能力，提高自然的英语交流技巧。"
         }
       ]
     }

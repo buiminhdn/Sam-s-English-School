@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Popup from "./Popup";
 
 function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
   const { t, i18n } = useTranslation();
@@ -38,13 +39,10 @@ function CourseItem({ id, image, title, description, enrolled, classesTaken }) {
           </p>
         </div>
 
-        <a
-          href={`/Programs/${id}`}
-          target="_blank"
-          className="block text-base text-center border-2 border-blue-dark font-medium bg-blue-dark text-white p-2.5 w-full rounded-lg mt-6 hover:text-blue-dark hover:bg-blue-light transition-colors duration-300"
-        >
-          {t("courseitem.joinNow")}
-        </a>
+        <Popup
+          buttonContent={t("courseitem.joinNow")}
+          buttonClass="text-base text-center border-2 border-blue-dark font-medium bg-blue-dark text-white p-2.5 w-full rounded-lg mt-6 hover:text-blue-dark hover:bg-blue-light transition-colors duration-300"
+        />
       </div>
     </div>
   );

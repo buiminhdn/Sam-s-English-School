@@ -146,7 +146,7 @@ function Footer() {
                     </Link>
                   ) : (
                     <div
-                      key={item.text?.toString() || idx}
+                      key={item.text?.toString() + idx}
                       className="flex items-center gap-3"
                     >
                       <i className={`${item.icon} fa-lg mt-1`} />

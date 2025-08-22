@@ -156,7 +156,10 @@ function Navbar() {
             ))}
           </div>
 
-          <Popup className="text-lg" />
+          <Popup
+            buttonContent={t("tryForFree")}
+            buttonClass="text-lg bg-yellow-dark hover:cursor-pointer font-medium text-black py-3 px-5 rounded-sm shadow-xl hover:scale-110 transition duration-300"
+          />
         </div>
       </div>
 
