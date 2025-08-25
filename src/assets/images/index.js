@@ -88,7 +88,7 @@ import student4 from "./student4.jpg";
 import student5 from "./student5.jpg";
 import student6 from "./student6.jpg";
 import onlineClass from "./onlineClass.jpg";
-import hero from "./hero.png";
+import hero from "./hero.gif";
 import logo1 from "./logo1.png";
 import logo2 from "./logo2.png";
 import logo3 from "./logo3.png";
